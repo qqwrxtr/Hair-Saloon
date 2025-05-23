@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balayage vs. Highlights: Which is Right for You? | Equipe Hair Salon Blog</title>
+    <meta name="description" content="Understanding the difference between balayage and highlights, and how to choose the best coloring technique for your hair type and style goals. Expert advice from Equipe Hair Salon's color specialists.">
+    <meta name="keywords" content="balayage vs highlights, hair coloring techniques, hair color, balayage, highlights, hair salon London, Equipe Hair, luxury hair salon, Maida Vale salon, Finchley salon">
+    <link rel="canonical" href="https://equipehair.com/blog/balayage-vs-highlights/" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../../assets/icon.png">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .blog-banner {
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .blog-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+            z-index: 1;
+        }
+        .blog-banner > div {
+            position: relative;
+            z-index: 2;
+        }
+        .text-brand {
+            color: #9932CC; /* Purple */
+        }
+        .bg-brand {
+            background-color: #9932CC; /* Purple */
+        }
+        .text-accent {
+            color: #FF1493; /* Deep Pink */
+        }
+        .bg-accent {
+            background-color: #FF1493; /* Deep Pink */
+        }
+        .social-icon a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            margin-right: 15px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .social-icon a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .social-icon a:hover {
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.3);
+        }
+        .social-icon a:hover::before {
+            opacity: 1;
+        }
+        
+        /* Fancy Navigation */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Neon glow effect */
+        .neon-glow {
+            text-shadow: 0 0 5px rgba(153, 50, 204, 0.5),
+                         0 0 10px rgba(153, 50, 204, 0.3),
+                         0 0 15px rgba(153, 50, 204, 0.1);
+        }
+        
+        /* Fancy buttons */
+        .btn-fancy {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: none;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.3);
+        }
+        
+        /* Blog content styles */
+        .blog-content {
+            line-height: 1.8;
+        }
+        
+        .blog-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.25rem;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content ul li, .blog-content ol li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-content img {
+            border-radius: 0.75rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #9932CC;
+            padding-left: 1.5rem;
+            font-style: italic;
+            margin: 1.5rem 0;
+        }
+        
+        /* Category badge */
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+        }
+        
+        /* Author card */
+        .author-card {
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: white;
+        }
+        
+        /* Share buttons */
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .share-facebook {
+            background-color: #3b5998;
+        }
+        
+        .share-twitter {
+            background-color: #1da1f2;
+        }
+        
+        .share-pinterest {
+            background-color: #bd081c;
+        }
+        
+        .share-linkedin {
+            background-color: #0077b5;
+        }
+        
+        /* Related posts */
+        .related-post {
+            transition: all 0.3s ease;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .related-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .related-post img {
+            transition: transform 0.5s ease;
+        }
+        
+        .related-post:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Table of contents */
+        .toc {
+            border-radius: 0.75rem;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #9932CC;
+        }
+        
+        .toc ul {
+            padding-left: 1.25rem;
+            list-style-type: none;
+        }
+        
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc a {
+            color: #4B5563;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .toc a:hover {
+            color: #9932CC;
+        }
+
+        /* Comparison table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 2rem 0;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #f1f5f9;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#9932CC',
+                        accent: '#FF1493',
+                        dark: '#1E0E2F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-t-brand border-r-accent border-b-brand border-l-accent rounded-full animate-spin"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold gradient-text">E</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-lg z-50 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../../" class="flex items-center">
+                    <span class="text-3xl font-bold gradient-text">EQUIPE</span>
+                    <span class="ml-2 text-dark text-xl">HAIR</span>
+                </a>
+                
+                <nav class="hidden lg:flex space-x-10 text-gray-800">
+                    <a href="../../" class="nav-link font-medium hover:text-brand">Home</a>
+                    <a href="../../about/" class="nav-link font-medium hover:text-brand">About Us</a>
+                    <a href="../../services/" class="nav-link font-medium hover:text-brand">Services</a>
+                    <a href="../../gallery/" class="nav-link font-medium hover:text-brand">Gallery</a>
+                    <a href="../../blog/" class="nav-link font-medium hover:text-brand">Blog</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="../../booking/" class="hidden md:block btn-fancy text-white px-6 py-3 rounded-full transition duration-500">
+                        Book Appointment
+                    </a>
+                    <button class="lg:hidden text-gray-700 focus:outline-none ml-4" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden pt-4 pb-2" id="mobile-menu">
+                <nav class="flex flex-col space-y-3 text-gray-700">
+                    <a href="../../" class="font-medium hover:text-brand py-2 border-b border-gray-100">Home</a>
+                    <a href="../../about/" class="font-medium hover:text-brand py-2 border-b border-gray-100">About Us</a>
+                    <a href="../../services/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Services</a>
+                    <a href="../../gallery/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Gallery</a>
+                    <a href="../../blog/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Blog</a>
+                    <a href="../../booking/" class="font-medium hover:text-brand py-2">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Banner -->
+    <div class="blog-banner flex items-end pt-24" style="background-image: url('../../assets/images/blog/blog-3.jpg');">
+        <div class="container mx-auto px-4 pb-12">
+            <div class="max-w-4xl">
+                <span class="category-badge mb-4 inline-block">Coloring</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">Balayage vs. Highlights: Which Technique is Right for You?</h1>
+                <div class="flex items-center">
+                    <img src="../../assets/images/testimonial-2.webp" alt="Sophia Martinez" class="w-12 h-12 rounded-full object-cover border-2 border-white mr-4">
+                    <div class="text-white">
+                        <p class="font-medium">Sophia Martinez</p>
+                        <p class="text-sm opacity-90">Color Specialist</p>
+                    </div>
+                    <div class="flex items-center ml-auto text-white text-sm">
+                        <span class="flex items-center mr-6">
+                            <i class="far fa-calendar-alt mr-2"></i> April 29, 2025
+                        </span>
+                        <span class="flex items-center">
+                            <i class="far fa-clock mr-2"></i> 6 min read
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Content -->
+                <div class="lg:w-2/3">
+                    <!-- Table of Contents -->
+                    <div class="toc mb-8" data-aos="fade-up">
+                        <h3 class="font-bold text-xl mb-4">Table of Contents</h3>
+                        <ul>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#what-is-balayage">What is Balayage?</a></li>
+                            <li><a href="#what-are-highlights">What are Highlights?</a></li>
+                            <li><a href="#key-differences">Key Differences Between Balayage and Highlights</a></li>
+                            <li><a href="#who-should-choose">Who Should Choose Which Technique?</a></li>
+                            <li><a href="#maintenance">Maintenance and Upkeep</a></li>
+                            <li><a href="#cost-considerations">Cost Considerations</a></li>
+                            <li><a href="#conclusion">Conclusion</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Blog Content -->
+                    <div class="blog-content" data-aos="fade-up">
+                        <div id="introduction">
+                            <p>When it comes to adding dimension, lightness, and movement to your hair color, two techniques stand out as the most popular options: balayage and highlights. Both can transform your look and add beautiful dimension to your hair, but they achieve results in different ways and with different maintenance requirements.</p>
+                            
+                            <p>At Equipe Hair, our color specialists frequently hear clients ask, "Should I get balayage or highlights?" The answer isn't always straightforward, as both techniques have their own unique advantages. In this comprehensive guide, we'll break down the differences between these popular coloring methods and help you determine which one might be better suited for your hair type, lifestyle, and desired outcome.</p>
+                        </div>
+                        
+                        <div id="what-is-balayage">
+                            <h2>What is Balayage?</h2>
+                                                        
+                            <p>Balayage (pronounced bah-lee-ahzh) is a French word meaning "to sweep" or "to paint." This name perfectly describes the technique, as color is hand-painted onto the hair in a sweeping motion. This freehand approach creates a soft, natural-looking gradation of lightness from the mid-lengths to the ends of the hair.</p>
+                            
+                            <h3>Key Characteristics of Balayage</h3>
+                            <ul>
+                                <li><strong>Hand-Painted:</strong> Color is applied by hand rather than using foils or caps</li>
+                                <li><strong>Surface Application:</strong> Color is typically applied to the surface of hair sections rather than saturating the entire section</li>
+                                <li><strong>Soft Transition:</strong> Creates a soft, gradual transition from darker to lighter tones</li>
+                                <li><strong>Customizable:</strong> Can be subtle or bold depending on the desired effect</li>
+                                <li><strong>Grows Out Naturally:</strong> Less noticeable regrowth line because of the soft transition</li>
+                            </ul>
+                            
+                            <h3>The Balayage Process</h3>
+                            <p>During a balayage service, your colorist will section your hair and then hand-paint the lightener or color onto select strands. The application often starts lighter and becomes heavier toward the ends, creating that sun-kissed, graduated effect. The lightener is typically left open to the air (without foils) or covered with plastic wrap to prevent it from drying out.</p>
+                            
+                            <p>The result is multi-dimensional color with softer, less noticeable regrowth lines. This makes balayage ideal for those who prefer a lower-maintenance coloring option that still delivers dramatic results.</p>
+                            
+                            <blockquote>
+                                "Balayage gives us the artistic freedom to create truly customized color. We can emphasize your best features by strategically placing lighter pieces around the face or throughout the hair, just as the sun would naturally do." — Sophia Martinez, Color Specialist
+                            </blockquote>
+                        </div>
+                        
+                        <div id="what-are-highlights">
+                            <h2>What are Highlights?</h2>
+                                                        
+                            <p>Traditional highlights involve selecting small sections of hair and lightening them from root to tip. This technique typically uses foils to separate the treated hair from the rest, allowing for more precise and often more dramatic lightening.</p>
+                            
+                            <h3>Key Characteristics of Highlights</h3>
+                            <ul>
+                                <li><strong>Foil Application:</strong> Hair is typically wrapped in foil to process</li>
+                                <li><strong>Root-to-Tip Lightening:</strong> Color is applied evenly from roots to ends</li>
+                                <li><strong>Defined Sections:</strong> Creates more defined lightened sections</li>
+                                <li><strong>Precision:</strong> Allows for very precise placement and control</li>
+                                <li><strong>Regular Maintenance:</strong> Requires more frequent touch-ups as the hair grows</li>
+                            </ul>
+                            
+                            <h3>The Highlighting Process</h3>
+                            <p>During a highlighting service, your colorist will select small sections of hair using a tail comb. The sections are then painted with lightener and wrapped in foil to isolate them from the surrounding hair. The foil helps to trap heat, which accelerates the lightening process. Depending on the desired effect, your stylist may place highlights throughout your entire head (full highlights) or just in specific areas like around the face or on the top sections (partial highlights).</p>
+                            
+                            <p>The result is a more uniform lightening from root to tip, creating a more defined contrast between the highlighted sections and your base color. This technique is excellent for creating brightness and a more deliberate pattern of lighter strands.</p>
+                        </div>
+                        
+                        <div id="key-differences">
+                            <h2>Key Differences Between Balayage and Highlights</h2>
+                                                        
+                            <p>While both techniques add dimension and lightness to your hair, they differ in several important ways:</p>
+                            
+                            <table class="comparison-table">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Balayage</th>
+                                        <th>Highlights</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Application Method</strong></td>
+                                        <td>Hand-painted, freehand technique</td>
+                                        <td>Foil-wrapped, more structured</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Root Application</strong></td>
+                                        <td>Usually starts away from the roots</td>
+                                        <td>Applied from roots to ends</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Look & Effect</strong></td>
+                                        <td>Soft, natural, sun-kissed appearance</td>
+                                        <td>More uniform, deliberate pattern</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Grow-Out Appearance</strong></td>
+                                        <td>Subtle, natural-looking regrowth</td>
+                                        <td>More noticeable regrowth line</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Maintenance</strong></td>
+                                        <td>Lower maintenance, 3-4 months between services</td>
+                                        <td>Higher maintenance, 6-8 weeks between services</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Lightening Power</strong></td>
+                                        <td>Can be more subtle; may not lift as much</td>
+                                        <td>Often achieves more lift due to foil heat</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Customization</strong></td>
+                                        <td>Highly customizable, artistic technique</td>
+                                        <td>Structured but versatile</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div id="who-should-choose">
+                            <h2>Who Should Choose Which Technique?</h2>
+                            
+                            <p>The right technique for you depends on several factors, including your hair type, desired result, lifestyle, and maintenance preferences.</p>
+                            
+                            <h3>Balayage Might Be Right for You If:</h3>
+                            <ul>
+                                <li>You want a low-maintenance color option</li>
+                                <li>You prefer a natural, sun-kissed look</li>
+                                <li>You're new to hair coloring and want to start subtle</li>
+                                <li>You don't want noticeable regrowth or frequent salon visits</li>
+                                <li>You want to add dimension without dramatically changing your overall color</li>
+                                <li>You have darker hair and want to avoid a stark contrast</li>
+                            </ul>
+                            
+                            <h3>Highlights Might Be Right for You If:</h3>
+                            <ul>
+                                <li>You want a more dramatic, noticeable lightening effect</li>
+                                <li>You desire brightness around your face</li>
+                                <li>You have fine hair that could benefit from the appearance of more volume</li>
+                                <li>You don't mind regular maintenance appointments</li>
+                                <li>You want more precise placement of lighter strands</li>
+                                <li>You're looking to cover gray hair</li>
+                            </ul>
+                            
+                            <h3>Hair Type Considerations</h3>
+                            <p>Your natural hair type and color also play a role in determining which technique might work better for you:</p>
+                            
+                            <ul>
+                                <li><strong>Fine Hair:</strong> Highlights can make fine hair appear thicker and add volume</li>
+                                <li><strong>Thick Hair:</strong> Balayage can enhance natural movement and texture in thick hair</li>
+                                <li><strong>Curly Hair:</strong> Balayage typically works well on curly hair, accentuating the natural curl pattern</li>
+                                <li><strong>Straight Hair:</strong> Both techniques work well, though highlights may provide more noticeable dimension</li>
+                                <li><strong>Dark Hair:</strong> Balayage often creates a more natural transition on dark hair</li>
+                                <li><strong>Light Hair:</strong> Both techniques work well, though highlights might require less processing time</li>
+                            </ul>
+                        </div>
+                        
+                        <div id="maintenance">
+                            <h2>Maintenance and Upkeep</h2>
+                                                        
+                            <h3>Balayage Maintenance</h3>
+                            <p>One of the biggest advantages of balayage is its low-maintenance nature. Since the technique doesn't start at the root, there's no harsh regrowth line as your hair grows. Most clients can go 3-4 months between touch-ups, with some even stretching it to 6 months.</p>
+                            
+                            <p>To keep your balayage looking fresh:</p>
+                            <ul>
+                                <li>Use color-safe, sulfate-free shampoo and conditioner</li>
+                                <li>Apply a weekly toning mask to neutralize unwanted brassiness</li>
+                                <li>Use heat protectant products to prevent color fading</li>
+                                <li>Schedule occasional gloss treatments to refresh the tone between full services</li>
+                            </ul>
+                            
+                            <h3>Highlights Maintenance</h3>
+                            <p>Traditional highlights typically require more frequent maintenance due to the more noticeable regrowth at the roots. Most clients schedule touch-ups every 6-8 weeks to keep their highlights looking fresh.</p>
+                            
+                            <p>To maintain your highlights:</p>
+                            <ul>
+                                <li>Use purple or blue shampoo 1-2 times a week to combat brassiness</li>
+                                <li>Deep condition weekly to maintain hair health</li>
+                                <li>Protect your hair from sun exposure, which can accelerate fading</li>
+                                <li>Consider partial highlight touch-ups for the face-framing pieces between full services</li>
+                            </ul>
+                            
+                            <blockquote>
+                                "The maintenance schedule is often the deciding factor for many clients. If you're someone who enjoys frequent salon visits and keeping a consistent look, highlights might be your preference. If you prefer less frequent appointments and a more lived-in look, balayage is likely the better option." — Sophia Martinez, Color Specialist
+                            </blockquote>
+                        </div>
+                        
+                        <div id="cost-considerations">
+                            <h2>Cost Considerations</h2>
+                            
+                            <p>The investment in your hair color is another factor to consider when choosing between these techniques:</p>
+                            
+                            <h3>Balayage Cost Factors</h3>
+                            <ul>
+                                <li>Initial service may be more expensive due to the time and expertise required</li>
+                                <li>Fewer touch-ups needed (every 3-6 months), potentially reducing long-term costs</li>
+                                <li>Less product needed for maintenance at home</li>
+                            </ul>
+                            
+                            <h3>Highlights Cost Factors</h3>
+                            <ul>
+                                <li>Initial service may be less expensive than a full balayage</li>
+                                <li>More frequent touch-ups required (every 6-8 weeks), potentially increasing long-term costs</li>
+                                <li>May require more specialized products for home maintenance</li>
+                            </ul>
+                            
+                            <p>At Equipe Hair, we offer various options at different price points for both techniques. During your consultation, we can provide a detailed cost breakdown based on your specific hair needs and goals.</p>
+                        </div>
+                        
+                        <div id="conclusion">
+                            <h2>Conclusion</h2>
+                            
+                            <p>Both balayage and highlights are excellent techniques that can transform your look and add beautiful dimension to your hair. The choice between them ultimately comes down to your personal preferences, lifestyle, and hair goals.</p>
+                            
+                            <p>If you prefer a low-maintenance, natural-looking result with subtle regrowth, balayage may be your best option. If you desire a more dramatic, bright effect with precise placement and don't mind regular touch-ups, traditional highlights might be more suitable.</p>
+                            
+                            <p>At Equipe Hair, our color specialists are trained in both techniques and can help you determine which one will best achieve your desired results. We recommend booking a color consultation before your service, where we can assess your hair's current condition, discuss your goals, and create a customized coloring plan.</p>
+                            
+                            <div class="flex justify-center mt-8">
+                                <a href="../../booking/" class="btn-fancy text-white font-bold px-8 py-4 rounded-full">
+                                    Book a Color Consultation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Share Buttons -->
+                    <div class="border-t border-gray-200 pt-8 mt-12" data-aos="fade-up">
+                        <h4 class="font-bold text-lg mb-4">Share This Article</h4>
+                        <div class="flex space-x-3">
+                            <a href="#" class="share-btn share-facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="share-btn share-twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="share-btn share-pinterest">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                            <a href="#" class="share-btn share-linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Author Bio -->
+                    <div class="author-card mt-12 p-8" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <img src="../../assets/images/testimonial-2.webp" alt="Sophia Martinez" class="w-24 h-24 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Sophia Martinez</h4>
+                                <p class="text-gray-600 mb-4">Color Specialist at Equipe Hair with over 8 years of experience. Sophia is known for her expertise in creating custom color techniques that enhance each client's natural beauty. She specializes in balayage, highlights, and creative color applications.</p>
+                                <div class="flex space-x-3">
+                                    <a href="https://www.instagram.com/equipefinchley/" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/equipehairsalon/" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://wa.me/+447957990217?text=Hello" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="lg:w-1/3">
+                    <!-- Related Posts -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8" data-aos="fade-left">
+                        <h3 class="font-bold text-xl mb-6">Related Articles</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="related-post">
+                                <a href="../summer-hair-trends-2025/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-2.webp" alt="Summer Hair Trends" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Hair Trends</span>
+                                        <h4 class="font-bold mt-1">Summer Hair Trends You Need to Try in 2025</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="related-post">
+                                <a href="../styling-tools-guide/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-4.png" alt="Styling Tools Guide" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Styling Tips</span>
+                                        <h4 class="font-bold mt-1">The Ultimate Guide to Hair Styling Tools</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="related-post">
+                                <a href="../ultimate-hair-care-routine/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-6.avif" alt="Hair Care Routine" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Hair Care</span>
+                                        <h4 class="font-bold mt-1">The Ultimate Hair Care Routine for Healthy, Shiny Hair</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8" data-aos="fade-left" data-aos-delay="100">
+                        <h3 class="font-bold text-xl mb-6">Categories</h3>
+                        
+                        <div class="space-y-3">
+                            <a href="../../blog/?filter=color" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Coloring</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">14</span>
+                            </a>
+                            <a href="../../blog/?filter=trends" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Hair Trends</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">8</span>
+                            </a>
+                            <a href="../../blog/?filter=care" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Hair Care</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">9</span>
+                            </a>
+                            <a href="../../blog/?filter=tips" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Styling Tips</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">12</span>
+                            </a>
+                            <a href="../../blog/?filter=events" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Salon Events</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">5</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Color Services -->
+                    <div class="bg-gradient-to-br from-brand/10 to-accent/10 p-6 rounded-2xl shadow-lg mb-8" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="font-bold text-xl mb-4">Our Color Services</h3>
+                        <p class="text-gray-600 mb-6">Discover our range of professional hair coloring services at Equipe Hair.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-paint-brush text-brand"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Balayage</h4>
+                                    <p class="text-sm text-gray-600">Hand-painted highlights for a natural, sun-kissed look</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-palette text-brand"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Highlights & Lowlights</h4>
+                                    <p class="text-sm text-gray-600">Add dimension and depth to your hair</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-fill-drip text-brand"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Full Color & Root Touch-Ups</h4>
+                                    <p class="text-sm text-gray-600">Vibrant, long-lasting color results</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="../../services/#coloring" class="btn-fancy text-white font-bold w-full py-3 rounded-full text-center block mt-6">
+                            Explore Color Services
+                        </a>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-left" data-aos-delay="300">
+                        <h3 class="font-bold text-xl mb-4">Subscribe to Our Newsletter</h3>
+                        <p class="text-gray-600 mb-4">Get the latest hair color trends, tips, and exclusive offers delivered to your inbox.</p>
+                        <form class="space-y-3">
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand">
+                            <button type="submit" class="btn-fancy text-white font-bold w-full py-3 rounded-lg">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Success Modal -->
+    <div id="newsletter-modal" class="fixed inset-0 flex items-center justify-center z-[9999] hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 relative z-10 transform transition-all duration-300 scale-90 opacity-0" id="modal-content">
+            <div class="absolute top-4 right-4">
+                <button id="close-modal" class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-20 h-20 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mx-auto mb-6">
+                    <i class="fas fa-check text-3xl"></i>
+                </div>
+                
+                <h3 class="text-2xl font-bold mb-2">Subscription Successful!</h3>
+                <p class="text-gray-600 mb-6">Thank you for subscribing to our newsletter. You'll start receiving hair tips, trends, and exclusive offers straight to your inbox.</p>
+                
+                <button id="close-modal-btn" class="btn-fancy text-white font-medium px-8 py-3 rounded-full transition duration-300 transform hover:scale-105">
+                    Got it!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Articles -->
+    <section class="py-16 bg-gray-50 relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">More Hair <span class="gradient-text">Inspiration</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Explore more articles from our expert stylists</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="blog-card" data-aos="fade-up">
+                    <div class="featured-image">
+                        <img src="../../assets/images/blog/blog-1.webp" alt="Summer Hair Trends">
+                        <div class="absolute top-4 left-4">
+                            <span class="category-badge">Trends</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="meta">
+                            <span><i class="far fa-calendar-alt"></i> May 15, 2025</span>
+                        </div>
+                        <h3>Summer Hair Trends You Need to Try in 2025</h3>
+                        <p class="mb-4">Discover the hottest summer hair trends that are making waves this season.</p>
+                        <a href="../summer-hair-trends-2025/" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-image">
+                        <img src="../../assets/images/blog/blog-2.webp" alt="Hair Care Routine">
+                        <div class="absolute top-4 left-4">
+                            <span class="category-badge">Hair Care</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="meta">
+                            <span><i class="far fa-calendar-alt"></i> May 8, 2025</span>
+                        </div>
+                        <h3>The Ultimate Hair Care Routine for Healthy, Shiny Hair</h3>
+                        <p class="mb-4">Learn the essential steps to create a hair care routine that will transform your locks.</p>
+                        <a href="../ultimate-hair-care-routine/" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-image">
+                        <img src="../../assets/images/blog/blog-6.avif" alt="Hair Masks Benefits">
+                        <div class="absolute top-4 left-4">
+                            <span class="category-badge">Hair Care</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="meta">
+                            <span><i class="far fa-calendar-alt"></i> April 8, 2025</span>
+                        </div>
+                        <h3>The Power of Hair Masks</h3>
+                        <p class="mb-4">Discover how incorporating weekly hair masks into your routine can transform your hair in just 20 minutes.</p>
+                        <a href="../power-of-hair-masks/" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="../../blog/" class="btn-fancy text-white font-bold px-8 py-4 rounded-full">
+                    View All Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <a href="../../" class="inline-block">
+                            <span class="text-4xl font-bold gradient-text">EQUIPE</span>
+                            <span class="ml-2 text-white text-2xl">HAIR</span>
+                        </a>
+                    </div>
+                    <p class="mb-8 text-gray-400 text-lg">London's premier hair salon delivering exceptional styling, cutting and coloring services tailored to your unique style and personality.</p>
+                    <ul class="social-icon flex">
+                        <li><a href="https://www.facebook.com/equipehairsalon/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipefinchley/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipemaidavale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/+447957990217?text=Hello" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Maida Vale -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Maida Vale <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02072869988" class="block hover:text-accent transition-colors duration-300">02072869988</a>
+                                <a href="tel:02072869948" class="block hover:text-accent transition-colors duration-300">02072869948</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Monday: 9:00am - 5:00pm</p>
+                                <p>Tuesday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Finchley -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Finchley <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>1113 Finchley Road, London NW11 0QB</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02032095030" class="block hover:text-accent transition-colors duration-300">02032095030</a>
+                                <a href="tel:02082093200" class="block hover:text-accent transition-colors duration-300">02082093200</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Sunday: 10:00am - 5:00pm</p>
+                                <p>Monday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Quick <span class="text-accent">Links</span></h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../../" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../about/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../services/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../gallery/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../blog/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../booking/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Book Now
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../privacy/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../terms/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-10 text-center">
+                <p class="text-gray-500">&copy; 2025 Equipe Hair. All rights reserved.</p>
+                <div class="flex justify-center mt-4 space-x-6">
+                    <a href="../../privacy/" class="text-accent hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="../../terms/" class="text-accent hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                    <a href="../../cookies/" class="text-accent hover:text-white transition-colors duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-brand to-accent hover:from-accent hover:to-brand text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-500 hover:scale-110 opacity-0 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100');
+                backToTopButton.classList.remove('opacity-0');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                backToTopButton.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Table of Contents Smooth Scroll
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Newsletter Form Submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForms = document.querySelectorAll('form');
+            const modal = document.getElementById('newsletter-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalOverlay = document.getElementById('modal-overlay');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const closeModalX = document.getElementById('close-modal');
+            
+            newsletterForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    
+                    // Check if email is valid
+                    if (emailInput && emailInput.value.trim() !== '' && emailInput.checkValidity()) {
+                        // Show success modal
+                        modal.classList.remove('hidden');
+                        setTimeout(() => {
+                            modalContent.classList.remove('scale-90', 'opacity-0');
+                            modalContent.classList.add('scale-100', 'opacity-100');
+                        }, 10);
+                        
+                        // Clear input field
+                        emailInput.value = '';
+                    }
+                });
+            });
+            
+            // Close modal when clicking outside
+            if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+            if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+            if (closeModalX) closeModalX.addEventListener('click', closeModal);
+            
+            function closeModal() {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-90', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        });
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipe Hair Salon | London's Premier Hair Styling Experience</title>
+    <meta name="description" content="Equipe Hair Salon - London's premier luxury hair salon with locations in Maida Vale and Finchley. Specializing in expert styling, cutting, coloring, and hair treatments. Book your appointment today for a transformative hair experience.">
+    <meta name="keywords" content="hair salon London, Equipe Hair, luxury hair salon, best hair stylist, hair coloring London, haircut Maida Vale, hair salon Finchley, professional hair styling, balayage London, hair treatments, keratin treatment, hair extensions, London hairdresser, wedding hair London, hair color specialist, men's haircut, women's haircut, hair blowdry">
+    <link rel="canonical" href="https://equipehair.com/" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="assets/icon.png">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/images/hero-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+    min-height: 100vh;
+    width: 100%;
+}
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(8, 7, 8, 0.7) 0%, rgba(144, 55, 166, 0.3) 100%);
+            z-index: 1;
+        }
+        .hero-section > div {
+            position: relative;
+            z-index: 2;
+        }
+        .text-brand {
+            color: #9932CC; /* Purple */
+        }
+        .bg-brand {
+            background-color: #9932CC; /* Purple */
+        }
+        .text-accent {
+            color: #FF1493; /* Deep Pink */
+        }
+        .bg-accent {
+            background-color: #FF1493; /* Deep Pink */
+        }
+        .salon-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: none;
+        }
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 1rem;
+            overflow: hidden;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+        .social-icon a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            margin-right: 15px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .social-icon a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .social-icon a:hover {
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.3);
+        }
+        .social-icon a:hover::before {
+            opacity: 1;
+        }
+        
+        /* Animated cursor for booking */
+        @keyframes cursor-blink {
+            0% { opacity: 0; height: 20px; }
+            50% { opacity: 1; height: 30px; }
+            100% { opacity: 0; height: 20px; }
+        }
+        .cursor {
+            display: inline-block;
+            width: 3px;
+            height: 20px;
+            background: linear-gradient(to bottom, #9932CC, #FF1493);
+            margin-left: 5px;
+            animation: cursor-blink 1.2s infinite;
+            border-radius: 5px;
+        }
+        
+        /* Fancy Navigation */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Neon glow effect */
+        .neon-glow {
+            text-shadow: 0 0 5px rgba(153, 50, 204, 0.5),
+                         0 0 10px rgba(153, 50, 204, 0.3),
+                         0 0 15px rgba(153, 50, 204, 0.1);
+        }
+        
+        /* Fancy buttons */
+        .btn-fancy {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: none;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.3);
+        }
+        .btn-fancy::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        .btn-fancy:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.5);
+        }
+        .btn-fancy:hover::before {
+            left: 0;
+        }
+        
+        /* Animated background */
+        .animated-bg {
+            background: linear-gradient(-45deg, #9932CC, #FF1493, #9932CC, #FF1493);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Glass morphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#9932CC',
+                        accent: '#FF1493',
+                        dark: '#1E0E2F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-t-brand border-r-accent border-b-brand border-l-accent rounded-full animate-spin"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold gradient-text">E</div>
+        </div>
+    </div>
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-lg z-50 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="./" class="flex items-center">
+                    <span class="text-3xl font-bold gradient-text">EQUIPE</span>
+                    <span class="ml-2 text-dark text-xl">HAIR</span>
+                </a>
+                
+                <nav class="hidden lg:flex space-x-10 text-gray-800">
+                    <a href="./" class="nav-link font-medium hover:text-brand">Home</a>
+                    <a href="about/" class="nav-link font-medium hover:text-brand">About Us</a>
+                    <a href="services/" class="nav-link font-medium hover:text-brand">Services</a>
+                    <a href="gallery/" class="nav-link font-medium hover:text-brand">Gallery</a>
+                    <a href="blog/" class="nav-link font-medium hover:text-brand">Blog</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="booking/" class="hidden md:block btn-fancy text-white px-6 py-3 rounded-full transition duration-500">
+                        Book Appointment
+                    </a>
+                    <button class="lg:hidden text-gray-700 focus:outline-none ml-4" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden pt-4 pb-2" id="mobile-menu">
+                <nav class="flex flex-col space-y-3 text-gray-700">
+                    <a href="./" class="font-medium hover:text-brand py-2 border-b border-gray-100">Home</a>
+                    <a href="about/" class="font-medium hover:text-brand py-2 border-b border-gray-100">About Us</a>
+                    <a href="services/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Services</a>
+                    <a href="gallery/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Gallery</a>
+                    <a href="booking/" class="font-medium hover:text-brand py-2">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up" data-aos-duration="1200">
+            <div class="relative mb-6">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 neon-glow">Experience the <span class="gradient-text">Art of Hair</span></h1>
+                <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent rounded-full"></div>
+            </div>
+            <p class="text-xl md:text-2xl lg:text-3xl mb-12 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">London's premier hair salon delivering exceptional styling, cutting and coloring services tailored to your unique style.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6" data-aos="fade-up" data-aos-delay="600">
+                <a href="booking/" class="btn-fancy text-white font-bold text-lg px-10 py-5 rounded-full transform hover:scale-110">
+                    Book Your Appointment
+                </a>
+                <a href="services/" class="bg-transparent hover:bg-white text-white hover:text-brand font-bold text-lg px-10 py-5 rounded-full border-2 border-white transition duration-500 transform hover:scale-110 hover:border-accent">
+                    Explore Services
+                </a>
+            </div>
+            <div class="mt-16" data-aos="fade-up" data-aos-delay="900">
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/equipemaidavale/" target="_blank" class="text-white hover:text-accent transition-all duration-300 transform hover:scale-125">
+                        <i class="fab fa-instagram text-3xl"></i>
+                    </a>
+                    <a href="https://www.facebook.com/equipehairsalon/" target="_blank" class="text-white hover:text-accent transition-all duration-300 transform hover:scale-125">
+                        <i class="fab fa-facebook text-3xl"></i>
+                    </a>
+                    <a href="https://wa.me/+447957990217?text=Hello" target="_blank" class="text-white hover:text-accent transition-all duration-300 transform hover:scale-125">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#intro" class="text-white">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="py-24 bg-white" id="intro">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Welcome to <span class="gradient-text">Equipe Hair</span></h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-8 rounded-full"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg md:text-xl">Where artistry meets expertise. We believe every client deserves a personalized experience that enhances their natural beauty and boosts their confidence.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card w-24 h-24 flex items-center justify-center mx-auto mb-8 transform hover:rotate-12 transition-all duration-500">
+                        <i class="fas fa-cut text-brand text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Expert Stylists</h3>
+                    <p class="text-gray-600">Our team of talented professionals are trained in the latest techniques and trends to give you the perfect look that complements your unique style and personality.</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card w-24 h-24 flex items-center justify-center mx-auto mb-8 transform hover:rotate-12 transition-all duration-500">
+                        <i class="fas fa-spa text-brand text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Premium Products</h3>
+                    <p class="text-gray-600">We use only the highest quality products that nourish and protect your hair while delivering stunning results that last longer and maintain that salon-fresh look.</p>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card w-24 h-24 flex items-center justify-center mx-auto mb-8 transform hover:rotate-12 transition-all duration-500">
+                        <i class="fas fa-gem text-brand text-4xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Luxurious Experience</h3>
+                    <p class="text-gray-600">From the moment you step in, enjoy a relaxing atmosphere designed to make you feel pampered and special, with complimentary refreshments and personalized service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Our Locations -->
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-brand rounded-full opacity-10 blur-3xl"></div>
+        <div class="absolute -bottom-20 -left-20 w-64 h-64 bg-accent rounded-full opacity-10 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Our <span class="gradient-text">Locations</span></h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-8 rounded-full"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg md:text-xl">Visit us at one of our two convenient London locations, each offering the same exceptional service in unique, luxurious settings.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Maida Vale Location -->
+                <div class="salon-card bg-white rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-80 bg-gray-200 relative">
+                        <img src="assets/images/location-1.jpg" alt="Maida Vale Salon" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-8">
+                            <span class="bg-accent text-white px-6 py-3 rounded-full font-bold text-lg inline-block mb-4 shadow-lg">Maida Vale</span>
+                            <h3 class="text-3xl font-bold text-white mb-2">Maida Vale Salon</h3>
+                            <p class="text-white text-lg">9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h4 class="font-bold text-xl text-gray-800 mb-4 flex items-center">
+                                <i class="far fa-clock text-brand mr-3"></i> Opening Hours
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="font-bold text-gray-700">Monday</p>
+                                    <p class="text-gray-600">9:00am - 5:00pm</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="font-bold text-gray-700">Tuesday-Saturday</p>
+                                    <p class="text-gray-600">9:00am - 7:00pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-800 mb-4 flex items-center">
+                                    <i class="fas fa-phone-alt text-brand mr-3"></i> Contact Us
+                                </h4>
+                                <a href="tel:02072869988" class="text-brand hover:text-accent text-lg font-medium hover:underline block">02072869988</a>
+                                <a href="tel:02072869948" class="text-brand hover:text-accent text-lg font-medium hover:underline block">02072869948</a>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://www.instagram.com/equipemaidavale/" target="_blank" class="bg-gradient-to-r from-brand to-accent text-white p-4 rounded-full transition duration-500 transform hover:scale-110 hover:rotate-12">
+                                    <i class="fab fa-instagram text-2xl"></i>
+                                </a>
+                                <a href="https://wa.me/+447957990217?text=Hello" target="_blank" class="bg-gradient-to-r from-brand to-accent text-white p-4 rounded-full transition duration-500 transform hover:scale-110 hover:rotate-12">
+                                    <i class="fab fa-whatsapp text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Finchley Location -->
+                <div class="salon-card bg-white rounded-2xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-80 bg-gray-200 relative">
+                        <img src="assets/images/location-2.jpg" alt="Finchley Salon" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-8">
+                            <span class="bg-accent text-white px-6 py-3 rounded-full font-bold text-lg inline-block mb-4 shadow-lg">Finchley</span>
+                            <h3 class="text-3xl font-bold text-white mb-2">Finchley Salon</h3>
+                            <p class="text-white text-lg">1113 Finchley Road, London NW11 0QB</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-6">
+                            <h4 class="font-bold text-xl text-gray-800 mb-4 flex items-center">
+                                <i class="far fa-clock text-brand mr-3"></i> Opening Hours
+                            </h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="font-bold text-gray-700">Sunday</p>
+                                    <p class="text-gray-600">10:00am - 5:00pm</p>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg">
+                                    <p class="font-bold text-gray-700">Monday-Saturday</p>
+                                    <p class="text-gray-600">9:00am - 7:00pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-800 mb-4 flex items-center">
+                                    <i class="fas fa-phone-alt text-brand mr-3"></i> Contact Us
+                                </h4>
+                                <a href="tel:02032095030" class="text-brand hover:text-accent text-lg font-medium hover:underline block">02032095030</a>
+                                <a href="tel:02082093200" class="text-brand hover:text-accent text-lg font-medium hover:underline block">02082093200</a>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://www.instagram.com/equipefinchley/" target="_blank" class="bg-gradient-to-r from-brand to-accent text-white p-4 rounded-full transition duration-500 transform hover:scale-110 hover:rotate-12">
+                                    <i class="fab fa-instagram text-2xl"></i>
+                                </a>
+                                <a href="https://wa.me/+447957990217?text=Hello" target="_blank" class="bg-gradient-to-r from-brand to-accent text-white p-4 rounded-full transition duration-500 transform hover:scale-110 hover:rotate-12">
+                                    <i class="fab fa-whatsapp text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Services -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Our <span class="gradient-text">Services</span></h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-8 rounded-full"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg md:text-xl">Discover our range of premium hair services designed to transform your look and elevate your personal style.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card p-8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-20 h-20 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center mb-8 transform transition-all duration-500 hover:rotate-12">
+                        <i class="fas fa-cut text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Precision Cutting</h3>
+                    <p class="text-gray-600 mb-6">Tailored cuts that enhance your features and suit your lifestyle, creating a look that's uniquely yours.</p>
+                    <a href="services/" class="text-brand hover:text-accent font-medium inline-flex items-center text-lg group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card p-8" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-20 h-20 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center mb-8 transform transition-all duration-500 hover:rotate-12">
+                        <i class="fas fa-palette text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Color & Highlights</h3>
+                    <p class="text-gray-600 mb-6">From subtle highlights to bold transformations using premium colors that maintain hair health and vibrancy.</p>
+                    <a href="services/" class="text-brand hover:text-accent font-medium inline-flex items-center text-lg group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card p-8" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-20 h-20 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center mb-8 transform transition-all duration-500 hover:rotate-12">
+                        <i class="fas fa-magic text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Styling & Blowdry</h3>
+                    <p class="text-gray-600 mb-6">Perfect for special occasions or whenever you want to feel extra special, with styles that last and turn heads.</p>
+                    <a href="services/" class="text-brand hover:text-accent font-medium inline-flex items-center text-lg group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-2"></i>
+                    </a>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card p-8" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-20 h-20 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center mb-8 transform transition-all duration-500 hover:rotate-12">
+                        <i class="fas fa-leaf text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Hair Treatments</h3>
+                    <p class="text-gray-600 mb-6">Revitalize damaged hair with our nourishing and restorative treatments that bring back shine, strength and softness.</p>
+                    <a href="services/" class="text-brand hover:text-accent font-medium inline-flex items-center text-lg group">
+                        Learn More
+                        <i class="fas fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="services/" class="inline-block btn-fancy text-white font-bold px-10 py-5 rounded-full transition duration-500 transform hover:scale-110">
+                    View All Services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 animated-bg text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Client <span class="gradient-text">Testimonials</span></h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-8 rounded-full"></div>
+                <p class="text-gray-200 max-w-4xl mx-auto text-lg md:text-xl">Don't just take our word for it. Here's what our clients have to say about their Equipe Hair experience.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Testimonial 1 -->
+                <div class="glass-card p-10 rounded-2xl relative" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-10 left-10">
+                        <i class="fas fa-quote-left text-5xl text-accent opacity-70"></i>
+                    </div>
+                    <p class="text-white mb-8 pt-6 text-lg">Absolutely love this salon! My stylist really listened to what I wanted and gave me the best haircut I've ever had. The atmosphere is so luxurious and welcoming. I won't go anywhere else now!</p>
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-gray-600 rounded-full mr-4 border-2 border-accent">
+                            <img src="assets/images/testimonial-1.png" alt="Client" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-1">Sarah Thompson</h4>
+                            <div class="text-accent">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="glass-card p-10 rounded-2xl relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute -top-10 left-10">
+                        <i class="fas fa-quote-left text-5xl text-accent opacity-70"></i>
+                    </div>
+                    <p class="text-white mb-8 pt-6 text-lg">I've been searching for a salon that could handle my curly hair, and Equipe is the best! The staff are knowledgeable, friendly, and truly care about giving you the look you want.</p>
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-gray-600 rounded-full mr-4 border-2 border-accent">
+                            <img src="assets/images/testimonial-2.webp" alt="Client" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-1">Michael Rodriguez</h4>
+                            <div class="text-accent">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="glass-card p-10 rounded-2xl relative" data-aos="fade-up" data-aos-delay="300">
+                    <div class="absolute -top-10 left-10">
+                        <i class="fas fa-quote-left text-5xl text-accent opacity-70"></i>
+                    </div>
+                    <p class="text-white mb-8 pt-6 text-lg">The color transformation I received at Equipe was beyond my expectations! My stylist took the time to understand exactly what I wanted and delivered perfection. Will definitely be back!</p>
+                    <div class="flex items-center">
+                        <div class="w-16 h-16 bg-gray-600 rounded-full mr-4 border-2 border-accent">
+                            <img src="assets/images/testimonial-3.webp" alt="Client" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xl mb-1">Emma Watson</h4>
+                            <div class="text-accent">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16" data-aos="fade-up">
+                <a href="gallery/" class="inline-block bg-transparent hover:bg-white text-white hover:text-brand font-bold text-lg px-10 py-5 rounded-full border-2 border-white transition duration-500 transform hover:scale-110 hover:border-accent">
+                    <i class="fas fa-images mr-2"></i> View Our Gallery
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Feed Section -->
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Follow Us on <span class="gradient-text">Instagram</span></h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-8 rounded-full"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg">Stay updated with our latest styles, transformations, and salon updates by following us on Instagram.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <div class="instagram-item overflow-hidden rounded-lg relative group" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/images/insta_002.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex items-center space-x-2">
+                            <i class="far fa-heart"></i>
+                            <span>142</span>
+                            <i class="far fa-comment ml-2"></i>
+                            <span>12</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item overflow-hidden rounded-lg relative group" data-aos="fade-up" data-aos-delay="150">
+                    <img src="assets/images/testimonial-1.png" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex items-center space-x-2">
+                            <i class="far fa-heart"></i>
+                            <span>98</span>
+                            <i class="far fa-comment ml-2"></i>
+                            <span>8</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item overflow-hidden rounded-lg relative group" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/images/insta_012.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex items-center space-x-2">
+                            <i class="far fa-heart"></i>
+                            <span>207</span>
+                            <i class="far fa-comment ml-2"></i>
+                            <span>15</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item overflow-hidden rounded-lg relative group" data-aos="fade-up" data-aos-delay="250">
+                    <img src="assets/images/insta_015.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex items-center space-x-2">
+                            <i class="far fa-heart"></i>
+                            <span>132</span>
+                            <i class="far fa-comment ml-2"></i>
+                            <span>7</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item overflow-hidden rounded-lg relative group" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/images/insta_005.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex items-center space-x-2">
+                            <i class="far fa-heart"></i>
+                            <span>165</span>
+                            <i class="far fa-comment ml-2"></i>
+                            <span>11</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="instagram-item overflow-hidden rounded-lg relative group" data-aos="fade-up" data-aos-delay="350">
+                    <img src="assets/images/insta_007.jpg" alt="Instagram post" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                        <div class="flex items-center space-x-2">
+                            <i class="far fa-heart"></i>
+                            <span>183</span>
+                            <i class="far fa-comment ml-2"></i>
+                            <span>13</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="https://www.instagram.com/equipefinchley/" target="_blank" class="inline-flex items-center text-brand hover:text-accent font-medium transition duration-300">
+                    <i class="fab fa-instagram mr-2 text-xl"></i>
+                    Follow @equipefinchley
+                </a>
+                <span class="mx-4 text-gray-400">|</span>
+                <a href="https://www.instagram.com/equipemaidavale/" target="_blank" class="inline-flex items-center text-brand hover:text-accent font-medium transition duration-300">
+                    <i class="fab fa-instagram mr-2 text-xl"></i>
+                    Follow @equipemaidavale
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Now CTA -->
+    <section class="py-24 relative text-white overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand to-accent opacity-40 z-20"></div>
+        <div class="absolute inset-0" style="background-image: url('assets/images/cta-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;"></div>
+        <div class="absolute inset-0 backdrop-filter backdrop-blur-sm z-30"></div>
+        
+        <div class="container mx-auto px-4 relative z-40">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 drop-shadow-lg">Ready for a <span class="gradient-text">New Look?</span></h2>
+                <p class="text-xl md:text-2xl text-gray-200 mb-12 drop-shadow-md">Book your appointment today and experience the Equipe difference. Our team of expert stylists is waiting to transform your look.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                    <a href="booking/" class="btn-fancy text-white font-bold text-lg px-10 py-5 rounded-full transform hover:scale-110 hover:rotate-1">
+                        <i class="far fa-calendar-alt mr-2"></i> Book Your Appointment
+                    </a>
+                    <a href="tel:02072869988" class="bg-transparent hover:bg-white text-white hover:text-brand font-bold text-lg px-10 py-5 rounded-full border-2 border-white transition duration-500 transform hover:scale-110 hover:-rotate-1 hover:border-accent">
+                        <i class="fas fa-phone-alt mr-2"></i> Call Us Now
+                    </a>
+                </div>
+                
+                <div class="flex justify-center space-x-6 mt-8">
+                    <div class="glass-card px-6 py-4 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-white text-lg">Maida Vale: <a href="tel:02072869988" class="font-bold hover:text-accent">02072869988</a></p>
+                    </div>
+                    <div class="glass-card px-6 py-4 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-white text-lg">Finchley: <a href="tel:02032095030" class="font-bold hover:text-accent">02032095030</a></p>
+                    </div>
+                </div>
+                
+                <p class="mt-12 text-gray-200 text-xl flex items-center justify-center">
+                    <span class="inline-block">We can't wait to welcome you to Equipe Hair</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <a href="./" class="inline-block">
+                            <span class="text-4xl font-bold gradient-text">EQUIPE</span>
+                            <span class="ml-2 text-white text-2xl">HAIR</span>
+                        </a>
+                    </div>
+                    <p class="mb-8 text-gray-400 text-lg">London's premier hair salon delivering exceptional styling, cutting and coloring services tailored to your unique style and personality.</p>
+                    <ul class="social-icon flex">
+                        <li><a href="https://www.facebook.com/equipehairsalon/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipefinchley/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipemaidavale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/+447957990217?text=Hello" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Maida Vale -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Maida Vale <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02072869988" class="block hover:text-accent transition-colors duration-300">02072869988</a>
+                                <a href="tel:02072869948" class="block hover:text-accent transition-colors duration-300">02072869948</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Monday: 9:00am - 5:00pm</p>
+                                <p>Tuesday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Finchley -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Finchley <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>1113 Finchley Road, London NW11 0QB</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02032095030" class="block hover:text-accent transition-colors duration-300">02032095030</a>
+                                <a href="tel:02082093200" class="block hover:text-accent transition-colors duration-300">02082093200</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Sunday: 10:00am - 5:00pm</p>
+                                <p>Monday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Quick <span class="text-accent">Links</span></h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="./" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gallery/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="booking/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Book Now
+                            </a>
+                        </li>
+                        <li>
+                            <a href="privacy/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="terms/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cookies/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Cookie Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-10 text-center">
+                <p class="text-gray-500">&copy; 2025 Equipe Hair. All rights reserved.</p>
+                <div class="flex justify-center mt-4 space-x-6">
+                    <a href="privacy/" class="text-accent hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="terms/" class="text-accent hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                    <a href="cookies/" class="text-accent hover:text-white transition-colors duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-brand to-accent hover:from-accent hover:to-brand text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-500 hover:scale-110 opacity-0 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100');
+                backToTopButton.classList.remove('opacity-0');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                backToTopButton.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+    </script>
+</body>
+</html>

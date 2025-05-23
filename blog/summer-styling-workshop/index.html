@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Styling Workshop | Equipe Hair Salon Blog</title>
+    <meta name="description" content="Join our exclusive summer styling workshop in London where our top stylists share their secrets and teach you how to create salon-quality looks at home. Limited spots available!">
+    <meta name="keywords" content="hair styling workshop, summer hairstyles, hair tutorial, styling lessons, Equipe Hair, luxury hair salon, Maida Vale salon, Finchley salon">
+    <link rel="canonical" href="https://equipehair.com/blog/summer-styling-workshop/" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../../assets/icon.png">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .blog-banner {
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .blog-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+            z-index: 1;
+        }
+        .blog-banner > div {
+            position: relative;
+            z-index: 2;
+        }
+        .text-brand {
+            color: #9932CC; /* Purple */
+        }
+        .bg-brand {
+            background-color: #9932CC; /* Purple */
+        }
+        .text-accent {
+            color: #FF1493; /* Deep Pink */
+        }
+        .bg-accent {
+            background-color: #FF1493; /* Deep Pink */
+        }
+        .social-icon a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            margin-right: 15px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .social-icon a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .social-icon a:hover {
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.3);
+        }
+        .social-icon a:hover::before {
+            opacity: 1;
+        }
+        
+        /* Fancy Navigation */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Neon glow effect */
+        .neon-glow {
+            text-shadow: 0 0 5px rgba(153, 50, 204, 0.5),
+                         0 0 10px rgba(153, 50, 204, 0.3),
+                         0 0 15px rgba(153, 50, 204, 0.1);
+        }
+        
+        /* Fancy buttons */
+        .btn-fancy {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: none;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.3);
+        }
+        
+        /* Blog content styles */
+        .blog-content {
+            line-height: 1.8;
+        }
+        
+        .blog-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.25rem;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content ul li, .blog-content ol li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-content img {
+            border-radius: 0.75rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #9932CC;
+            padding-left: 1.5rem;
+            font-style: italic;
+            margin: 1.5rem 0;
+        }
+        
+        /* Category badge */
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+        }
+        
+        /* Author card */
+        .author-card {
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: white;
+        }
+        
+        /* Share buttons */
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .share-facebook {
+            background-color: #3b5998;
+        }
+        
+        .share-twitter {
+            background-color: #1da1f2;
+        }
+        
+        .share-pinterest {
+            background-color: #bd081c;
+        }
+        
+        .share-linkedin {
+            background-color: #0077b5;
+        }
+        
+        /* Related posts */
+        .related-post {
+            transition: all 0.3s ease;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .related-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .related-post img {
+            transition: transform 0.5s ease;
+        }
+        
+        .related-post:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Table of contents */
+        .toc {
+            border-radius: 0.75rem;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #9932CC;
+        }
+        
+        .toc ul {
+            padding-left: 1.25rem;
+            list-style-type: none;
+        }
+        
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc a {
+            color: #4B5563;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .toc a:hover {
+            color: #9932CC;
+        }
+
+        /* Workshop styles */
+        .workshop-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .workshop-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .workshop-details {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .workshop-details li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        
+        .workshop-details li:last-child {
+            border-bottom: none;
+        }
+        
+        .workshop-details i {
+            color: #9932CC;
+            margin-right: 0.75rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        .instructor-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .instructor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#9932CC',
+                        accent: '#FF1493',
+                        dark: '#1E0E2F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-t-brand border-r-accent border-b-brand border-l-accent rounded-full animate-spin"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold gradient-text">E</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-lg z-50 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../../" class="flex items-center">
+                    <span class="text-3xl font-bold gradient-text">EQUIPE</span>
+                    <span class="ml-2 text-dark text-xl">HAIR</span>
+                </a>
+                
+                <nav class="hidden lg:flex space-x-10 text-gray-800">
+                    <a href="../../" class="nav-link font-medium hover:text-brand">Home</a>
+                    <a href="../../about/" class="nav-link font-medium hover:text-brand">About Us</a>
+                    <a href="../../services/" class="nav-link font-medium hover:text-brand">Services</a>
+                    <a href="../../gallery/" class="nav-link font-medium hover:text-brand">Gallery</a>
+                    <a href="../../blog/" class="nav-link font-medium hover:text-brand">Blog</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="../../booking/" class="hidden md:block btn-fancy text-white px-6 py-3 rounded-full transition duration-500">
+                        Book Appointment
+                    </a>
+                    <button class="lg:hidden text-gray-700 focus:outline-none ml-4" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden pt-4 pb-2" id="mobile-menu">
+                <nav class="flex flex-col space-y-3 text-gray-700">
+                    <a href="../../" class="font-medium hover:text-brand py-2 border-b border-gray-100">Home</a>
+                    <a href="../../about/" class="font-medium hover:text-brand py-2 border-b border-gray-100">About Us</a>
+                    <a href="../../services/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Services</a>
+                    <a href="../../gallery/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Gallery</a>
+                    <a href="../../blog/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Blog</a>
+                    <a href="../../booking/" class="font-medium hover:text-brand py-2">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Banner -->
+    <div class="blog-banner flex items-end pt-24" style="background-image: url('../../assets/images/blog/blog-5.jpeg');">
+        <div class="container mx-auto px-4 pb-12">
+            <div class="max-w-4xl">
+                <span class="category-badge mb-4 inline-block">Events</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">Join Our Summer Styling Workshop: Learn from London's Best</h1>
+                <div class="flex items-center">
+                    <img src="../../assets/images/gallery/0_001.jpg" alt="Olivia Taylor" class="w-12 h-12 rounded-full object-cover border-2 border-white mr-4">
+                    <div class="text-white">
+                        <p class="font-medium">Olivia Taylor</p>
+                        <p class="text-sm opacity-90">Event Coordinator</p>
+                    </div>
+                    <div class="flex items-center ml-auto text-white text-sm">
+                        <span class="flex items-center mr-6">
+                            <i class="far fa-calendar-alt mr-2"></i> April 15, 2025
+                        </span>
+                        <span class="flex items-center">
+                            <i class="far fa-clock mr-2"></i> 4 min read
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Content -->
+                <div class="lg:w-2/3">
+                    <!-- Table of Contents -->
+                    <div class="toc mb-8" data-aos="fade-up">
+                        <h3 class="font-bold text-xl mb-4">Table of Contents</h3>
+                        <ul>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#workshop-details">Workshop Details</a></li>
+                            <li><a href="#what-to-learn">What You'll Learn</a></li>
+                            <li><a href="#meet-instructors">Meet Your Instructors</a></li>
+                            <li><a href="#who-should-attend">Who Should Attend</a></li>
+                            <li><a href="#what-to-bring">What to Bring</a></li>
+                            <li><a href="#booking-info">Booking Information</a></li>
+                            <li><a href="#faqs">Frequently Asked Questions</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Blog Content -->
+                    <div class="blog-content" data-aos="fade-up">
+                        <div id="introduction">
+                            <p>We're excited to announce our exclusive Summer Styling Workshop series, happening this June at our Maida Vale salon. This hands-on masterclass is your opportunity to learn professional styling techniques directly from Equipe Hair's award-winning stylists.</p>
+                            
+                            <p>Whether you struggle with creating the perfect beachy waves, can't quite nail that salon-worthy blowout, or simply want to expand your styling repertoire for the summer season, this workshop is designed to transform your skills and boost your confidence.</p>
+                            
+                            <p>Limited to just 8 participants per session, this intimate workshop ensures plenty of personal attention and guidance as you master new techniques under expert supervision.</p>
+                        </div>
+                        
+                        <div id="workshop-details">
+                            <h2>Workshop Details</h2>
+                            
+                            <div class="workshop-card p-6 mb-8">
+                                <h3 class="text-xl font-bold mb-4 gradient-text">Event Information</h3>
+                                <ul class="workshop-details">
+                                    <li>
+                                        <i class="far fa-calendar-alt"></i>
+                                        <div>
+                                            <strong>Dates:</strong> June 11, 18, and 25, 2025
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="far fa-clock"></i>
+                                        <div>
+                                            <strong>Time:</strong> 6:30 PM - 9:00 PM
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        <div>
+                                            <strong>Location:</strong> Equipe Hair Maida Vale, 9 Clifton Road, London W9 1SZ
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-users"></i>
+                                        <div>
+                                            <strong>Group Size:</strong> 8 participants maximum per session
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-pound-sign"></i>
+                                        <div>
+                                            <strong>Price:</strong> £95 per person (includes refreshments and a styling product kit worth £45)
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <img src="../../assets/images/blog/blog-5.jpeg" alt="Hair Styling Workshop" class="w-full">
+                            
+                            <p>Each workshop date will focus on the same techniques, so you only need to attend one session. If you're interested in multiple styling approaches, we recommend booking our comprehensive full-day master class in September (details coming soon).</p>
+                        </div>
+                        
+                        <div id="what-to-learn">
+                            <h2>What You'll Learn</h2>
+                            
+                            <p>This summer-focused workshop has been carefully designed to help you create versatile styles that withstand heat, humidity, and active summer days. Our expert instructors will guide you through:</p>
+                            
+                            <h3>1. Summer-Proof Blowout Techniques</h3>
+                            <ul>
+                                <li>How to achieve volume and bounce that lasts in summer humidity</li>
+                                <li>Quick-drying techniques to minimize heat exposure</li>
+                                <li>Products and tools that enhance longevity in warm weather</li>
+                            </ul>
+                            
+                            <h3>2. Beach Waves Masterclass</h3>
+                            <ul>
+                                <li>Different techniques for creating various wave patterns</li>
+                                <li>How to customize beach waves for different hair lengths and textures</li>
+                                <li>Heat-free overnight methods for effortless waves</li>
+                            </ul>
+                            
+                            <h3>3. Summer Updos and Half-Up Styles</h3>
+                            <ul>
+                                <li>Quick and easy updos for hot days that still look polished</li>
+                                <li>Versatile half-up styles that transition from day to evening</li>
+                                <li>How to incorporate accessories for added flair</li>
+                            </ul>
+                            
+                            <h3>4. Styling Product Masterclass</h3>
+                            <ul>
+                                <li>Understanding which products work best for your hair type</li>
+                                <li>Proper application techniques for maximum effectiveness</li>
+                                <li>Creating a personalized summer styling product routine</li>
+                            </ul>
+                            
+                            <blockquote>
+                                "Our goal is to demystify professional styling techniques and empower you to recreate salon-quality looks at home. We'll break down complex methods into simple, repeatable steps that work for your specific hair type and lifestyle." — James Wilson, Style Director
+                            </blockquote>
+                        </div>
+                        
+                        <div id="meet-instructors">
+                            <h2>Meet Your Instructors</h2>
+                            
+                            <p>Learn from our team of award-winning stylists who bring years of salon, editorial, and runway experience:</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                                <div class="instructor-card overflow-hidden">
+                                    <div class="h-64">
+                                        <img src="../../assets/images/testimonial-3.webp" alt="James Wilson" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="font-bold text-xl mb-2">James Wilson</h3>
+                                        <p class="text-sm text-gray-500 mb-3">Style Director</p>
+                                        <p class="text-gray-600">With over 15 years of experience, James has styled hair for London Fashion Week and numerous editorial shoots. He specializes in creating effortless, wearable styles with a focus on enhancing natural texture.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="instructor-card overflow-hidden">
+                                    <div class="h-64">
+                                        <img src="../../assets/images/testimonial-2.webp" alt="Sophia Martinez" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-6">
+                                        <h3 class="font-bold text-xl mb-2">Sophia Martinez</h3>
+                                        <p class="text-sm text-gray-500 mb-3">Color Specialist</p>
+                                        <p class="text-gray-600">Sophia brings a unique perspective on how color and styling work together. Her expertise in creating dimensional color has made her a sought-after educator in the industry, teaching stylists across the UK.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <p>Both instructors will be present throughout the workshop, giving you access to their combined expertise and allowing for more personalized attention.</p>
+                        </div>
+                        
+                        <div id="who-should-attend">
+                            <h2>Who Should Attend</h2>
+                            
+                            <p>This workshop is perfect for:</p>
+                            
+                            <ul>
+                                <li><strong>Styling Beginners:</strong> If you struggle with basic styling techniques and want to build confidence</li>
+                                <li><strong>Intermediate Stylists:</strong> Those who can create basic styles but want to refine techniques and expand their repertoire</li>
+                                <li><strong>Anyone Planning Summer Events:</strong> Perfect for those with weddings, vacations, or special occasions this summer</li>
+                                <li><strong>People with Specific Hair Challenges:</strong> If you find your hair particularly difficult to style in summer humidity or heat</li>
+                            </ul>
+                            
+                            <p>The techniques taught are adaptable for all hair types and lengths, though some modifications may be necessary for very short hair or highly textured hair. Our instructors will provide personalized guidance based on your specific hair characteristics.</p>
+                            
+                            <blockquote>
+                                "We've designed this workshop to be accessible for all skill levels. Even if you've never picked up a curling iron before, you'll leave with the confidence to create beautiful styles at home." — Olivia Taylor, Event Coordinator
+                            </blockquote>
+                        </div>
+                        
+                        <div id="what-to-bring">
+                            <h2>What to Bring</h2>
+                            
+                            <p>To make the most of your workshop experience, please bring:</p>
+                            
+                            <ul>
+                                <li>Your own styling tools (if you have them) - this allows you to learn on the equipment you'll be using at home</li>
+                                <li>Any styling products you currently use and enjoy</li>
+                                <li>A notebook for taking notes (though we'll provide a detailed handout)</li>
+                                <li>A water bottle (we'll provide additional refreshments)</li>
+                            </ul>
+                            
+                            <p><strong>Note:</strong> If you don't own styling tools yet, don't worry! We'll have professional tools available for you to use during the workshop, and our experts can help guide you on which tools might be best for your specific needs before you invest.</p>
+                        </div>
+                        
+                        <div id="booking-info">
+                            <h2>Booking Information</h2>
+                            
+                            <p>Securing your spot is easy! Due to the limited group size, we recommend booking early to avoid disappointment.</p>
+                            
+                            <h3>How to Book</h3>
+                            <ul>
+                                <li><strong>Online:</strong> Visit our booking page and select "Summer Styling Workshop" under special events</li>
+                                <li><strong>By Phone:</strong> Call our Maida Vale salon at 02072869988</li>
+                                <li><strong>In Person:</strong> Speak with any team member during your next appointment</li>
+                            </ul>
+                            
+                            <h3>Payment & Cancellation Policy</h3>
+                            <ul>
+                                <li>Full payment is required at the time of booking to secure your place</li>
+                                <li>Cancellations made more than 7 days before the event will receive a full refund</li>
+                                <li>Cancellations within 7 days will receive a salon credit that can be used toward services or products</li>
+                                <li>If you need to change dates, we'll accommodate where possible with at least 48 hours' notice</li>
+                            </ul>
+                            
+                            <div class="bg-gray-50 p-6 rounded-xl my-8">
+                                <h3 class="font-bold text-xl mb-4">Special Offer for Workshop Participants</h3>
+                                <p class="mb-4">All workshop attendees will receive:</p>
+                                <ul>
+                                    <li>A styling product kit valued at £45</li>
+                                    <li>15% off any styling tools purchased within 2 weeks of the workshop</li>
+                                    <li>A voucher for 20% off your next hair service</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="faqs">
+                            <h2>Frequently Asked Questions</h2>
+                            
+                            <div class="space-y-6 mt-4">
+                                <div>
+                                    <h3 class="font-bold text-lg">Do I need to have experience with hair styling?</h3>
+                                    <p>Not at all! Our workshop is designed for all skill levels, from complete beginners to those looking to refine their techniques.</p>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-bold text-lg">Will the techniques work for my hair type?</h3>
+                                    <p>Yes, our instructors will demonstrate techniques that can be adapted for different hair types and lengths. They'll provide personalized advice for your specific hair characteristics.</p>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-bold text-lg">What if I don't own styling tools?</h3>
+                                    <p>We'll have professional tools available for everyone to use during the workshop. This is actually a great opportunity to try different tools before investing in your own.</p>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-bold text-lg">Will I be styling my own hair or working on a mannequin?</h3>
+                                    <p>You'll be styling your own hair with guidance from our instructors. This gives you the most realistic practice and allows you to learn techniques specifically for your hair.</p>
+                                </div>
+                                
+                                <div>
+                                    <h3 class="font-bold text-lg">What if I need to change my booking date?</h3>
+                                    <p>We understand plans change! Contact us at least 48 hours before your booked session, and we'll do our best to accommodate a date change, subject to availability.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-brand/10 to-accent/10 p-8 rounded-2xl mt-12">
+                            <h2 class="text-2xl font-bold mb-4">Ready to Transform Your Styling Skills?</h2>
+                            <p class="mb-6">Don't miss this opportunity to learn from London's top stylists in an intimate, hands-on setting. Spaces are filling quickly for all three dates!</p>
+                            <div class="flex justify-center">
+                                <a href="../../booking/" class="btn-fancy text-white font-bold px-8 py-4 rounded-full">
+                                    Book Your Workshop Spot
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Author Bio -->
+                    <div class="author-card mt-12 p-8" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <img src="../../assets/images/gallery/0_001.jpg" alt="Olivia Taylor" class="w-24 h-24 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Olivia Taylor</h4>
+                                <p class="text-gray-600 mb-4">Event Coordinator at Equipe Hair who specializes in creating engaging educational experiences. With a background in both hair styling and event management, Olivia designs workshops that bridge the gap between professional techniques and practical, everyday application.</p>
+                                <div class="flex space-x-3">
+                                    <a href="https://www.instagram.com/equipefinchley/" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/equipehairsalon/" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://wa.me/+447957990217?text=Hello" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="lg:w-1/3">
+                    
+                    <!-- Related Posts -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8" data-aos="fade-left" data-aos-delay="100">
+                        <h3 class="font-bold text-xl mb-6">Related Articles</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="related-post">
+                                <a href="../styling-tools-guide/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-2.webp" alt="Styling Tools Guide" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Styling Tips</span>
+                                        <h4 class="font-bold mt-1">The Ultimate Guide to Hair Styling Tools</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="related-post">
+                                <a href="../summer-hair-trends-2025/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-1.webp" alt="Summer Hair Trends" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Hair Trends</span>
+                                        <h4 class="font-bold mt-1">Summer Hair Trends You Need to Try in 2025</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="related-post">
+                                <a href="../power-of-hair-masks/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-3.jpg" alt="Hair Masks Benefits" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Hair Care</span>
+                                        <h4 class="font-bold mt-1">The Power of Hair Masks: Transform Your Hair in Just 20 Minutes</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="font-bold text-xl mb-6">Categories</h3>
+                        
+                        <div class="space-y-3">
+                            <a href="../../blog/?filter=events" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Salon Events</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">5</span>
+                            </a>
+                            <a href="../../blog/?filter=tips" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Styling Tips</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">12</span>
+                            </a>
+                            <a href="../../blog/?filter=trends" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Hair Trends</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">8</span>
+                            </a>
+                            <a href="../../blog/?filter=care" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Hair Care</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">9</span>
+                            </a>
+                            <a href="../../blog/?filter=color" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Coloring</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">14</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-left" data-aos-delay="300">
+                        <h3 class="font-bold text-xl mb-4">Subscribe to Our Newsletter</h3>
+                        <p class="text-gray-600 mb-4">Be the first to know about upcoming workshops, styling tips, and exclusive offers.</p>
+                        <form class="space-y-3">
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand">
+                            <button type="submit" class="btn-fancy text-white font-bold w-full py-3 rounded-lg">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Success Modal -->
+    <div id="newsletter-modal" class="fixed inset-0 flex items-center justify-center z-[9999] hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 relative z-10 transform transition-all duration-300 scale-90 opacity-0" id="modal-content">
+            <div class="absolute top-4 right-4">
+                <button id="close-modal" class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-20 h-20 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mx-auto mb-6">
+                    <i class="fas fa-check text-3xl"></i>
+                </div>
+                
+                <h3 class="text-2xl font-bold mb-2">Subscription Successful!</h3>
+                <p class="text-gray-600 mb-6">Thank you for subscribing to our newsletter. You'll start receiving styling tips, event updates, and exclusive offers straight to your inbox.</p>
+                
+                <button id="close-modal-btn" class="btn-fancy text-white font-medium px-8 py-3 rounded-full transition duration-300 transform hover:scale-105">
+                    Got it!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <a href="../../" class="inline-block">
+                            <span class="text-4xl font-bold gradient-text">EQUIPE</span>
+                            <span class="ml-2 text-white text-2xl">HAIR</span>
+                        </a>
+                    </div>
+                    <p class="mb-8 text-gray-400 text-lg">London's premier hair salon delivering exceptional styling, cutting and coloring services tailored to your unique style and personality.</p>
+                    <ul class="social-icon flex">
+                        <li><a href="https://www.facebook.com/equipehairsalon/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipefinchley/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipemaidavale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/+447957990217?text=Hello" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Maida Vale -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Maida Vale <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02072869988" class="block hover:text-accent transition-colors duration-300">02072869988</a>
+                                <a href="tel:02072869948" class="block hover:text-accent transition-colors duration-300">02072869948</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Monday: 9:00am - 5:00pm</p>
+                                <p>Tuesday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Finchley -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Finchley <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>1113 Finchley Road, London NW11 0QB</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02032095030" class="block hover:text-accent transition-colors duration-300">02032095030</a>
+                                <a href="tel:02082093200" class="block hover:text-accent transition-colors duration-300">02082093200</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Sunday: 10:00am - 5:00pm</p>
+                                <p>Monday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Quick <span class="text-accent">Links</span></h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../../" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../about/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../services/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../gallery/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../blog/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../booking/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Book Now
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../privacy/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../terms/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-10 text-center">
+                <p class="text-gray-500">&copy; 2025 Equipe Hair. All rights reserved.</p>
+                <div class="flex justify-center mt-4 space-x-6">
+                    <a href="../../privacy/" class="text-accent hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="../../terms/" class="text-accent hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                    <a href="../../cookies/" class="text-accent hover:text-white transition-colors duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-brand to-accent hover:from-accent hover:to-brand text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-500 hover:scale-110 opacity-0 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+       // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100');
+                backToTopButton.classList.remove('opacity-0');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                backToTopButton.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Table of Contents Smooth Scroll
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Newsletter Form Submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForms = document.querySelectorAll('form');
+            const modal = document.getElementById('newsletter-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalOverlay = document.getElementById('modal-overlay');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const closeModalX = document.getElementById('close-modal');
+            
+            newsletterForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    
+                    // Check if email is valid
+                    if (emailInput && emailInput.value.trim() !== '' && emailInput.checkValidity()) {
+                        // Show success modal
+                        modal.classList.remove('hidden');
+                        setTimeout(() => {
+                            modalContent.classList.remove('scale-90', 'opacity-0');
+                            modalContent.classList.add('scale-100', 'opacity-100');
+                        }, 10);
+                        
+                        // Clear input field
+                        emailInput.value = '';
+                    }
+                });
+            });
+            
+            // Close modal when clicking outside
+            if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+            if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+            if (closeModalX) closeModalX.addEventListener('click', closeModal);
+            
+            function closeModal() {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-90', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        });
+    </script>
+</body>
+</html>

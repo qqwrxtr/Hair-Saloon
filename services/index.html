@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Equipe Hair Salon - London's Premier Hair Styling Experience</title>
+    <meta name="description" content="Explore Equipe Hair Salon's complete range of professional hair services including cutting, coloring, styling, treatments, and more. Premium hair services in Maida Vale and Finchley, London.">
+    <meta name="keywords" content="hair salon services London, haircut, hair coloring, balayage, hair treatments, keratin treatment, hair extensions, blowdry, styling, Equipe Hair, luxury hair salon, Maida Vale salon, Finchley salon">
+    <link rel="canonical" href="https://equipehair.com/services/" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../assets/icon.png">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .page-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/hero-bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 70vh;
+            width: 100%;
+        }
+        .page-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70vh;
+            background: linear-gradient(45deg, rgba(8, 7, 8, 0.7) 0%, rgba(144, 55, 166, 0.3) 100%);
+            z-index: 1;
+        }
+        .page-banner > div {
+            position: relative;
+            z-index: 2;
+        }
+        .text-brand {
+            color: #9932CC; /* Purple */
+        }
+        .bg-brand {
+            background-color: #9932CC; /* Purple */
+        }
+        .text-accent {
+            color: #FF1493; /* Deep Pink */
+        }
+        .bg-accent {
+            background-color: #FF1493; /* Deep Pink */
+        }
+        .service-card {
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            background: white;
+        }
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+        }
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+        .social-icon a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            margin-right: 15px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .social-icon a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .social-icon a:hover {
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.3);
+        }
+        .social-icon a:hover::before {
+            opacity: 1;
+        }
+        
+        /* Fancy Navigation */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Neon glow effect */
+        .neon-glow {
+            text-shadow: 0 0 5px rgba(153, 50, 204, 0.5),
+                         0 0 10px rgba(153, 50, 204, 0.3),
+                         0 0 15px rgba(153, 50, 204, 0.1);
+        }
+        
+        /* Fancy buttons */
+        .btn-fancy {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: none;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.3);
+        }
+        .btn-fancy::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        .btn-fancy:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.5);
+        }
+        .btn-fancy:hover::before {
+            left: 0;
+        }
+        
+        /* Animated background */
+        .animated-bg {
+            background: linear-gradient(-45deg, #9932CC, #FF1493, #9932CC, #FF1493);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Glass morphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Service tabs */
+        .service-tab {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 0.5rem;
+            overflow: hidden;
+        }
+        .service-tab::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, #9932CC, #FF1493);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .service-tab:hover {
+            transform: translateX(5px);
+        }
+        .service-tab:hover::before {
+            opacity: 1;
+        }
+        .service-tab.active {
+            background: linear-gradient(to right, rgba(153, 50, 204, 0.1), transparent);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .service-tab.active::before {
+            opacity: 1;
+            width: 8px;
+        }
+        
+        /* Price Table */
+        .price-table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .price-table thead {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            color: white;
+        }
+        .price-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        .price-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .price-table tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .price-table tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+        .price-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* Accordion styles for FAQ */
+        .accordion-item {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        .accordion-item:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .accordion-button {
+            background: white;
+            color: #333;
+            font-weight: 600;
+            padding: 1.25rem;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .accordion-button:hover {
+            color: #9932CC;
+        }
+        .accordion-button::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #9932CC;
+        }
+        .accordion-button.active::after {
+            content: '-';
+        }
+        .accordion-content {
+            background: white;
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .accordion-content.show {
+            padding: 1.25rem;
+            max-height: 500px;
+        }
+        
+        /* Before/After Comparison Slider */
+        .comparison-slider {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .comparison-slider .before,
+        .comparison-slider .after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .comparison-slider .before {
+            clip-path: polygon(0 0, var(--position) 0, var(--position) 100%, 0 100%);
+        }
+        .comparison-slider .slider {
+            position: absolute;
+            top: 0;
+            left: var(--position);
+            width: 4px;
+            height: 100%;
+            background: white;
+            cursor: ew-resize;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .comparison-slider .slider::before {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: white;
+            top: 50%;
+            transform: translateY(-50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .comparison-slider .slider::after {
+            content: '↔';
+            color: #9932CC;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        /* Service Category Badge */
+        .category-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            color: white;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            box-shadow: 0 2px 5px rgba(153, 50, 204, 0.3);
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#9932CC',
+                        accent: '#FF1493',
+                        dark: '#1E0E2F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-t-brand border-r-accent border-b-brand border-l-accent rounded-full animate-spin"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold gradient-text">E</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-lg z-50 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../" class="flex items-center">
+                    <span class="text-3xl font-bold gradient-text">EQUIPE</span>
+                    <span class="ml-2 text-dark text-xl">HAIR</span>
+                </a>
+                
+                <nav class="hidden lg:flex space-x-10 text-gray-800">
+                    <a href="../" class="nav-link font-medium hover:text-brand">Home</a>
+                    <a href="../about/" class="nav-link font-medium hover:text-brand">About Us</a>
+                    <a href="../services/" class="nav-link font-medium hover:text-brand">Services</a>
+                    <a href="../gallery/" class="nav-link font-medium hover:text-brand">Gallery</a>
+                    <a href="../blog/" class="nav-link font-medium hover:text-brand">Blog</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="../booking/" class="hidden md:block btn-fancy text-white px-6 py-3 rounded-full transition duration-500">
+                        Book Appointment
+                    </a>
+                    <button class="lg:hidden text-gray-700 focus:outline-none ml-4" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden pt-4 pb-2" id="mobile-menu">
+                <nav class="flex flex-col space-y-3 text-gray-700">
+                    <a href="../" class="font-medium hover:text-brand py-2 border-b border-gray-100">Home</a>
+                    <a href="../about/" class="font-medium hover:text-brand py-2 border-b border-gray-100">About Us</a>
+                    <a href="../services/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Services</a>
+                    <a href="../gallery/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Gallery</a>
+                    <a href="../booking/" class="font-medium hover:text-brand py-2">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner flex items-center justify-center text-white pt-24">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up" data-aos-duration="1200">
+            <div class="relative mb-6">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-2 neon-glow">Our <span class="gradient-text">Services</span></h1>
+                <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent rounded-full"></div>
+            </div>
+            <p class="text-xl md:text-2xl lg:text-3xl mb-12 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">Discover our comprehensive range of premium hair services designed to transform your look and elevate your personal style.</p>
+        </div>
+    </section>
+
+    <!-- Service Introduction -->
+    <section class="py-24 bg-white" id="intro">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <div class="relative">
+                        <img src="../assets/images/service-intro.webp" alt="Equipe Hair Salon Services" class="w-full h-auto rounded-2xl shadow-2xl">
+                        <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-gradient-to-br from-brand to-accent rounded-2xl opacity-20 -z-10 blur-xl"></div>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Premium <span class="gradient-text">Hair Services</span></h2>
+                    <div class="w-24 h-1 bg-brand mb-8 rounded-full"></div>
+                    
+                    <p class="text-gray-600 mb-6 text-lg">At Equipe Hair, we offer a comprehensive range of premium hair services tailored to your unique style, hair type, and preferences. From precision cutting and creative coloring to luxurious treatments and special occasion styling, our expert team is dedicated to helping you look and feel your absolute best.</p>
+                    
+                    <p class="text-gray-600 mb-6 text-lg">Each service begins with a thorough consultation to understand your vision and needs, followed by personalized recommendations from our experienced stylists. We use only the highest quality professional products to ensure exceptional results that not only look beautiful but also maintain the health and integrity of your hair.</p>
+                    
+                    <p class="text-gray-600 mb-8 text-lg">Whether you're looking for a subtle refresh or a bold transformation, our team has the expertise and creativity to bring your hair dreams to life. Explore our service menu below to find the perfect option for your next visit to Equipe Hair.</p>
+                    
+                    <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-8 py-4 rounded-full transition duration-500 transform hover:scale-110">
+                        Book Your Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Tabs Section -->
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Our Service <span class="gradient-text">Menu</span></h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-8 rounded-full"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg md:text-xl">Explore our full range of premium hair services designed to transform, enhance, and maintain your unique style.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Sidebar Tabs -->
+                <div class="lg:col-span-1" data-aos="fade-right">
+                    <div class="service-tab active" data-target="haircuts">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <span class="font-bold text-lg">Haircuts & Styling</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-tab" data-target="coloring">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <span class="font-bold text-lg">Coloring Services</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-tab" data-target="treatments">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <span class="font-bold text-lg">Hair Treatments</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-tab" data-target="extensions">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-magic"></i>
+                            </div>
+                            <span class="font-bold text-lg">Hair Extensions</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-tab" data-target="special">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="font-bold text-lg">Special Occasions</span>
+                        </div>
+                    </div>
+                    
+                    <div class="service-tab" data-target="packages">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                <i class="fas fa-gift"></i>
+                            </div>
+                            <span class="font-bold text-lg">Packages & Offers</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg">
+                            <h3 class="text-xl font-bold mb-4">Need Help?</h3>
+                            <p class="text-gray-600 mb-6">Not sure which service is right for you? Book a consultation or contact us for personalized recommendations.</p>
+                            <a href="../contact/" class="text-brand hover:text-accent font-medium inline-flex items-center">
+                                Contact Us
+                                <i class="fas fa-arrow-right ml-2 transition-transform duration-300 transform group-hover:translate-x-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Content Area -->
+                <div class="lg:col-span-3" data-aos="fade-left">
+                    <!-- Haircuts & Styling Tab Content -->
+                    <div class="service-content active" id="haircuts">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-cut text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold">Haircuts & Styling</h3>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-8">Our precision cutting services are tailored to enhance your features and suit your lifestyle. Each haircut includes a consultation, shampoo experience, precision cut, and styling.</p>
+                            
+                            <div class="mb-10">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Service</th>
+                                            <th>Junior Stylist</th>
+                                            <th>Senior Stylist</th>
+                                            <th>Art Director</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Women's Cut & Finish</td>
+                                            <td>£65</td>
+                                            <td>£85</td>
+                                            <td>£110</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Men's Cut & Style</td>
+                                            <td>£45</td>
+                                            <td>£55</td>
+                                            <td>£75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Children's Cut (Under 12)</td>
+                                            <td>£35</td>
+                                            <td>£45</td>
+                                            <td>£55</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fringe Trim</td>
+                                            <td>£15</td>
+                                            <td>£15</td>
+                                            <td>£15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Blow Dry - Short</td>
+                                            <td>£35</td>
+                                            <td>£45</td>
+                                            <td>£55</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Blow Dry - Medium</td>
+                                            <td>£45</td>
+                                            <td>£55</td>
+                                            <td>£65</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Blow Dry - Long</td>
+                                            <td>£55</td>
+                                            <td>£65</td>
+                                            <td>£75</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                                <div>
+                                    <img src="../assets/images/haircut-1.webp" alt="Precision Haircut" class="w-full h-auto rounded-xl shadow-lg mb-4">
+                                    <h4 class="text-xl font-bold mb-2">Precision Cutting</h4>
+                                    <p class="text-gray-600">Our stylists are trained in the latest cutting techniques to create styles that enhance your features and suit your lifestyle.</p>
+                                </div>
+                                
+                                <div>
+                                    <img src="../assets/images/haircut-2.jpg" alt="Styling Service" class="w-full h-auto rounded-xl shadow-lg mb-4">
+                                    <h4 class="text-xl font-bold mb-2">Expert Styling</h4>
+                                    <p class="text-gray-600">From classic blowouts to contemporary styles, our styling services will leave you looking and feeling fabulous.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-xl mb-8">
+                                <h4 class="text-xl font-bold mb-4">What to Expect</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                        <span>In-depth consultation to understand your style preferences and needs</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                        <span>Relaxing shampoo experience with scalp massage</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                        <span>Precision cutting techniques tailored to your hair type and face shape</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                        <span>Styling tips and product recommendations for maintaining your look at home</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-8 py-4 rounded-full transition duration-500 transform hover:scale-110">
+                                    Book a Haircut & Styling Service
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hair Treatments Tab Content -->
+                    <div class="service-content hidden" id="treatments">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-leaf text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold">Hair Treatments</h3>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-8">Revitalize and transform your hair with our luxurious, restorative treatments. From deep conditioning to specialized therapies, we offer solutions for every hair concern.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-tint text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Moisturizing Treatment</h4>
+                                    <p class="text-gray-600 mb-4">Intense hydration for dry, damaged hair. Restores moisture, improves elasticity, and adds shine.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £45</span>
+                                        <span class="text-gray-500">30-45 minutes</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-shield-alt text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Protein Treatment</h4>
+                                    <p class="text-gray-600 mb-4">Strengthens weak, brittle hair. Rebuilds hair structure and prevents breakage.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £55</span>
+                                        <span class="text-gray-500">45-60 minutes</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-sun text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Olaplex Treatment</h4>
+                                    <p class="text-gray-600 mb-4">Repairs damaged bonds in the hair. Ideal for color-treated or heat-damaged hair.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £65</span>
+                                        <span class="text-gray-500">45-60 minutes</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-heart text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Scalp Treatment</h4>
+                                    <p class="text-gray-600 mb-4">Balances and rejuvenates the scalp. Addresses dryness, oiliness, or irritation.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £50</span>
+                                        <span class="text-gray-500">30-45 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-xl mb-10">
+                                <h4 class="text-xl font-bold mb-4">Keratin Smoothing Treatment</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                    <div>
+                                        <p class="text-gray-600 mb-4">Our premium keratin treatment eliminates frizz, reduces curl, and adds incredible shine and manageability to your hair. Results last 3-5 months with proper care.</p>
+                                        <ul class="space-y-2 mb-4">
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                                <span>Eliminates up to 95% of frizz</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                                <span>Reduces styling time by half</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                                <span>Makes hair more manageable in humidity</span>
+                                            </li>
+                                            <li class="flex items-start">
+                                                <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                                <span>Adds incredible shine and softness</span>
+                                            </li>
+                                        </ul>
+                                        <div class="flex justify-between items-end">
+                                            <span class="text-brand font-bold text-xl">From £195</span>
+                                            <span class="text-gray-500">2-3 hours</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="../assets/images/keratin.jpg" alt="Keratin Treatment" class="w-full h-auto rounded-xl shadow-lg">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-8 py-4 rounded-full transition duration-500 transform hover:scale-110">
+                                    Book a Hair Treatment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Special Occasions Tab Content -->
+                    <div class="service-content hidden" id="special">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-star text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold">Special Occasions</h3>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-8">Make your special day even more memorable with our expert styling services. Whether it's a wedding, prom, or other special event, we'll create a look that makes you feel confident and beautiful.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                                <div>
+                                    <img src="../assets/images/wedding.webp" alt="Wedding Hair" class="w-full h-auto rounded-xl shadow-lg mb-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="text-xl font-bold">Wedding Hair</h4>
+                                        <span class="category-badge">Popular</span>
+                                    </div>
+                                    <p class="text-gray-600">Elegant updos, romantic half-up styles, or flowing curls to complement your wedding day look.</p>
+                                    <div class="mt-4">
+                                        <span class="text-brand font-bold">From £95</span>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <img src="../assets/images/prom.webp" alt="Prom & Formal Events" class="w-full h-auto rounded-xl shadow-lg mb-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="text-xl font-bold">Prom & Formal</h4>
+                                    </div>
+                                    <p class="text-gray-600">Stunning styles that make a statement for proms, galas, and other formal occasions.</p>
+                                    <div class="mt-4">
+                                        <span class="text-brand font-bold">From £75</span>
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <img src="../assets/images/party.jpg" alt="Party Ready" class="w-full h-auto rounded-xl shadow-lg mb-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="text-xl font-bold">Party Ready</h4>
+                                    </div>
+                                    <p class="text-gray-600">Quick and glamorous styles for parties, date nights, and special celebrations.</p>
+                                    <div class="mt-4">
+                                        <span class="text-brand font-bold">From £65</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-10">
+                                <h4 class="text-xl font-bold mb-4">Special Occasion FAQ</h4>
+                                <div class="accordion-item">
+                                    <button class="accordion-button">
+                                        How far in advance should I book?
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="text-gray-600">For weddings, we recommend booking 3-6 months in advance, with a trial run 1-2 months before the event. For other special occasions, booking 2-4 weeks ahead is advised, especially during peak seasons (prom, holiday parties, etc.).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <button class="accordion-button">
+                                        Should I wash my hair before my appointment?
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="text-gray-600">For most updo styles, day-old hair works best as it has more grip. We recommend washing your hair the day before your appointment and avoiding heavy conditioners or styling products. If needed, we can always wash your hair at the salon.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <button class="accordion-button">
+                                        What should I bring to my appointment?
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="text-gray-600">Bring any hair accessories or pieces you plan to wear (veil, hairpins, flowers, etc.). We also recommend bringing photos of styles you like for inspiration. For wedding trials, bringing a photo of your dress can help us create a complementary style.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <button class="accordion-button">
+                                        How long will my appointment take?
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="text-gray-600">Special occasion styling typically takes 45-90 minutes, depending on the complexity of the style and your hair length/thickness. For wedding days or large parties, we'll create a detailed timeline to ensure everyone is ready on time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                                <div class="bg-gray-50 p-6 rounded-xl">
+                                    <h4 class="text-xl font-bold mb-4">Wedding Packages</h4>
+                                    <p class="text-gray-600 mb-4">Complete wedding hair services for you and your bridal party:</p>
+                                    <ul class="space-y-3 mb-6">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Bride trial and wedding day styling</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Bridesmaid styling</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Mother of bride/groom styling</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Flower girl styling</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>On-location services available</span>
+                                        </li>
+                                    </ul>
+                                    <div class="text-brand font-bold">
+                                        Contact us for custom package pricing
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <img src="../assets/images/bridal-party.webp" alt="Bridal Party" class="w-full h-auto rounded-xl shadow-lg">
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-8 py-4 rounded-full transition duration-500 transform hover:scale-110">
+                                    Book a Special Occasion Service
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hair Extensions Tab Content -->
+                    <div class="service-content hidden" id="extensions">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-magic text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold">Hair Extensions</h3>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-8">Add length, volume, or both with our premium hair extension services. We offer various application methods to suit your lifestyle, hair type, and desired results.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-link text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Micro-Link Extensions</h4>
+                                    <p class="text-gray-600 mb-4">Individual strands attached with tiny metal beads. Gentle on hair and highly customizable.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £450</span>
+                                        <span class="text-gray-500">3-4 hours</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-tape text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Tape-In Extensions</h4>
+                                    <p class="text-gray-600 mb-4">Wefts of hair attached with medical-grade tape. Quick application and removal.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £350</span>
+                                        <span class="text-gray-500">1-2 hours</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-hand-rock text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Hand-Tied Wefts</h4>
+                                    <p class="text-gray-600 mb-4">Thin, lightweight wefts sewn into a small braid. Lies flat and moves naturally.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £550</span>
+                                        <span class="text-gray-500">2-3 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Comparison Slider HTML -->
+<div class="mb-10">
+    <div class="comparison-slider">
+        <img class="comparison-image before" src="../assets/images/before-extensions.png" alt="Before Extensions">
+        <img class="comparison-image after" src="../assets/images/after-extensions.png" alt="After Extensions">
+        <div class="slider-handle"></div>
+    </div>
+    <p class="text-center text-gray-500 mt-2">Drag the slider to see the transformation</p>
+</div>
+
+<!-- CSS for the Comparison Slider -->
+<style>
+.comparison-slider {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comparison-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comparison-image.before {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+.comparison-image.after {
+    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background-color: white;
+    transform: translateX(-50%);
+    cursor: ew-resize;
+    z-index: 10;
+}
+
+.slider-handle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* JavaScript for the slider functionality */
+</style>
+
+<!-- JavaScript for the Comparison Slider -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const sliders = document.querySelectorAll('.comparison-slider');
+    
+    sliders.forEach(slider => {
+        const before = slider.querySelector('.before');
+        const after = slider.querySelector('.after');
+        const handle = slider.querySelector('.slider-handle');
+        
+        // Function to update slider position
+        function updateSliderPosition(position) {
+            const percentage = Math.max(0, Math.min(100, position));
+            before.style.clipPath = `polygon(0 0, ${percentage}% 0, ${percentage}% 100%, 0 100%)`;
+            after.style.clipPath = `polygon(${percentage}% 0, 100% 0, 100% 100%, ${percentage}% 100%)`;
+            handle.style.left = `${percentage}%`;
+        }
+        
+        // Mouse and touch event handlers
+        let isDragging = false;
+        
+        // Mouse events
+        slider.addEventListener('mousedown', startDragging);
+        window.addEventListener('mousemove', handleDragging);
+        window.addEventListener('mouseup', stopDragging);
+        
+        // Touch events
+        slider.addEventListener('touchstart', startDragging);
+        window.addEventListener('touchmove', handleDragging);
+        window.addEventListener('touchend', stopDragging);
+        
+        function startDragging(e) {
+            isDragging = true;
+            slider.classList.add('dragging');
+            updateSliderFromEvent(e);
+        }
+        
+        function handleDragging(e) {
+            if (!isDragging) return;
+            updateSliderFromEvent(e);
+            e.preventDefault(); // Prevent scrolling when dragging on mobile
+        }
+        
+        function stopDragging() {
+            isDragging = false;
+            slider.classList.remove('dragging');
+        }
+        
+        function updateSliderFromEvent(e) {
+            const rect = slider.getBoundingClientRect();
+            const x = (e.clientX || e.touches[0].clientX) - rect.left;
+            updateSliderPosition((x / rect.width) * 100);
+        }
+        
+        // Initialize at 50%
+        updateSliderPosition(50);
+    });
+});
+</script>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                                <div>
+                                    <h4 class="text-xl font-bold mb-4">Extension Care</h4>
+                                    <p class="text-gray-600 mb-4">Proper maintenance is essential for keeping your extensions looking beautiful and lasting as long as possible. We provide detailed care instructions and recommend the following:</p>
+                                    <ul class="space-y-3">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Use sulfate-free, extension-safe shampoo and conditioner</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Brush gently with an extension-specific brush</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Avoid sleeping with wet hair</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Schedule regular maintenance appointments</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="bg-gray-50 p-6 rounded-xl">
+                                    <h4 class="text-xl font-bold mb-4">Extension FAQs</h4>
+                                    <div class="space-y-4">
+                                        <div>
+                                            <h5 class="font-bold mb-1">How long do extensions last?</h5>
+                                            <p class="text-gray-600">Depending on the type and your hair growth, extensions typically last 6-12 weeks before needing maintenance.</p>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold mb-1">Will extensions damage my hair?</h5>
+                                            <p class="text-gray-600">When applied by our skilled professionals and properly maintained, extensions should not cause damage to your natural hair.</p>
+                                        </div>
+                                        <div>
+                                            <h5 class="font-bold mb-1">Can I color my extensions?</h5>
+                                            <p class="text-gray-600">We recommend professional coloring of extensions only. Human hair extensions can be colored, but synthetic cannot.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-8 py-4 rounded-full transition duration-500 transform hover:scale-110">
+                                    Book an Extension Consultation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coloring Services Tab Content -->
+                    <div class="service-content hidden" id="coloring">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-palette text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold">Coloring Services</h3>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-8">Our color specialists create everything from natural-looking highlights to bold fashion colors, using premium products that maintain hair health. All color services include a blow dry finish.</p>
+                            
+                            <div class="mb-10">
+                                <table class="price-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Service</th>
+                                            <th>Junior Colorist</th>
+                                            <th>Senior Colorist</th>
+                                            <th>Color Director</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Root Touch Up</td>
+                                            <td>£65</td>
+                                            <td>£75</td>
+                                            <td>£95</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Full Color</td>
+                                            <td>£85</td>
+                                            <td>£95</td>
+                                            <td>£115</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Partial Highlights</td>
+                                            <td>£95</td>
+                                            <td>£115</td>
+                                            <td>£135</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Full Highlights</td>
+                                            <td>£125</td>
+                                            <td>£145</td>
+                                            <td>£175</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Balayage</td>
+                                            <td>£135</td>
+                                            <td>£165</td>
+                                            <td>£195</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ombré</td>
+                                            <td>£145</td>
+                                            <td>£175</td>
+                                            <td>£205</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fashion Color</td>
+                                            <td>£155</td>
+                                            <td>£185</td>
+                                            <td>£215</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-sm text-gray-500 mt-2">* Additional charges may apply for extra-long or thick hair, or for color correction services.</p>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                                <div>
+                                    <img src="../assets/images/color-1.webp" alt="Balayage" class="w-full h-auto rounded-xl shadow-lg mb-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="text-xl font-bold">Balayage</h4>
+                                        <span class="category-badge">Popular</span>
+                                    </div>
+                                    <p class="text-gray-600">Hand-painted highlights that create a natural, sun-kissed look with seamless grow-out.</p>
+                                </div>
+
+                                <div>
+                                    <img src="../assets/images/color-3.jpg" alt="Fashion Color" class="w-full h-auto rounded-xl shadow-lg mb-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="text-xl font-bold">Fashion Colors</h4>
+                                        <span class="category-badge">Trendy</span>
+                                    </div>
+                                    <p class="text-gray-600">Express yourself with vibrant, creative colors from pastels to bold statement shades.</p>
+                                </div>
+                                
+                                <div>
+                                    <img src="../assets/images/color-2.jpg" alt="Full Highlights" class="w-full h-auto rounded-xl shadow-lg mb-4">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="text-xl font-bold">Highlights</h4>
+                                        <span class="category-badge">Classic</span>
+                                    </div>
+                                    <p class="text-gray-600">Add dimension and brightness with perfectly placed highlights throughout your hair.</p>
+                                </div>
+                                
+                                
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-xl mb-8">
+                                <h4 class="text-xl font-bold mb-4">Our Color Philosophy</h4>
+                                <p class="text-gray-600 mb-4">At Equipe Hair, we believe that beautiful color starts with healthy hair. We use premium, ammonia-free color products that deliver vibrant, long-lasting results while maintaining the integrity of your hair.</p>
+                                <p class="text-gray-600">Our color specialists are trained in the latest techniques and trends, ensuring you receive a personalized color service that enhances your natural beauty and complements your skin tone and lifestyle.</p>
+                            </div>
+                            
+                            <div class="mb-10">
+                                <h4 class="text-xl font-bold mb-4">Before & After</h4>
+                                <div class="comparison-slider" style="--position: 50%">
+                                    <div class="before" style="background-image: url('../assets/images/before-color.png')"></div>
+                                    <div class="after" style="background-image: url('../assets/images/after-color.png')"></div>
+                                    <div class="slider"></div>
+                                </div>
+                                <p class="text-center text-gray-500 mt-2">Drag the slider to see the transformation</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-8 py-4 rounded-full transition duration-500 transform hover:scale-110">
+                                    Book a Coloring Service
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Hair Treatments Tab Content -->
+                    <div class="service-content hidden" id="treatments">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-leaf text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold">Hair Treatments</h3>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-8">Revitalize and transform your hair with our luxurious, restorative treatments. From deep conditioning to specialized therapies, we offer solutions for every hair concern.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-tint text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Moisturizing Treatment</h4>
+                                    <p class="text-gray-600 mb-4">Intense hydration for dry, damaged hair. Restores moisture, improves elasticity, and adds shine.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £45</span>
+                                        <span class="text-gray-500">30-45 minutes</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-shield-alt text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Protein Treatment</h4>
+                                    <p class="text-gray-600 mb-4">Strengthens weak, brittle hair. Rebuilds hair structure and prevents breakage.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £55</span>
+                                        <span class="text-gray-500">45-60 minutes</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-sun text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Olaplex Treatment</h4>
+                                    <p class="text-gray-600 mb-4">Repairs damaged bonds in the hair. Ideal for color-treated or heat-damaged hair.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £65</span>
+                                        <span class="text-gray-500">45-60 minutes</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="service-card p-6">
+                                    <div class="w-16 h-16 bg-gradient-to-br from-brand to-accent rounded-2xl flex items-center justify-center text-white mb-4">
+                                        <i class="fas fa-heart text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-xl font-bold mb-2">Scalp Treatment</h4>
+                                    <p class="text-gray-600 mb-4">Balances and rejuvenates the scalp. Addresses dryness, oiliness, or irritation.</p>
+                                    <div class="flex justify-between items-end">
+                                        <span class="text-brand font-bold">From £50</span>
+                                        <span class="text-gray-500">30-45 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-xl mb-10">
+                                <h4 class="text-xl font-bold mb-4">Keratin Smoothing Treatment</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                    <div>
+                                        <p class="text-gray-600">For most updo styles, day-old hair works best as it has more grip. We recommend washing your hair the day before your appointment and avoiding heavy conditioners or styling products. If needed, we can always wash your hair at the salon.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <button class="accordion-button">
+                                        What should I bring to my appointment?
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="text-gray-600">Bring any hair accessories or pieces you plan to wear (veil, hairpins, flowers, etc.). We also recommend bringing photos of styles you like for inspiration. For wedding trials, bringing a photo of your dress can help us create a complementary style.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="accordion-item">
+                                    <button class="accordion-button">
+                                        How long will my appointment take?
+                                    </button>
+                                    <div class="accordion-content">
+                                        <p class="text-gray-600">Special occasion styling typically takes 45-90 minutes, depending on the complexity of the style and your hair length/thickness. For wedding days or large parties, we'll create a detailed timeline to ensure everyone is ready on time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-8 py-4 rounded-full transition duration-500 transform hover:scale-110">
+                                    Book a Special Occasion Service
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Packages & Offers Tab Content -->
+                    <div class="service-content hidden" id="packages">
+                        <div class="bg-white p-8 rounded-2xl shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <div class="w-12 h-12 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                    <i class="fas fa-gift text-2xl"></i>
+                                </div>
+                                <h3 class="text-3xl font-bold">Packages & Offers</h3>
+                            </div>
+                            
+                            <p class="text-gray-600 mb-8">Enjoy exceptional value with our carefully curated packages and special offers. Perfect for treating yourself or as a gift for someone special.</p>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                                <!-- Package 1 -->
+                                <div class="service-card p-8 relative overflow-hidden">
+                                    <div class="absolute top-0 right-0">
+                                        <div class="bg-accent text-white text-sm font-bold py-1 px-4 rounded-bl-lg">
+                                            Most Popular
+                                        </div>
+                                    </div>
+                                    <h4 class="text-2xl font-bold mb-4">The Complete Refresh</h4>
+                                    <p class="text-gray-600 mb-6">A full hair transformation experience that includes:</p>
+                                    <ul class="space-y-3 mb-6">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Consultation with senior stylist</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Customized hair color service</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Precision haircut and style</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Deep conditioning treatment</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Complimentary product sample</span>
+                                        </li>
+                                    </ul>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-gray-500 line-through mr-3">£235</span>
+                                        <span class="text-brand font-bold text-2xl">£195</span>
+                                    </div>
+                                    <p class="text-gray-500 text-sm mb-6">Save £40 with this package</p>
+                                    <div class="text-center">
+                                        <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-6 py-3 rounded-full transition duration-500 transform hover:scale-105">
+                                            Book This Package
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- Package 2 -->
+                                <div class="service-card p-8">
+                                    <h4 class="text-2xl font-bold mb-4">The Hair Therapy</h4>
+                                    <p class="text-gray-600 mb-6">Restore and revitalize damaged hair with this treatment package:</p>
+                                    <ul class="space-y-3 mb-6">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Hair and scalp assessment</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Customized Olaplex treatment</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Hydrating hair mask</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Stress-relieving scalp massage</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-check-circle text-brand mt-1 mr-3"></i>
+                                            <span>Blow dry and style</span>
+                                        </li>
+                                    </ul>
+                                    <div class="flex items-center mb-2">
+                                        <span class="text-gray-500 line-through mr-3">£155</span>
+                                        <span class="text-brand font-bold text-2xl">£125</span>
+                                    </div>
+                                    <p class="text-gray-500 text-sm mb-6">Save £30 with this package</p>
+                                    <div class="text-center">
+                                        <a href="../booking/" class="inline-block btn-fancy text-white font-bold px-6 py-3 rounded-full transition duration-500 transform hover:scale-105">
+                                            Book This Package
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gradient-to-r from-brand/10 to-accent/10 p-8 rounded-2xl mb-12">
+                                <h4 class="text-2xl font-bold mb-6">Current Special Offers</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                    <!-- Offer 1 -->
+                                    <div class="bg-white p-6 rounded-xl shadow-md">
+                                        <div class="text-center mb-4">
+                                            <span class="text-accent font-bold text-sm uppercase tracking-wide">New Client Offer</span>
+                                            <h5 class="text-xl font-bold mt-1">20% Off First Visit</h5>
+                                        </div>
+                                        <p class="text-gray-600 mb-4">First-time clients receive 20% off any service. Experience the Equipe difference!</p>
+                                        <p class="text-gray-500 text-sm">Use code: <span class="font-bold">WELCOME20</span> when booking.</p>
+                                    </div>
+                                    
+                                    <!-- Offer 2 -->
+                                    <div class="bg-white p-6 rounded-xl shadow-md">
+                                        <div class="text-center mb-4">
+                                            <span class="text-accent font-bold text-sm uppercase tracking-wide">Limited Time</span>
+                                            <h5 class="text-xl font-bold mt-1">Summer Highlights Special</h5>
+                                        </div>
+                                        <p class="text-gray-600 mb-4">Get summer-ready with £25 off full or partial highlights through August.</p>
+                                        <p class="text-gray-500 text-sm">Mention "Summer Glow" when booking.</p>
+                                    </div>
+                                    
+                                    <!-- Offer 3 -->
+                                    <div class="bg-white p-6 rounded-xl shadow-md">
+                                        <div class="text-center mb-4">
+                                            <span class="text-accent font-bold text-sm uppercase tracking-wide">Refer a Friend</span>
+                                            <h5 class="text-xl font-bold mt-1">£15 Credit for Both</h5>
+                                        </div>
+                                        <p class="text-gray-600 mb-4">Refer a friend and you both receive £15 credit toward your next service.</p>
+                                        <p class="text-gray-500 text-sm">Ask your stylist for details.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-12">
+                                <h4 class="text-2xl font-bold mb-6">Gift Cards</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                                    <div>
+                                        <p class="text-gray-600 mb-6">Give the gift of gorgeous hair! Equipe Hair gift cards are perfect for birthdays, holidays, or just to show someone you care. Available in any denomination and beautifully packaged.</p>
+                                        <div class="space-y-4">
+                                            <div class="flex items-center">
+                                                <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                                    <i class="fas fa-store"></i>
+                                                </div>
+                                                <span>Purchase in salon at either location</span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                                    <i class="fas fa-phone"></i>
+                                                </div>
+                                                <span>Order by phone for delivery or collection</span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <div class="w-10 h-10 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mr-4">
+                                                    <i class="fas fa-envelope"></i>
+                                                </div>
+                                                <span>E-gift cards available for instant delivery</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-8">
+                                            <a href="../contact/" class="inline-block btn-fancy text-white font-bold px-6 py-3 rounded-full transition duration-500 transform hover:scale-105">
+                                                Purchase Gift Card
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <img src="../assets/images/giftcard.png" alt="Equipe Hair Gift Card" class="w-full h-auto rounded-2xl shadow-lg">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-xl">
+                                <h4 class="text-xl font-bold mb-4">Offer Terms & Conditions</h4>
+                                <ul class="space-y-2 text-gray-600 text-sm">
+                                    <li>• Special offers cannot be combined with other promotions or discounts.</li>
+                                    <li>• New client offer valid for first-time clients only.</li>
+                                    <li>• All offers subject to availability and may be withdrawn at any time.</li>
+                                    <li>• Some services may require a patch test 48 hours before appointment.</li>
+                                    <li>• Refer-a-friend credit applied after friend's first service is completed.</li>
+                                    <li>• Gift cards are valid for 12 months from date of purchase.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Lines -->
+    <section class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Premium <span class="gradient-text">Products</span></h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-8 rounded-full"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg md:text-xl">We use and recommend only the highest quality professional haircare products to ensure exceptional results that last.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-16">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../assets/images/brand-1.webp" alt="Kérastase" class="h-24 mx-auto mb-4 object-contain">
+                    <h3 class="font-bold">Kérastase</h3>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="150">
+                    <img src="../assets/images/brand-2.jpg" alt="Olaplex" class="h-24 mx-auto mb-4 object-contain">
+                    <h3 class="font-bold">Olaplex</h3>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../assets/images/brand-3.jpg" alt="Kevin Murphy" class="h-24 mx-auto mb-4 object-contain">
+                    <h3 class="font-bold">Kevin Murphy</h3>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="250">
+                    <img src="../assets/images/brand-4.jpg" alt="Wella Professionals" class="h-24 mx-auto mb-4 object-contain">
+                    <h3 class="font-bold">Wella</h3>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                    <img src="../assets/images/brand-5.jpg" alt="Moroccanoil" class="h-24 mx-auto mb-4 object-contain">
+                    <h3 class="font-bold">Moroccanoil</h3>
+                </div>
+                
+                <div class="text-center" data-aos="fade-up" data-aos-delay="350">
+                    <img src="../assets/images/brand-6.webp" alt="Redken" class="h-24 mx-auto mb-4 object-contain">
+                    <h3 class="font-bold">Redken</h3>
+                </div>
+            </div>
+            
+            <div class="text-center" data-aos="fade-up">
+                <p class="text-gray-600 mb-8">All products used in our services are available for purchase to help you maintain your salon-fresh look at home. Ask your stylist for personalized recommendations.</p>
+                <a href="../contact/" class="inline-block btn-fancy text-white font-bold px-8 py-4 rounded-full transition duration-500 transform hover:scale-110">
+                    Shop Products
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service FAQs -->
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <div class="w-24 h-1 bg-brand mx-auto mb-8 rounded-full"></div>
+                <p class="text-gray-600 max-w-4xl mx-auto text-lg md:text-xl">Have questions about our services? Find answers to commonly asked questions below.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="accordion-button">
+                        How do I know which service is right for me?
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600">We recommend booking a consultation with one of our stylists. During this appointment, they'll assess your hair type, listen to your goals, and recommend services that will help you achieve your desired look. Consultations are complimentary and can be booked online or by phone.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
+                    <button class="accordion-button">
+                        How often should I get my hair cut?
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600">This varies depending on your hair type and style, but generally:
+                        <br>• Short hairstyles: Every 4-6 weeks
+                        <br>• Medium styles: Every 6-8 weeks
+                        <br>• Long hair: Every 8-12 weeks
+                        <br>• Bangs/fringe: Every 2-3 weeks
+                        <br>Your stylist can provide a personalized recommendation during your appointment.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="accordion-button">
+                        How should I prepare for my color appointment?
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600">For best results, we recommend:
+                        <br>• Come with clean, dry hair (unless advised otherwise by your stylist)
+                        <br>• Avoid using heavy styling products or oils for 24-48 hours before your appointment
+                        <br>• Bring reference photos of your desired color
+                        <br>• Wear clothing that won't be damaged if it comes in contact with color
+                        <br>• Allow plenty of time—color services can take 2-4 hours depending on the service</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
+                    <button class="accordion-button">
+                        What is your cancellation policy?
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600">We understand that plans change. We appreciate at least 24 hours' notice for cancellations or rescheduling. Late cancellations (less than 24 hours) or no-shows may incur a fee of 50% of the service cost. This policy helps us manage our schedule efficiently and fairly for all clients.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="accordion-button">
+                        Do you offer hair services for children?
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600">Yes, we offer children's haircuts for kids under 12 years old. We create a friendly, comfortable environment for our younger clients. For children under 5, we recommend booking during quieter times of the day for a more relaxed experience. Please note that a parent or guardian must be present for appointments with minors.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="350">
+                    <button class="accordion-button">
+                        What if I'm not happy with my service?
+                    </button>
+                    <div class="accordion-content">
+                        <p class="text-gray-600">Your satisfaction is our priority. If you're not completely happy with your service, please let us know within 7 days, and we'll do everything we can to make it right. This may include adjustments to your cut or color at no additional charge. We value your feedback as it helps us continue to improve our services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking CTA -->
+    <section class="py-24 relative text-white overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-60 z-10"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-brand to-accent opacity-40 z-20"></div>
+        <div class="absolute inset-0" style="background-image: url('../assets/images/cta-bg.jpg'); background-size: cover; background-position: center; background-attachment: fixed;"></div>
+        <div class="absolute inset-0 backdrop-filter backdrop-blur-sm z-30"></div>
+        
+        <div class="container mx-auto px-4 relative z-40">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 drop-shadow-lg">Ready for a <span class="gradient-text">Transformation?</span></h2>
+                <p class="text-xl md:text-2xl text-gray-200 mb-12 drop-shadow-md">Book your appointment today and experience the Equipe difference. Our team of expert stylists is waiting to help you look and feel your absolute best.</p>
+                
+                <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                    <a href="../booking/" class="btn-fancy text-white font-bold text-lg px-10 py-5 rounded-full transform hover:scale-110 hover:rotate-1">
+                        <i class="far fa-calendar-alt mr-2"></i> Book Your Appointment
+                    </a>
+                    <a href="../contact/" class="bg-transparent hover:bg-white text-white hover:text-brand font-bold text-lg px-10 py-5 rounded-full border-2 border-white transition duration-500 transform hover:scale-110 hover:-rotate-1 hover:border-accent">
+                        <i class="fas fa-envelope mr-2"></i> Contact Us
+                    </a>
+                </div>
+                
+                <div class="flex flex-col md:flex-row justify-center gap-6 mt-8">
+                    <div class="glass-card px-6 py-4 rounded-xl" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-white text-lg">Maida Vale: <a href="tel:02072869988" class="font-bold hover:text-accent">02072869988</a></p>
+                    </div>
+                    <div class="glass-card px-6 py-4 rounded-xl" data-aos="fade-up" data-aos-delay="200">
+                        <p class="text-white text-lg">Finchley: <a href="tel:02032095030" class="font-bold hover:text-accent">02032095030</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <a href="../" class="inline-block">
+                            <span class="text-4xl font-bold gradient-text">EQUIPE</span>
+                            <span class="ml-2 text-white text-2xl">HAIR</span>
+                        </a>
+                    </div>
+                    <p class="mb-8 text-gray-400 text-lg">London's premier hair salon delivering exceptional styling, cutting and coloring services tailored to your unique style and personality.</p>
+                    <ul class="social-icon flex">
+                        <li><a href="https://www.facebook.com/equipehairsalon/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipefinchley/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipemaidavale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/+447957990217?text=Hello" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Maida Vale -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Maida Vale <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02072869988" class="block hover:text-accent transition-colors duration-300">02072869988</a>
+                                <a href="tel:02072869948" class="block hover:text-accent transition-colors duration-300">02072869948</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Monday: 9:00am - 5:00pm</p>
+                                <p>Tuesday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Finchley -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Finchley <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>1113 Finchley Road, London NW11 0QB</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02032095030" class="block hover:text-accent transition-colors duration-300">02032095030</a>
+                                <a href="tel:02082093200" class="block hover:text-accent transition-colors duration-300">02082093200</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Sunday: 10:00am - 5:00pm</p>
+                                <p>Monday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Quick <span class="text-accent">Links</span></h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../services/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../booking/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Book Now
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../privacy/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../terms/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../cookies/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Cookie Policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-10 text-center">
+                <p class="text-gray-500">&copy; 2025 Equipe Hair. All rights reserved.</p>
+                <div class="flex justify-center mt-4 space-x-6">
+                    <a href="../privacy/" class="text-accent hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="../terms/" class="text-accent hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                    <a href="../cookies/" class="text-accent hover:text-white transition-colors duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-brand to-accent hover:from-accent hover:to-brand text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-500 hover:scale-110 opacity-0 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100');
+                backToTopButton.classList.remove('opacity-0');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                backToTopButton.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Service Tab Navigation
+        const serviceTabs = document.querySelectorAll('.service-tab');
+        const serviceContents = document.querySelectorAll('.service-content');
+        
+        serviceTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Remove active class from all tabs
+                serviceTabs.forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Add active class to clicked tab
+                this.classList.add('active');
+                
+                // Hide all content sections
+                serviceContents.forEach(content => {
+                    content.classList.add('hidden');
+                    content.classList.remove('active');
+                });
+                
+                // Show the corresponding content
+                const targetId = this.getAttribute('data-target');
+                document.getElementById(targetId).classList.remove('hidden');
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+        
+        // Accordion functionality
+        const accordionButtons = document.querySelectorAll('.accordion-button');
+        accordionButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const content = this.nextElementSibling;
+                if (content.classList.contains('show')) {
+                    content.classList.remove('show');
+                } else {
+                    content.classList.add('show');
+                }
+            });
+        });
+        
+        // Before/After Slider
+        const sliders = document.querySelectorAll('.comparison-slider');
+        sliders.forEach(slider => {
+            const sliderElement = slider.querySelector('.slider');
+            let isDown = false;
+            
+            slider.addEventListener('mousedown', function(e) {
+                isDown = true;
+                slider.classList.add('active');
+            });
+            
+            slider.addEventListener('mouseup', function() {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+            
+            slider.addEventListener('mouseleave', function() {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+            
+            slider.addEventListener('mousemove', function(e) {
+                if (!isDown) return;
+                e.preventDefault();
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const percent = (x / this.offsetWidth) * 100;
+                if (percent >= 0 && percent <= 100) {
+                    this.style.setProperty('--position', `${percent}%`);
+                }
+            });
+            
+            // Touch events for mobile
+            slider.addEventListener('touchstart', function(e) {
+                isDown = true;
+                slider.classList.add('active');
+            });
+            
+            slider.addEventListener('touchend', function() {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+            
+            slider.addEventListener('touchcancel', function() {
+                isDown = false;
+                slider.classList.remove('active');
+            });
+            
+            slider.addEventListener('touchmove', function(e) {
+                if (!isDown) return;
+                const rect = this.getBoundingClientRect();
+                const x = e.touches[0].clientX - rect.left;
+                const percent = (x / this.offsetWidth) * 100;
+                if (percent >= 0 && percent <= 100) {
+                    this.style.setProperty('--position', `${percent}%`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

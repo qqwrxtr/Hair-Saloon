@@ -1,0 +1,1881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment | Equipe Hair Salon - London's Premier Hair Styling Experience</title>
+    <meta name="description" content="Book your appointment at Equipe Hair Salon in Maida Vale or Finchley, London. Easy online booking for haircuts, coloring, styling, treatments and more.">
+    <meta name="keywords" content="hair salon booking, appointment booking, hair salon London, hair appointment, Equipe Hair, luxury hair salon, Maida Vale salon, Finchley salon">
+    <link rel="canonical" href="https://equipehair.com/booking/" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../assets/icon.png">
+    
+    <!-- Flatpickr Calendar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .page-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/hero-bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 50vh;
+            width: 100%;
+        }
+        .page-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+            background: linear-gradient(45deg, rgba(8, 7, 8, 0.7) 0%, rgba(144, 55, 166, 0.3) 100%);
+            z-index: 1;
+        }
+        .page-banner > div {
+            position: relative;
+            z-index: 2;
+        }
+        .text-brand {
+            color: #9932CC; /* Purple */
+        }
+        .bg-brand {
+            background-color: #9932CC; /* Purple */
+        }
+        .text-accent {
+            color: #FF1493; /* Deep Pink */
+        }
+        .bg-accent {
+            background-color: #FF1493; /* Deep Pink */
+        }
+        .social-icon a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            margin-right: 15px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .social-icon a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .social-icon a:hover {
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.3);
+        }
+        .social-icon a:hover::before {
+            opacity: 1;
+        }
+        
+        /* Fancy Navigation */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Neon glow effect */
+        .neon-glow {
+            text-shadow: 0 0 5px rgba(153, 50, 204, 0.5),
+                         0 0 10px rgba(153, 50, 204, 0.3),
+                         0 0 15px rgba(153, 50, 204, 0.1);
+        }
+        
+        /* Fancy buttons */
+        .btn-fancy {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: none;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.3);
+        }
+        .btn-fancy::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        .btn-fancy:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.5);
+        }
+        .btn-fancy:hover::before {
+            left: 0;
+        }
+        
+        /* Booking Form Styles */
+        .booking-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background: white;
+        }
+        
+        .booking-card:hover {
+            box-shadow: 0 15px 50px rgba(153, 50, 204, 0.15);
+        }
+        
+        .form-progress {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .step-label {
+            font-size: 0.875rem;
+            color: #6b7280;
+            transition: all 0.3s ease;
+        }
+        
+        .progress-line {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #e2e8f0;
+            z-index: 0;
+        }
+        
+        .progress-line-active {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            z-index: 0;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+        
+        .form-step {
+            display: none;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        .progress-step.active .step-number {
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+        }
+        
+        .progress-step.active .step-label {
+            color: #9932CC;
+            font-weight: 600;
+        }
+        
+        .progress-step.completed .step-number {
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+        }
+        
+        .progress-step.completed .step-number::after {
+            content: '✓';
+        }
+        
+        /* Service Selection */
+        .service-option {
+            cursor: pointer;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.15);
+        }
+        
+        .service-option.selected {
+            border: 2px solid #9932CC;
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.3);
+        }
+        
+        .service-option.selected .service-check {
+            opacity: 1;
+        }
+        
+        .service-check {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Calendar Styles */
+        .time-slot {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            background-color: #f9fafb;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .time-slot:hover {
+            background-color: #f3f4f6;
+            border-color: #d1d5db;
+        }
+        
+        .time-slot.selected {
+            background: linear-gradient(45deg, rgba(153, 50, 204, 0.1), rgba(255, 20, 147, 0.1));
+            border-color: #9932CC;
+            font-weight: 600;
+        }
+        
+        .time-slot.unavailable {
+            opacity: 0.5;
+            cursor: not-allowed;
+            text-decoration: line-through;
+        }
+        
+        /* Custom Form Elements */
+        .custom-input {
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .custom-input:focus {
+            outline: none;
+            border-color: #9932CC;
+            box-shadow: 0 0 0 3px rgba(153, 50, 204, 0.1);
+        }
+        
+        .custom-label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .custom-select {
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+            background-color: white;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 1em;
+        }
+        
+        .custom-select:focus {
+            outline: none;
+            border-color: #9932CC;
+            box-shadow: 0 0 0 3px rgba(153, 50, 204, 0.1);
+        }
+        
+        /* Custom Radio Buttons */
+        .custom-radio-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .custom-radio {
+            display: none;
+        }
+        
+        .custom-radio-label {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .custom-radio-label:hover {
+            border-color: #9932CC;
+        }
+        
+        .custom-radio:checked + .custom-radio-label {
+            background: linear-gradient(45deg, rgba(153, 50, 204, 0.1), rgba(255, 20, 147, 0.1));
+            border-color: #9932CC;
+            font-weight: 600;
+        }
+        
+        /* Success Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .modal-content {
+            background-color: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .modal.active .modal-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Flatpickr Calendar Customization */
+        .flatpickr-calendar {
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(153, 50, 204, 0.1);
+            padding: 1rem;
+            border: none;
+        }
+        
+        .flatpickr-day {
+            border-radius: 0.5rem;
+        }
+        
+        .flatpickr-day.selected {
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            border-color: transparent;
+        }
+        
+        .flatpickr-day.selected:hover {
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            border-color: transparent;
+        }
+        
+        .flatpickr-day.today {
+            border-color: #9932CC;
+        }
+        
+        .flatpickr-months .flatpickr-month {
+            background: transparent;
+        }
+        
+        .flatpickr-current-month .flatpickr-monthDropdown-months {
+            font-weight: 600;
+        }
+        
+        .flatpickr-months .flatpickr-prev-month, .flatpickr-months .flatpickr-next-month {
+            padding: 5px;
+        }
+        
+        /* Stylist Profile */
+        .stylist-card {
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .stylist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(153, 50, 204, 0.15);
+        }
+        
+        .stylist-card.selected {
+            border: 2px solid #9932CC;
+            box-shadow: 0 10px 25px rgba(153, 50, 204, 0.3);
+        }
+        
+        .stylist-card.selected .stylist-check {
+            opacity: 1;
+        }
+        
+        .stylist-check {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .stylist-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Booking Summary */
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+        
+        .summary-label {
+            font-weight: 500;
+            color: #6b7280;
+        }
+        
+        .summary-value {
+            font-weight: 600;
+        }
+        
+        .summary-total {
+            background: linear-gradient(45deg, rgba(153, 50, 204, 0.1), rgba(255, 20, 147, 0.1));
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        /* Form validation */
+        .input-error {
+            border-color: #ef4444 !important;
+        }
+        
+        .error-message {
+            color: #ef4444;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#9932CC',
+                        accent: '#FF1493',
+                        dark: '#1E0E2F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-t-brand border-r-accent border-b-brand border-l-accent rounded-full animate-spin"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold gradient-text">E</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-lg z-50 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../" class="flex items-center">
+                    <span class="text-3xl font-bold gradient-text">EQUIPE</span>
+                    <span class="ml-2 text-dark text-xl">HAIR</span>
+                </a>
+                
+                <nav class="hidden lg:flex space-x-10 text-gray-800">
+                    <a href="../" class="nav-link font-medium hover:text-brand">Home</a>
+                    <a href="../about/" class="nav-link font-medium hover:text-brand">About Us</a>
+                    <a href="../services/" class="nav-link font-medium hover:text-brand">Services</a>
+                    <a href="../gallery/" class="nav-link font-medium hover:text-brand">Gallery</a>
+                    <a href="../blog/" class="nav-link font-medium hover:text-brand">Blog</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="../booking/" class="hidden md:block btn-fancy text-white px-6 py-3 rounded-full transition duration-500">
+                        Book Appointment
+                    </a>
+                    <button class="lg:hidden text-gray-700 focus:outline-none ml-4" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden pt-4 pb-2" id="mobile-menu">
+                <nav class="flex flex-col space-y-3 text-gray-700">
+                    <a href="../" class="font-medium hover:text-brand py-2 border-b border-gray-100">Home</a>
+                    <a href="../about/" class="font-medium hover:text-brand py-2 border-b border-gray-100">About Us</a>
+                    <a href="../services/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Services</a>
+                    <a href="../gallery/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Gallery</a>
+                    <a href="../blog/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Blog</a>
+                    <a href="../booking/" class="font-medium hover:text-brand py-2">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner flex items-center justify-center text-white pt-24">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up" data-aos-duration="1200">
+            <div class="relative mb-6">
+                <h1 class="text-5xl md:text-7xl font-bold mb-2 neon-glow">Book Your <span class="gradient-text">Appointment</span></h1>
+                <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent rounded-full"></div>
+            </div>
+            <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">Reserve your time with our expert stylists and experience the Equipe difference.</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+<section class="py-20 bg-white relative overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+    <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-5xl mx-auto" data-aos="fade-up">
+            <div class="booking-card bg-white p-8 md:p-12">
+                <!-- Progress Bar -->
+                <div class="form-progress mb-10">
+                    <div class="progress-line"></div>
+                    <div class="progress-line-active" id="progress-line"></div>
+                    
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Service</div>
+                    </div>
+                    
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Location</div>
+                    </div>
+                    
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Stylist</div>
+                    </div>
+                    
+                    <div class="progress-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Date & Time</div>
+                    </div>
+                    
+                    <div class="progress-step" data-step="5">
+                        <div class="step-number">5</div>
+                        <div class="step-label">Details</div>
+                    </div>
+                    
+                    <div class="progress-step" data-step="6">
+                        <div class="step-number">6</div>
+                        <div class="step-label">Confirm</div>
+                    </div>
+                </div>
+                
+                <!-- Form Steps -->
+                <form id="booking-form">
+                    <!-- Step 1: Service Selection -->
+                    <div class="form-step active" id="step-1">
+                        <h2 class="text-3xl font-bold mb-6">Select Your Service</h2>
+                        <p class="text-gray-600 mb-10">Choose the service you would like to book. You can add additional services later if needed.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                            <!-- Service 1 -->
+                            <div class="service-option relative" data-service="Haircut & Style" data-price="85">
+                                <div class="service-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <img src="../assets/images/haircut-1.webp" alt="Haircut & Style" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg mb-1">Haircut & Style</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Precision cut with styling</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-brand font-bold">From £85</span>
+                                        <span class="text-gray-500 text-sm">45 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Service 2 -->
+                            <div class="service-option relative" data-service="Color Service" data-price="125">
+                                <div class="service-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <img src="../assets/images/color-1.webp" alt="Color Service" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg mb-1">Color Service</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Full color or highlights</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-brand font-bold">From £125</span>
+                                        <span class="text-gray-500 text-sm">2 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Service 3 -->
+                            <div class="service-option relative" data-service="Balayage" data-price="165">
+                                <div class="service-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <img src="../assets/images/color-2.jpg" alt="Balayage" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg mb-1">Balayage</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Hand-painted highlights</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-brand font-bold">From £165</span>
+                                        <span class="text-gray-500 text-sm">2.5 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Service 4 -->
+                            <div class="service-option relative" data-service="Olaplex Treatment" data-price="65">
+                                <div class="service-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <img src="../assets/images/keratin.jpg" alt="Olaplex Treatment" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg mb-1">Olaplex Treatment</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Repair damaged hair bonds</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-brand font-bold">From £65</span>
+                                        <span class="text-gray-500 text-sm">1 hour</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Service 5 -->
+                            <div class="service-option relative" data-service="Blow Dry" data-price="45">
+                                <div class="service-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <img src="../assets/images/haircut-2.jpg" alt="Blow Dry" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg mb-1">Blow Dry</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Professional styling</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-brand font-bold">From £45</span>
+                                        <span class="text-gray-500 text-sm">45 minutes</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Service 6 -->
+                            <div class="service-option relative" data-service="Keratin Smoothing" data-price="195">
+                                <div class="service-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <img src="../assets/images/keratin.jpg" alt="Keratin Smoothing" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg mb-1">Keratin Smoothing</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Eliminates frizz for months</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-brand font-bold">From £195</span>
+                                        <span class="text-gray-500 text-sm">2-3 hours</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mb-6" id="service-error-container">
+                            <!-- Error message will appear here -->
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <button type="button" class="btn-fancy text-white px-8 py-3 rounded-full next-btn" data-step="1" disabled>Continue</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Salon Location -->
+                    <div class="form-step" id="step-2">
+                        <h2 class="text-3xl font-bold mb-6">Choose Your Salon</h2>
+                        <p class="text-gray-600 mb-10">Select which Equipe Hair salon location you'd like to visit.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                            <!-- Maida Vale Location -->
+                            <div class="service-option relative location-option" data-location="Maida Vale">
+                                <div class="service-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <img src="../assets/images/location-1.jpg" alt="Maida Vale Salon" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg mb-1">Maida Vale Salon</h3>
+                                    <p class="text-gray-600 text-sm mb-4">9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                                    <div class="space-y-2 text-sm text-gray-600">
+                                        <p><i class="far fa-clock mr-2 text-brand"></i> Mon: 9am - 5pm</p>
+                                        <p><i class="far fa-clock mr-2 text-brand"></i> Tues-Sat: 9am - 7pm</p>
+                                        <p><i class="fas fa-phone-alt mr-2 text-brand"></i> 02072869988</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Finchley Location -->
+                            <div class="service-option relative location-option" data-location="Finchley">
+                                <div class="service-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <img src="../assets/images/location-2.jpg" alt="Finchley Salon" class="w-full h-48 object-cover">
+                                <div class="p-4">
+                                    <h3 class="font-bold text-lg mb-1">Finchley Salon</h3>
+                                    <p class="text-gray-600 text-sm mb-4">1113 Finchley Road, London NW11 0QB</p>
+                                    <div class="space-y-2 text-sm text-gray-600">
+                                        <p><i class="far fa-clock mr-2 text-brand"></i> Sun: 10am - 5pm</p>
+                                        <p><i class="far fa-clock mr-2 text-brand"></i> Mon-Sat: 9am - 7pm</p>
+                                        <p><i class="fas fa-phone-alt mr-2 text-brand"></i> 02032095030</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mb-6" id="location-error-container">
+                            <!-- Error message will appear here -->
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button type="button" class="border border-gray-300 hover:border-brand text-gray-700 hover:text-brand px-8 py-3 rounded-full prev-btn transition duration-300">Back</button>
+                            <button type="button" class="btn-fancy text-white px-8 py-3 rounded-full next-btn" data-step="2" disabled>Continue</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Stylist Selection -->
+                    <div class="form-step" id="step-3">
+                        <h2 class="text-3xl font-bold mb-6">Choose Your Stylist</h2>
+                        <p class="text-gray-600 mb-10">Select your preferred stylist or choose 'Any Available Stylist' if you don't have a preference.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                            <!-- Any Available Stylist -->
+                            <div class="stylist-card bg-white shadow-md rounded-xl p-6 relative" data-stylist="Any Available Stylist" data-level="Varies">
+                                <div class="stylist-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="flex flex-col items-center text-center">
+                                    <div class="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+                                        <i class="fas fa-user text-gray-400 text-2xl"></i>
+                                    </div>
+                                    <h3 class="font-bold text-lg mb-1">Any Available Stylist</h3>
+                                    <p class="text-gray-600 text-sm mb-2">We'll match you with the first available stylist</p>
+                                    <span class="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">Quickest Availability</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Stylist 1 -->
+                            <div class="stylist-card bg-white shadow-md rounded-xl p-6 relative" data-stylist="Emma Roberts" data-level="Art Director">
+                                <div class="stylist-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="flex flex-col items-center text-center">
+                                    <img src="../assets/images/testimonial-1.png" alt="Emma Roberts" class="stylist-img mb-4">
+                                    <h3 class="font-bold text-lg mb-1">Emma Roberts</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Color Director</p>
+                                    <span class="inline-block bg-gradient-to-r from-brand/10 to-accent/10 text-brand text-xs px-3 py-1 rounded-full">Color Specialist</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Stylist 2 -->
+                            <div class="stylist-card bg-white shadow-md rounded-xl p-6 relative" data-stylist="Daniel Chen" data-level="Senior Stylist">
+                                <div class="stylist-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="flex flex-col items-center text-center">
+                                    <img src="../assets/images/team-2.jpg" alt="Daniel Chen" class="stylist-img mb-4">
+                                    <h3 class="font-bold text-lg mb-1">Daniel Chen</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Senior Stylist</p>
+                                    <span class="inline-block bg-gradient-to-r from-brand/10 to-accent/10 text-brand text-xs px-3 py-1 rounded-full">Cutting Expert</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Stylist 3 -->
+                            <div class="stylist-card bg-white shadow-md rounded-xl p-6 relative" data-stylist="Sophia Martinez" data-level="Senior Stylist">
+                                <div class="stylist-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="flex flex-col items-center text-center">
+                                    <img src="../assets/images/testimonial-2.webp" alt="Sophia Martinez" class="stylist-img mb-4">
+                                    <h3 class="font-bold text-lg mb-1">Sophia Martinez</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Color Specialist</p>
+                                    <span class="inline-block bg-gradient-to-r from-brand/10 to-accent/10 text-brand text-xs px-3 py-1 rounded-full">Balayage Expert</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Stylist 4 -->
+                            <div class="stylist-card bg-white shadow-md rounded-xl p-6 relative" data-stylist="James Wilson" data-level="Art Director">
+                                <div class="stylist-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="flex flex-col items-center text-center">
+                                    <img src="../assets/images/testimonial-3.webp" alt="James Wilson" class="stylist-img mb-4">
+                                    <h3 class="font-bold text-lg mb-1">James Wilson</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Style Director</p>
+                                    <span class="inline-block bg-gradient-to-r from-brand/10 to-accent/10 text-brand text-xs px-3 py-1 rounded-full">Men's Specialist</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Stylist 5 -->
+                            <div class="stylist-card bg-white shadow-md rounded-xl p-6 relative" data-stylist="Aiden Parker" data-level="Senior Stylist">
+                                <div class="stylist-check">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="flex flex-col items-center text-center">
+                                    <img src="../assets/images/team-4.jpg" alt="Aiden Parker" class="stylist-img mb-4">
+                                    <h3 class="font-bold text-lg mb-1">Aiden Parker</h3>
+                                    <p class="text-gray-600 text-sm mb-2">Treatment Specialist</p>
+                                    <span class="inline-block bg-gradient-to-r from-brand/10 to-accent/10 text-brand text-xs px-3 py-1 rounded-full">Keratin Expert</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mb-6" id="stylist-error-container">
+                            <!-- Error message will appear here -->
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button type="button" class="border border-gray-300 hover:border-brand text-gray-700 hover:text-brand px-8 py-3 rounded-full prev-btn transition duration-300">Back</button>
+                            <button type="button" class="btn-fancy text-white px-8 py-3 rounded-full next-btn" data-step="3" disabled>Continue</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Date & Time Selection -->
+                    <div class="form-step" id="step-4">
+                        <h2 class="text-3xl font-bold mb-6">Select Date & Time</h2>
+                        <p class="text-gray-600 mb-8">Choose your preferred appointment date and time.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                            <div>
+                                <label class="custom-label">Select Date</label>
+                                <input type="text" id="appointment-date" class="custom-input flatpickr-input" placeholder="Select date">
+                                <div id="date-error" class="error-message hidden">Please select a date</div>
+                            </div>
+                            
+                            <div>
+                                <label class="custom-label">Available Time Slots</label>
+                                <div id="time-slots" class="grid grid-cols-3 gap-2 mt-2">
+                                    <div class="time-slot text-center">9:00 AM</div>
+                                    <div class="time-slot text-center">9:30 AM</div>
+                                    <div class="time-slot text-center">10:00 AM</div>
+                                    <div class="time-slot text-center">10:30 AM</div>
+                                    <div class="time-slot text-center">11:00 AM</div>
+                                    <div class="time-slot text-center">11:30 AM</div>
+                                    <div class="time-slot text-center">12:00 PM</div>
+                                    <div class="time-slot text-center unavailable">12:30 PM</div>
+                                    <div class="time-slot text-center">1:00 PM</div>
+                                    <div class="time-slot text-center">1:30 PM</div>
+                                    <div class="time-slot text-center unavailable">2:00 PM</div>
+                                    <div class="time-slot text-center unavailable">2:30 PM</div>
+                                    <div class="time-slot text-center">3:00 PM</div>
+                                    <div class="time-slot text-center">3:30 PM</div>
+                                    <div class="time-slot text-center">4:00 PM</div>
+                                    <div class="time-slot text-center">4:30 PM</div>
+                                    <div class="time-slot text-center">5:00 PM</div>
+                                    <div class="time-slot text-center">5:30 PM</div>
+                                    <div class="time-slot text-center">6:00 PM</div>
+                                    <div class="time-slot text-center">6:30 PM</div>
+                                </div>
+                                <div id="time-error" class="error-message hidden">Please select a time slot</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-xl mb-8">
+                            <p class="text-sm text-gray-600"><i class="fas fa-info-circle text-brand mr-2"></i> Please arrive 10 minutes before your scheduled appointment time. If you're running late, please call us to let us know.</p>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button type="button" class="border border-gray-300 hover:border-brand text-gray-700 hover:text-brand px-8 py-3 rounded-full prev-btn transition duration-300">Back</button>
+                            <button type="button" class="btn-fancy text-white px-8 py-3 rounded-full next-btn" data-step="4" disabled>Continue</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5: Personal Details -->
+                    <div class="form-step" id="step-5">
+                        <h2 class="text-3xl font-bold mb-6">Your Details</h2>
+                        <p class="text-gray-600 mb-8">Please provide your contact information and any special requests.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <label for="first-name" class="custom-label">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" class="custom-input" required>
+                                <div id="first-name-error" class="error-message hidden">Please enter your first name</div>
+                            </div>
+                            
+                            <div>
+                                <label for="last-name" class="custom-label">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" class="custom-input" required>
+                                <div id="last-name-error" class="error-message hidden">Please enter your last name</div>
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="custom-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="custom-input" required>
+                                <div id="email-error" class="error-message hidden">Please enter a valid email address</div>
+                            </div>
+                            
+                            <div>
+                                <label for="phone" class="custom-label">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="custom-input" required>
+                                <div id="phone-error" class="error-message hidden">Please enter your phone number</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label for="client-type" class="custom-label">Are you a new or returning client? *</label>
+                            <div class="custom-radio-container">
+                                <input type="radio" id="new-client" name="client-type" value="New Client" class="custom-radio" required>
+                                <label for="new-client" class="custom-radio-label">New Client</label>
+                                
+                                <input type="radio" id="returning-client" name="client-type" value="Returning Client" class="custom-radio">
+                                <label for="returning-client" class="custom-radio-label">Returning Client</label>
+                            </div>
+                            <div id="client-type-error" class="error-message hidden">Please select if you are a new or returning client</div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label for="special-requests" class="custom-label">Special Requests or Notes (Optional)</label>
+                            <textarea id="special-requests" name="special-requests" class="custom-input h-32" placeholder="Please share any specific concerns, preferences, or health issues we should be aware of."></textarea>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label for="hear-about" class="custom-label">How did you hear about us? (Optional)</label>
+                            <select id="hear-about" name="hear-about" class="custom-select">
+                                <option value="">Please select...</option>
+                                <option value="Google">Google Search</option>
+                                <option value="Social Media">Social Media</option>
+                                <option value="Friend">Friend or Family</option>
+                                <option value="Walk-by">Walked By</option>
+                                <option value="Advertisement">Advertisement</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <div class="flex items-start">
+                                <input type="checkbox" id="privacy-policy" name="privacy-policy" class="mt-1 mr-3" required>
+                                <label for="privacy-policy" class="text-sm text-gray-600">I have read and agree to the <a href="../privacy/" class="text-brand hover:underline">Privacy Policy</a> and <a href="../terms/" class="text-brand hover:underline">Terms & Conditions</a>. *</label>
+                            </div>
+                            <div id="privacy-policy-error" class="error-message hidden">You must agree to the privacy policy and terms</div>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button type="button" class="border border-gray-300 hover:border-brand text-gray-700 hover:text-brand px-8 py-3 rounded-full prev-btn transition duration-300">Back</button>
+                            <button type="button" class="btn-fancy text-white px-8 py-3 rounded-full next-btn" data-step="5">Continue</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 6: Booking Confirmation -->
+                    <div class="form-step" id="step-6">
+                        <h2 class="text-3xl font-bold mb-6">Confirm Your Booking</h2>
+                        <p class="text-gray-600 mb-8">Please review your appointment details before confirming.</p>
+                        
+                        <div class="bg-gray-50 p-6 rounded-xl mb-8">
+                            <h3 class="text-xl font-bold mb-4">Booking Summary</h3>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Service:</div>
+                                <div class="summary-value" id="summary-service">Haircut & Style</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Location:</div>
+                                <div class="summary-value" id="summary-location">Maida Vale Salon</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Stylist:</div>
+                                <div class="summary-value" id="summary-stylist">Emma Roberts (Art Director)</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Date & Time:</div>
+                                <div class="summary-value" id="summary-datetime">May 25, 2025 at 10:00 AM</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Client:</div>
+                                <div class="summary-value" id="summary-client">John Doe</div>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <div class="summary-label">Contact:</div>
+                                <div class="summary-value" id="summary-contact">john.doe@email.com | +44 7123 456789</div>
+                            </div>
+                            
+                            <div class="summary-total flex justify-between">
+                                <div class="font-bold">Estimated Price:</div>
+                                <div class="font-bold text-brand text-xl" id="summary-price">£85.00</div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-yellow-50 p-4 rounded-xl mb-8">
+                            <p class="text-sm text-yellow-800"><i class="fas fa-info-circle mr-2"></i> This is an estimated price. The final price may vary based on hair length, thickness, and additional services.</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-4 rounded-xl mb-8">
+                            <h4 class="font-bold mb-2">Cancellation Policy</h4>
+                            <p class="text-sm text-gray-600">We require at least 24 hours' notice for cancellations or rescheduling. Late cancellations or no-shows may incur a fee of 50% of the service cost.</p>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button type="button" class="border border-gray-300 hover:border-brand text-gray-700 hover:text-brand px-8 py-3 rounded-full prev-btn transition duration-300">Back</button>
+                            <button type="submit" class="btn-fancy text-white px-8 py-3 rounded-full">Confirm Booking</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <a href="../" class="inline-block">
+                            <span class="text-4xl font-bold gradient-text">EQUIPE</span>
+                            <span class="ml-2 text-white text-2xl">HAIR</span>
+                        </a>
+                    </div>
+                    <p class="mb-8 text-gray-400 text-lg">London's premier hair salon delivering exceptional styling, cutting and coloring services tailored to your unique style and personality.</p>
+                    <ul class="social-icon flex">
+                        <li><a href="https://www.facebook.com/equipehairsalon/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipefinchley/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipemaidavale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/+447957990217?text=Hello" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Maida Vale -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Maida Vale <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02072869988" class="block hover:text-accent transition-colors duration-300">02072869988</a>
+                                <a href="tel:02072869948" class="block hover:text-accent transition-colors duration-300">02072869948</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Monday: 9:00am - 5:00pm</p>
+                                <p>Tuesday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Finchley -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Finchley <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>1113 Finchley Road, London NW11 0QB</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02032095030" class="block hover:text-accent transition-colors duration-300">02032095030</a>
+                                <a href="tel:02082093200" class="block hover:text-accent transition-colors duration-300">02082093200</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Sunday: 10:00am - 5:00pm</p>
+                                <p>Monday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Quick <span class="text-accent">Links</span></h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../services/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../blog/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../booking/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Book Now
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../privacy/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../terms/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-10 text-center">
+                <p class="text-gray-500">&copy; 2025 Equipe Hair. All rights reserved.</p>
+                <div class="flex justify-center mt-4 space-x-6">
+                    <a href="../privacy/" class="text-accent hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="../terms/" class="text-accent hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                    <a href="../cookies/" class="text-accent hover:text-white transition-colors duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-brand to-accent hover:from-accent hover:to-brand text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-500 hover:scale-110 opacity-0 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100');
+                backToTopButton.classList.remove('opacity-0');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                backToTopButton.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+    </script>
+
+    <!-- Booking Success Modal -->
+<div id="success-modal" class="modal">
+    <div class="modal-content">
+        <div class="text-center">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-green-500 text-3xl"></i>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-4">Booking Confirmed!</h3>
+            <p class="text-gray-600 mb-6">Your appointment has been successfully booked. We've sent a confirmation email to your registered address.</p>
+            
+            <div class="bg-gray-50 p-4 rounded-xl mb-6 text-left">
+                <h4 class="font-bold mb-2">Appointment Details</h4>
+                <p class="text-sm text-gray-600" id="modal-details">Haircut & Style with Emma Roberts at Maida Vale Salon on May 25, 2025 at 10:00 AM.</p>
+            </div>
+            
+            <p class="text-sm text-gray-600 mb-8">Please arrive 10 minutes before your scheduled appointment. If you need to make any changes, please contact us at least 24 hours in advance.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button id="close-modal" class="btn-fancy text-white px-6 py-3 rounded-full">
+                    Return to Home
+                </button>
+                <button id="add-calendar" class="border border-brand text-brand hover:bg-brand hover:text-white px-6 py-3 rounded-full transition duration-300">
+                    <i class="far fa-calendar-alt mr-2"></i> Add to Calendar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // FINAL FIXED BOOKING FORM JAVASCRIPT
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize variables
+    let currentStep = 1;
+    const totalSteps = 6;
+    let selectedService = '';
+    let selectedServicePrice = 0;
+    let selectedLocation = '';
+    let selectedStylist = '';
+    let selectedStylistLevel = '';
+    let selectedDate = '';
+    let selectedTime = '';
+    
+    // Get all elements
+    const progressLine = document.getElementById('progress-line');
+    const nextButtons = document.querySelectorAll('.next-btn');
+    const prevButtons = document.querySelectorAll('.prev-btn');
+    const serviceOptions = document.querySelectorAll('.service-option');
+    const locationOptions = document.querySelectorAll('.location-option');
+    const stylistCards = document.querySelectorAll('.stylist-card');
+    const timeSlots = document.querySelectorAll('.time-slot');
+    const bookingForm = document.getElementById('booking-form');
+    const successModal = document.getElementById('success-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+    const addCalendarBtn = document.getElementById('add-calendar');
+    
+    // ERROR HANDLING FUNCTIONS
+    function showError(containerId, message) {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.innerHTML = `<div class="error-message text-red-500 text-sm">${message}</div>`;
+            container.classList.remove('hidden');
+        }
+    }
+    
+    function hideError(containerId) {
+        const container = document.getElementById(containerId);
+        if (container) {
+            container.classList.add('hidden');
+            container.innerHTML = '';
+        }
+    }
+    
+    function clearAllErrors() {
+        const errorContainers = [
+            'service-error-container', 'location-error-container', 'stylist-error-container',
+            'date-error', 'time-error', 'first-name-error', 'last-name-error',
+            'email-error', 'phone-error', 'client-type-error', 'privacy-policy-error'
+        ];
+        
+        errorContainers.forEach(id => hideError(id));
+        document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
+    }
+    
+    // DATE PICKER INITIALIZATION
+    let appointmentDatePicker = null;
+    const dateInput = document.getElementById('appointment-date');
+    
+    if (dateInput && typeof flatpickr !== 'undefined') {
+        appointmentDatePicker = flatpickr(dateInput, {
+            minDate: "today",
+            dateFormat: "Y-m-d",
+            disable: [
+                function(date) {
+                    return selectedLocation === 'Maida Vale' && date.getDay() === 0;
+                }
+            ],
+            onChange: function(selectedDates, dateStr) {
+                selectedDate = dateStr;
+                hideError('date-error');
+                if (dateInput) dateInput.classList.remove('input-error');
+                updateDateTimeButton();
+            }
+        });
+    }
+    
+    // SERVICE SELECTION
+    serviceOptions.forEach((option) => {
+        if (!option.classList.contains('location-option')) {
+            option.addEventListener('click', function() {
+                try {
+                    // Reset only service cards
+                    serviceOptions.forEach(o => {
+                        if (!o.classList.contains('location-option')) {
+                            o.classList.remove('selected');
+                        }
+                    });
+                    
+                    this.classList.add('selected');
+                    
+                    // Get service name
+                    selectedService = this.getAttribute('data-service');
+                    if (!selectedService) {
+                        const heading = this.querySelector('h3');
+                        selectedService = heading ? heading.textContent.trim() : 'Selected Service';
+                    }
+                    
+                    // Get price
+                    let priceFromData = parseInt(this.getAttribute('data-price'), 10);
+                    if (!isNaN(priceFromData)) {
+                        selectedServicePrice = priceFromData;
+                    } else {
+                        const priceElement = this.querySelector('.text-brand');
+                        if (priceElement) {
+                            const priceText = priceElement.textContent;
+                            const match = priceText.match(/£(\d+)/);
+                            selectedServicePrice = match ? parseInt(match[1], 10) : 0;
+                        } else {
+                            selectedServicePrice = 0;
+                        }
+                    }
+                    
+                    hideError('service-error-container');
+                    const nextBtn = document.querySelector('.next-btn[data-step="1"]');
+                    if (nextBtn) nextBtn.disabled = false;
+                    
+                } catch (error) {
+                    selectedService = 'Selected Service';
+                    selectedServicePrice = 0;
+                }
+            });
+        }
+    });
+    
+    // LOCATION SELECTION
+    locationOptions.forEach((option) => {
+        option.addEventListener('click', function() {
+            locationOptions.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedLocation = this.getAttribute('data-location') || 'Selected Location';
+            
+            if (appointmentDatePicker) {
+                appointmentDatePicker.set('disable', [
+                    function(date) {
+                        return selectedLocation === 'Maida Vale' && date.getDay() === 0;
+                    }
+                ]);
+            }
+            
+            hideError('location-error-container');
+            const nextBtn = document.querySelector('.next-btn[data-step="2"]');
+            if (nextBtn) nextBtn.disabled = false;
+        });
+    });
+    
+    // STYLIST SELECTION
+    stylistCards.forEach((card) => {
+        card.addEventListener('click', function() {
+            stylistCards.forEach(c => c.classList.remove('selected'));
+            this.classList.add('selected');
+            selectedStylist = this.getAttribute('data-stylist') || 'Selected Stylist';
+            selectedStylistLevel = this.getAttribute('data-level') || '';
+            
+            hideError('stylist-error-container');
+            const nextBtn = document.querySelector('.next-btn[data-step="3"]');
+            if (nextBtn) nextBtn.disabled = false;
+        });
+    });
+    
+    // TIME SLOT SELECTION
+    timeSlots.forEach((slot) => {
+        if (!slot.classList.contains('unavailable')) {
+            slot.addEventListener('click', function() {
+                timeSlots.forEach(s => s.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedTime = this.textContent.trim();
+                hideError('time-error');
+                updateDateTimeButton();
+            });
+        }
+    });
+    
+    function updateDateTimeButton() {
+        const nextBtn = document.querySelector('.next-btn[data-step="4"]');
+        if (nextBtn) {
+            nextBtn.disabled = (!selectedDate || !selectedTime);
+        }
+    }
+    
+    // FORM NAVIGATION - NEXT BUTTONS
+    nextButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const step = parseInt(this.getAttribute('data-step'));
+            clearAllErrors();
+            
+            if (!validateStep(step)) {
+                return;
+            }
+            
+            const currentStepEl = document.getElementById(`step-${step}`);
+            if (currentStepEl) currentStepEl.classList.remove('active');
+            
+            currentStep = step + 1;
+            const nextStepEl = document.getElementById(`step-${currentStep}`);
+            if (nextStepEl) nextStepEl.classList.add('active');
+            
+            updateProgressBar();
+            updateProgressSteps();
+            
+            if (currentStep === 6) {
+                updateBookingSummary();
+            }
+            
+            const bookingCard = document.querySelector('.booking-card');
+            if (bookingCard) {
+                bookingCard.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+    
+    // FORM NAVIGATION - PREVIOUS BUTTONS
+    prevButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            clearAllErrors();
+            
+            const currentStepEl = document.getElementById(`step-${currentStep}`);
+            if (currentStepEl) currentStepEl.classList.remove('active');
+            
+            currentStep--;
+            const prevStepEl = document.getElementById(`step-${currentStep}`);
+            if (prevStepEl) prevStepEl.classList.add('active');
+            
+            updateProgressBar();
+            updateProgressSteps();
+            
+            const bookingCard = document.querySelector('.booking-card');
+            if (bookingCard) {
+                bookingCard.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+    
+    // VALIDATION FUNCTIONS
+    function validateStep(step) {
+        switch(step) {
+            case 1:
+                if (!selectedService) {
+                    showError('service-error-container', 'Please select a service to continue.');
+                    return false;
+                }
+                break;
+                
+            case 2:
+                if (!selectedLocation) {
+                    showError('location-error-container', 'Please select a salon location to continue.');
+                    return false;
+                }
+                break;
+                
+            case 3:
+                if (!selectedStylist) {
+                    showError('stylist-error-container', 'Please select a stylist to continue.');
+                    return false;
+                }
+                break;
+                
+            case 4:
+                let dateTimeValid = true;
+                if (!selectedDate) {
+                    showError('date-error', 'Please select a date');
+                    const dateInput = document.getElementById('appointment-date');
+                    if (dateInput) dateInput.classList.add('input-error');
+                    dateTimeValid = false;
+                }
+                if (!selectedTime) {
+                    showError('time-error', 'Please select a time slot');
+                    dateTimeValid = false;
+                }
+                return dateTimeValid;
+                
+            case 5:
+                return validatePersonalDetails();
+        }
+        return true;
+    }
+    
+    function validatePersonalDetails() {
+        let isValid = true;
+        
+        const fields = [
+            { id: 'first-name', error: 'first-name-error', message: 'Please enter your first name' },
+            { id: 'last-name', error: 'last-name-error', message: 'Please enter your last name' },
+            { id: 'email', error: 'email-error', message: 'Please enter a valid email address' },
+            { id: 'phone', error: 'phone-error', message: 'Please enter your phone number' }
+        ];
+        
+        fields.forEach(field => {
+            const element = document.getElementById(field.id);
+            if (element) {
+                const value = element.value.trim();
+                if (!value || (field.id === 'email' && !isValidEmail(value))) {
+                    showError(field.error, field.message);
+                    element.classList.add('input-error');
+                    isValid = false;
+                }
+            }
+        });
+        
+        const clientType = document.querySelector('input[name="client-type"]:checked');
+        if (!clientType) {
+            showError('client-type-error', 'Please select if you are a new or returning client');
+            isValid = false;
+        }
+        
+        const privacyPolicy = document.getElementById('privacy-policy');
+        if (privacyPolicy && !privacyPolicy.checked) {
+            showError('privacy-policy-error', 'You must agree to the privacy policy and terms');
+            isValid = false;
+        }
+        
+        return isValid;
+    }
+    
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+    
+    // PROGRESS BAR FUNCTIONS
+    function updateProgressBar() {
+        if (progressLine) {
+            const progress = ((currentStep - 1) / (totalSteps - 1)) * 100;
+            progressLine.style.width = `${progress}%`;
+        }
+    }
+    
+    function updateProgressSteps() {
+        const steps = document.querySelectorAll('.progress-step');
+        steps.forEach(step => {
+            const stepNum = parseInt(step.getAttribute('data-step'));
+            
+            if (stepNum < currentStep) {
+                step.classList.add('completed');
+                step.classList.remove('active');
+            } else if (stepNum === currentStep) {
+                step.classList.add('active');
+                step.classList.remove('completed');
+            } else {
+                step.classList.remove('active', 'completed');
+            }
+        });
+    }
+    
+    // BOOKING SUMMARY UPDATE
+    function updateBookingSummary() {
+        try {
+            const firstName = getElementValue('first-name');
+            const lastName = getElementValue('last-name');
+            const email = getElementValue('email');
+            const phone = getElementValue('phone');
+            
+            const safeService = selectedService || 'Selected Service';
+            const safeLocation = selectedLocation || 'Selected Location';
+            const safeStylist = selectedStylist || 'Selected Stylist';
+            const safeStylistLevel = selectedStylistLevel || '';
+            
+            const finalPrice = (typeof selectedServicePrice === 'number' && !isNaN(selectedServicePrice)) 
+                ? selectedServicePrice : 0;
+            
+            updateElementText('summary-service', safeService);
+            updateElementText('summary-location', `${safeLocation} Salon`);
+            updateElementText('summary-stylist', `${safeStylist}${safeStylistLevel ? ` (${safeStylistLevel})` : ''}`);
+            updateElementText('summary-datetime', (selectedDate && selectedTime) ? 
+                `${formatDate(selectedDate)} at ${selectedTime}` : 'Date and time not selected');
+            updateElementText('summary-client', `${firstName} ${lastName}`.trim());
+            updateElementText('summary-contact', `${email}${phone ? ` | ${phone}` : ''}`);
+            updateElementText('summary-price', `£${finalPrice.toFixed(2)}`);
+            
+            updateElementText('modal-details', 
+                `${safeService} with ${safeStylist} at ${safeLocation} Salon on ${selectedDate ? formatDate(selectedDate) : 'selected date'} at ${selectedTime || 'selected time'}.`);
+            
+        } catch (error) {
+            updateElementText('summary-service', 'Hair Service');
+            updateElementText('summary-price', '£0.00');
+        }
+    }
+    
+    // HELPER FUNCTIONS
+    function getElementValue(id) {
+        const element = document.getElementById(id);
+        return element ? element.value.trim() : '';
+    }
+    
+    function updateElementText(id, text) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.textContent = text;
+        }
+    }
+    
+    function formatDate(dateStr) {
+        try {
+            if (!dateStr) return 'Invalid date';
+            
+            const date = new Date(dateStr + 'T00:00:00');
+            if (isNaN(date.getTime())) return 'Invalid date';
+            
+            const options = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric',
+                timeZone: 'UTC'
+            };
+            return date.toLocaleDateString('en-GB', options);
+        } catch (error) {
+            return 'Invalid date';
+        }
+    }
+    
+    // FORM SUBMISSION
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (successModal) {
+                successModal.classList.add('active');
+            } else {
+                alert("Booking confirmed! Thank you for your appointment.");
+            }
+        });
+    }
+    
+    // MODAL HANDLERS
+    if (closeModalBtn) {
+        closeModalBtn.addEventListener('click', function() {
+            if (successModal) {
+                successModal.classList.remove('active');
+            }
+            window.location.href = '../';
+        });
+    }
+    
+    if (addCalendarBtn) {
+        addCalendarBtn.addEventListener('click', function() {
+            try {
+                const eventTitle = selectedService ? `Equipe Hair: ${selectedService}` : 'Equipe Hair Appointment';
+                const eventDetails = `Hair appointment at Equipe Hair Salon - ${selectedService || 'Hair Service'}`;
+                
+                let eventLocation = 'Equipe Hair Salon, London, UK';
+                if (selectedLocation === 'Maida Vale') {
+                    eventLocation = '9 Clifton Road, Maida Vale, London W9 1SZ';
+                } else if (selectedLocation === 'Finchley') {
+                    eventLocation = '1113 Finchley Road, London NW11 0QB';
+                }
+                
+                let eventDate = new Date();
+                eventDate.setDate(eventDate.getDate() + 1);
+                eventDate.setHours(10, 0, 0, 0);
+                
+                if (selectedDate && selectedTime) {
+                    const dateParts = selectedDate.split('-');
+                    const year = parseInt(dateParts[0]);
+                    const month = parseInt(dateParts[1]) - 1;
+                    const day = parseInt(dateParts[2]);
+                    
+                    let hours = 10;
+                    let minutes = 0;
+                    
+                    if (selectedTime.includes('AM') || selectedTime.includes('PM')) {
+                        const timeStr = selectedTime.replace(/\s*(AM|PM)/, '');
+                        const timeParts = timeStr.split(':');
+                        hours = parseInt(timeParts[0]);
+                        minutes = parseInt(timeParts[1] || '0');
+                        
+                        if (selectedTime.includes('PM') && hours < 12) {
+                            hours += 12;
+                        }
+                        if (selectedTime.includes('AM') && hours === 12) {
+                            hours = 0;
+                        }
+                    }
+                    
+                    eventDate = new Date(year, month, day, hours, minutes);
+                }
+                
+                const endDate = new Date(eventDate.getTime() + (60 * 60 * 1000));
+                
+                const formatGoogleDate = (date) => {
+                    return date.toISOString().replace(/-|:|\.\d+/g, '');
+                };
+                
+                const googleUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&details=${encodeURIComponent(eventDetails)}&location=${encodeURIComponent(eventLocation)}&dates=${formatGoogleDate(eventDate)}/${formatGoogleDate(endDate)}`;
+                
+                window.open(googleUrl, '_blank');
+                
+            } catch (error) {
+                alert("There was a problem creating the calendar event. Please try again.");
+            }
+        });
+    }
+});
+    </script>
+</body>
+</html>

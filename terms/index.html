@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | Equipe Hair Salon - London</title>
+    <meta name="description" content="Terms and Conditions for Equipe Hair Salon. Read our service terms, booking policies, and conditions for our London hair salons.">
+    <meta name="keywords" content="terms conditions, service terms, booking policy, Equipe Hair, hair salon London, salon terms">
+    <link rel="canonical" href="https://equipehair.com/terms/" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../assets/icon.png">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .page-banner {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/hero-bg.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 50vh;
+            width: 100%;
+        }
+        .page-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50vh;
+            background: linear-gradient(45deg, rgba(8, 7, 8, 0.7) 0%, rgba(144, 55, 166, 0.3) 100%);
+            z-index: 1;
+        }
+        .page-banner > div {
+            position: relative;
+            z-index: 2;
+        }
+        .text-brand {
+            color: #9932CC; /* Purple */
+        }
+        .bg-brand {
+            background-color: #9932CC; /* Purple */
+        }
+        .text-accent {
+            color: #FF1493; /* Deep Pink */
+        }
+        .bg-accent {
+            background-color: #FF1493; /* Deep Pink */
+        }
+        .social-icon a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            margin-right: 15px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .social-icon a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .social-icon a:hover {
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.3);
+        }
+        .social-icon a:hover::before {
+            opacity: 1;
+        }
+        
+        /* Fancy Navigation */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Neon glow effect */
+        .neon-glow {
+            text-shadow: 0 0 5px rgba(153, 50, 204, 0.5),
+                         0 0 10px rgba(153, 50, 204, 0.3),
+                         0 0 15px rgba(153, 50, 204, 0.1);
+        }
+        
+        /* Fancy buttons */
+        .btn-fancy {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: none;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.3);
+        }
+
+        /* Content sections */
+        .content-section {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            background: white;
+            margin-bottom: 2rem;
+        }
+        
+        .content-section:hover {
+            box-shadow: 0 15px 50px rgba(153, 50, 204, 0.15);
+        }
+        
+        .section-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(45deg, rgba(153, 50, 204, 0.1), rgba(255, 20, 147, 0.1));
+            border-left: 4px solid #9932CC;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .table-of-contents {
+            background: #f8fafc;
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .toc-item {
+            display: block;
+            padding: 0.5rem 0;
+            color: #4a5568;
+            text-decoration: none;
+            border-bottom: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-item:hover {
+            color: #9932CC;
+            padding-left: 1rem;
+        }
+        
+        .toc-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#9932CC',
+                        accent: '#FF1493',
+                        dark: '#1E0E2F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-t-brand border-r-accent border-b-brand border-l-accent rounded-full animate-spin"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold gradient-text">E</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-lg z-50 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../" class="flex items-center">
+                    <span class="text-3xl font-bold gradient-text">EQUIPE</span>
+                    <span class="ml-2 text-dark text-xl">HAIR</span>
+                </a>
+                
+                <nav class="hidden lg:flex space-x-10 text-gray-800">
+                    <a href="../" class="nav-link font-medium hover:text-brand">Home</a>
+                    <a href="../about/" class="nav-link font-medium hover:text-brand">About Us</a>
+                    <a href="../services/" class="nav-link font-medium hover:text-brand">Services</a>
+                    <a href="../gallery/" class="nav-link font-medium hover:text-brand">Gallery</a>
+                    <a href="../blog/" class="nav-link font-medium hover:text-brand">Blog</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="../booking/" class="hidden md:block btn-fancy text-white px-6 py-3 rounded-full transition duration-500">
+                        Book Appointment
+                    </a>
+                    <button class="lg:hidden text-gray-700 focus:outline-none ml-4" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden pt-4 pb-2" id="mobile-menu">
+                <nav class="flex flex-col space-y-3 text-gray-700">
+                    <a href="../" class="font-medium hover:text-brand py-2 border-b border-gray-100">Home</a>
+                    <a href="../about/" class="font-medium hover:text-brand py-2 border-b border-gray-100">About Us</a>
+                    <a href="../services/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Services</a>
+                    <a href="../gallery/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Gallery</a>
+                    <a href="../blog/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Blog</a>
+                    <a href="../booking/" class="font-medium hover:text-brand py-2">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <section class="page-banner flex items-center justify-center text-white pt-24">
+        <div class="container mx-auto px-4 text-center" data-aos="fade-up" data-aos-duration="1200">
+            <div class="relative mb-6">
+                <h1 class="text-5xl md:text-7xl font-bold mb-2 neon-glow">Terms & <span class="gradient-text">Conditions</span></h1>
+                <div class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent rounded-full"></div>
+            </div>
+            <p class="text-xl md:text-2xl mb-12 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">Please read our terms of service carefully before using our salon services.</p>
+        </div>
+    </section>
+
+    <!-- Terms & Conditions Content -->
+    <section class="py-20 bg-white relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="mx-auto">
+                
+                <!-- Introduction -->
+                <div class="content-section p-8 md:p-12 mb-10" data-aos="fade-up">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-file-contract text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">Terms of Service</h2>
+                            <p class="text-gray-600 text-lg">Last updated: January 2025</p>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Welcome to Equipe Hair Salon. These Terms and Conditions ("Terms") govern your use of our services, facilities, and website. By booking an appointment or using our services, you agree to comply with and be bound by these Terms.
+                    </p>
+                    
+                    <div class="highlight-box">
+                        <p class="text-gray-800 font-medium">
+                            <i class="fas fa-info-circle text-brand mr-2"></i>
+                            These terms apply to both our Maida Vale and Finchley salon locations, as well as our online booking system and website.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Table of Contents -->
+                <div class="table-of-contents" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                        <i class="fas fa-list text-brand mr-2"></i>
+                        Table of Contents
+                    </h3>
+                    <nav class="space-y-1">
+                        <a href="#acceptance-terms" class="toc-item">1. Acceptance of Terms</a>
+                        <a href="#appointment-booking" class="toc-item">2. Appointment Booking & Cancellation</a>
+                        <a href="#payment-terms" class="toc-item">3. Payment Terms</a>
+                        <a href="#service-policies" class="toc-item">4. Service Policies</a>
+                        <a href="#client-responsibilities" class="toc-item">5. Client Responsibilities</a>
+                        <a href="#health-safety" class="toc-item">6. Health & Safety</a>
+                        <a href="#liability-disclaimers" class="toc-item">7. Liability & Disclaimers</a>
+                        <a href="#intellectual-property" class="toc-item">8. Intellectual Property</a>
+                        <a href="#website-usage" class="toc-item">9. Website Usage</a>
+                        <a href="#dispute-resolution" class="toc-item">10. Dispute Resolution</a>
+                        <a href="#general-provisions" class="toc-item">11. General Provisions</a>
+                        <a href="#contact-info" class="toc-item">12. Contact Information</a>
+                    </nav>
+                </div>
+
+                <!-- Acceptance of Terms -->
+                <div id="acceptance-terms" class="content-section p-8 md:p-12" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">1. Acceptance of Terms</h2>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        By accessing our website, booking appointments, or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                                <i class="fas fa-check text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Agreement to Terms</h4>
+                                <p class="text-gray-700">Your use of our services constitutes acceptance of these terms in their entirety.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                                <i class="fas fa-sync text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Updates to Terms</h4>
+                                <p class="text-gray-700">We may update these terms from time to time. Continued use of our services after changes constitutes acceptance.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                                <i class="fas fa-calendar text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Age Requirements</h4>
+                                <p class="text-gray-700">Clients under 16 must be accompanied by a parent or guardian. Services for minors require parental consent.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appointment Booking & Cancellation -->
+                <div id="appointment-booking" class="content-section p-8 md:p-12" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-calendar-alt text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">2. Appointment Booking & Cancellation</h2>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Booking Policy</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Appointments can be booked online, by phone, or in person. We recommend booking in advance to secure your preferred time slot.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <i class="fas fa-clock text-brand mr-2"></i>
+                                Cancellation Policy
+                            </h4>
+                            <ul class="text-gray-700 text-sm space-y-2">
+                                <li>• 24 hours notice required for cancellations</li>
+                                <li>• Late cancellations may incur charges</li>
+                                <li>• No-shows will be charged full service fee</li>
+                                <li>• Emergency cancellations considered case-by-case</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <i class="fas fa-user-clock text-brand mr-2"></i>
+                                Lateness Policy
+                            </h4>
+                            <ul class="text-gray-700 text-sm space-y-2">
+                                <li>• Please arrive on time for your appointment</li>
+                                <li>• Late arrivals may result in shortened service</li>
+                                <li>• Significantly late clients may need to reschedule</li>
+                                <li>• Full charges apply regardless of service time</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p class="text-gray-800 font-medium">
+                            <i class="fas fa-phone text-brand mr-2"></i>
+                            To cancel or reschedule: Call Maida Vale at 020 7286 9988 or Finchley at 020 3209 5030
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Payment Terms -->
+                <div id="payment-terms" class="content-section p-8 md:p-12" data-aos="fade-up" data-aos-delay="400">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-credit-card text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">3. Payment Terms</h2>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Payment is required at the time of service. We accept various payment methods for your convenience.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Accepted Payment Methods</h4>
+                            <div class="flex flex-wrap gap-4">
+                                <span class="bg-brand text-white px-4 py-2 rounded-full text-sm">Cash</span>
+                                <span class="bg-brand text-white px-4 py-2 rounded-full text-sm">Credit Cards</span>
+                                <span class="bg-brand text-white px-4 py-2 rounded-full text-sm">Debit Cards</span>
+                                <span class="bg-brand text-white px-4 py-2 rounded-full text-sm">Contactless</span>
+                                <span class="bg-brand text-white px-4 py-2 rounded-full text-sm">Mobile Payments</span>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Pricing & Charges</h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• All prices are inclusive of VAT where applicable</li>
+                                <li>• Prices may vary based on hair length and condition</li>
+                                <li>• Additional charges may apply for specialized treatments</li>
+                                <li>• Consultation fees may apply for complex color corrections</li>
+                                <li>• Group bookings may qualify for discounts</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Deposits & Gift Vouchers</h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Deposits may be required for expensive treatments</li>
+                                <li>• Gift vouchers are available for purchase</li>
+                                <li>• Vouchers are valid for 12 months from purchase date</li>
+                                <li>• Refunds are not available for gift vouchers</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Service Policies -->
+                <div id="service-policies" class="content-section p-8 md:p-12" data-aos="fade-up" data-aos-delay="500">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-cut text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">4. Service Policies</h2>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Service Guarantee</h3>
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        We are committed to providing excellent service. If you are not satisfied with your service, please inform us within 7 days so we can address your concerns.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Color Services</h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Patch tests are required for first-time color clients</li>
+                                <li>• Results may vary based on existing hair condition</li>
+                                <li>• Color corrections may require multiple sessions</li>
+                                <li>• We reserve the right to refuse services that may damage hair</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Chemical Services</h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Consultation required before chemical treatments</li>
+                                <li>• Hair analysis may be necessary</li>
+                                <li>• Aftercare instructions must be followed</li>
+                                <li>• Touch-ups may be needed for optimal results</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Stylist Requests</h4>
+                            <ul class="text-gray-700 space-y-2">
+                                <li>• Specific stylist requests are accommodated when possible</li>
+                                <li>• Alternative stylists may be assigned if unavailable</li>
+                                <li>• Senior stylists may have premium pricing</li>
+                                <li>• Trainee services available at reduced rates</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Client Responsibilities -->
+                <div id="client-responsibilities" class="content-section p-8 md:p-12" data-aos="fade-up" data-aos-delay="600">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-user-check text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">5. Client Responsibilities</h2>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        To ensure the best service experience for all clients, we ask that you:
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                                <i class="fas fa-info text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Disclosure</h4>
+                                <p class="text-gray-700">Inform us of any allergies, medical conditions, or medications that may affect treatments.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                                <i class="fas fa-clock text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Punctuality</h4>
+                                <p class="text-gray-700">Arrive on time for appointments to allow full service time and avoid delays for other clients.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                                <i class="fas fa-mobile-alt text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Communication</h4>
+                                <p class="text-gray-700">Provide accurate contact information and respond promptly to appointment confirmations.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mr-4 mt-1">
+                                <i class="fas fa-heart text-white text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-1">Respect</h4>
+                                <p class="text-gray-700">Treat staff and other clients with courtesy and respect at all times.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Health & Safety -->
+                <div id="health-safety" class="content-section p-8 md:p-12" data-aos="fade-up" data-aos-delay="700">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-shield-virus text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">6. Health & Safety</h2>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        Your health and safety are our top priorities. We maintain strict hygiene and safety standards in accordance with industry regulations.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <i class="fas fa-hands-wash text-brand mr-2"></i>
+                                Hygiene Standards
+                            </h4>
+                            <ul class="text-gray-700 text-sm space-y-2">
+                                <li>• All tools are sanitized between clients</li>
+                                <li>• Single-use items are disposed of properly</li>
+                                <li>• Work stations are cleaned after each service</li>
+                                <li>• Staff follow strict hygiene protocols</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="font-semibold text-gray-800 mb-3">
+                                <i class="fas fa-exclamation-triangle text-brand mr-2"></i>
+                                Safety Precautions
+                            </h4>
+                            <ul class="text-gray-700 text-sm space-y-2">
+                                <li>• Patch tests for chemical services</li>
+                                <li>• Equipment safety checks regularly performed</li>
+                                <li>• Emergency procedures in place</li>
+                                <li>• Insurance coverage for client protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Liability & Disclaimers -->
+                <div id="liability-disclaimers" class="content-section p-8 md:p-12" data-aos="fade-up" data-aos-delay="800">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-balance-scale text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">7. Liability & Disclaimers</h2>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        While we strive to provide excellent service, please note the following limitations of liability:
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Service Results</h4>
+                            <p class="text-gray-700">Hair and beauty services may produce varying results based on individual hair type, condition, and other factors beyond our control.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Allergic Reactions</h4>
+                            <p class="text-gray-700">Despite patch testing, allergic reactions may occur. Clients must inform us of any known allergies or sensitivities.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">Personal Property</h4>
+                            <p class="text-gray-700">We are not responsible for loss or damage to personal items. Please secure valuables during your visit.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p class="text-gray-800 font-medium">
+                            <i class="fas fa-file-medical text-brand mr-2"></i>
+                            Our liability is limited to the cost of the service provided. We maintain professional indemnity insurance for your protection.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div id="contact-info" class="content-section p-8 md:p-12" data-aos="fade-up" data-aos-delay="900">
+                    <div class="flex items-start mb-6">
+                        <div class="section-icon">
+                            <i class="fas fa-phone text-2xl"></i>
+                        </div>
+                        <div class="ml-6">
+                            <h2 class="text-3xl font-bold mb-4">12. Contact Information</h2>
+                        </div>
+                    </div>
+                    
+                    <p class="text-gray-700 leading-relaxed mb-6">
+                        If you have any questions about these Terms and Conditions or need to discuss any service-related matters, please contact us:
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-4">Maida Vale Salon</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-brand mr-3"></i>
+                                    <span class="text-gray-700">9 Clifton Road, Maida Vale, London W9 1SZ</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone text-brand mr-3"></i>
+                                    <span class="text-gray-700">020 7286 9988</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-brand mr-3"></i>
+                                    <a href="mailto:info@equipehair.com" class="text-gray-700 hover:text-brand">info@equipehair.com</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-4">Finchley Salon</h4>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-brand mr-3"></i>
+                                    <span class="text-gray-700">1113 Finchley Road, London NW11 0QB</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone text-brand mr-3"></i>
+                                    <span class="text-gray-700">020 3209 5030</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-brand mr-3"></i>
+                                    <a href="mailto:info@equipehair.com" class="text-gray-700 hover:text-brand">info@equipehair.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="1000">
+                    <h3 class="text-2xl font-bold mb-6">Ready to Experience Our Services?</h3>
+                    <p class="text-gray-600 mb-8">Book your appointment today and let our expert stylists transform your look.</p>
+                    <a href="../booking/" class="btn-fancy text-white px-8 py-4 rounded-full text-lg font-medium">
+                        Book Appointment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <a href="../" class="inline-block">
+                            <span class="text-4xl font-bold gradient-text">EQUIPE</span>
+                            <span class="ml-2 text-white text-2xl">HAIR</span>
+                        </a>
+                    </div>
+                    <p class="mb-8 text-gray-400 text-lg">London's premier hair salon delivering exceptional styling, cutting and coloring services tailored to your unique style and personality.</p>
+                    <ul class="social-icon flex">
+                        <li><a href="https://www.facebook.com/equipehairsalon/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipefinchley/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipemaidavale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/+447957990217?text=Hello" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Maida Vale -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Maida Vale <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02072869988" class="block hover:text-accent transition-colors duration-300">02072869988</a>
+                                <a href="tel:02072869948" class="block hover:text-accent transition-colors duration-300">02072869948</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Monday: 9:00am - 5:00pm</p>
+                                <p>Tuesday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Finchley -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Finchley <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>1113 Finchley Road, London NW11 0QB</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02032095030" class="block hover:text-accent transition-colors duration-300">02032095030</a>
+                                <a href="tel:02082093200" class="block hover:text-accent transition-colors duration-300">02082093200</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Sunday: 10:00am - 5:00pm</p>
+                                <p>Monday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Quick <span class="text-accent">Links</span></h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../services/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../gallery/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../blog/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../booking/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Book Now
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../privacy/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../terms/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-10 text-center">
+                <p class="text-gray-500">&copy; 2025 Equipe Hair. All rights reserved.</p>
+                <div class="flex justify-center mt-4 space-x-6">
+                    <a href="../privacy/" class="text-accent hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="../terms/" class="text-accent hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                    <a href="../cookies/" class="text-accent hover:text-white transition-colors duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-brand to-accent hover:from-accent hover:to-brand text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-500 hover:scale-110 opacity-0 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100');
+                backToTopButton.classList.remove('opacity-0');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                backToTopButton.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for table of contents
+        document.querySelectorAll('.toc-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Hair Care Routine | Equipe Hair Salon Blog</title>
+    <meta name="description" content="Learn the essential steps to create a hair care routine that will transform your locks from dull to radiant with professional advice from Equipe Hair Salon's experts.">
+    <meta name="keywords" content="hair care routine, hair care tips, healthy hair, shiny hair, hair maintenance, Equipe Hair, luxury hair salon, Maida Vale salon, Finchley salon">
+    <link rel="canonical" href="https://equipehair.com/blog/ultimate-hair-care-routine/" />
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="../../assets/icon.png">
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+        }
+        .blog-banner {
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .blog-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+            z-index: 1;
+        }
+        .blog-banner > div {
+            position: relative;
+            z-index: 2;
+        }
+        .text-brand {
+            color: #9932CC; /* Purple */
+        }
+        .bg-brand {
+            background-color: #9932CC; /* Purple */
+        }
+        .text-accent {
+            color: #FF1493; /* Deep Pink */
+        }
+        .bg-accent {
+            background-color: #FF1493; /* Deep Pink */
+        }
+        .social-icon a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+            margin-right: 15px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .social-icon a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #FF1493, #9932CC);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .social-icon a:hover {
+            transform: translateY(-10px) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(153, 50, 204, 0.3);
+        }
+        .social-icon a:hover::before {
+            opacity: 1;
+        }
+        
+        /* Fancy Navigation */
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover {
+            transform: translateY(-3px);
+            text-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .nav-link:hover::before {
+            width: 100%;
+        }
+        
+        /* Gradient text */
+        .gradient-text {
+            background: linear-gradient(to right, #9932CC, #FF1493);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Neon glow effect */
+        .neon-glow {
+            text-shadow: 0 0 5px rgba(153, 50, 204, 0.5),
+                         0 0 10px rgba(153, 50, 204, 0.3),
+                         0 0 15px rgba(153, 50, 204, 0.1);
+        }
+        
+        /* Fancy buttons */
+        .btn-fancy {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: none;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            box-shadow: 0 10px 20px rgba(153, 50, 204, 0.3);
+        }
+        
+        /* Blog content styles */
+        .blog-content {
+            line-height: 1.8;
+        }
+        
+        .blog-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.25rem;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content ul li, .blog-content ol li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .blog-content img {
+            border-radius: 0.75rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #9932CC;
+            padding-left: 1.5rem;
+            font-style: italic;
+            margin: 1.5rem 0;
+        }
+        
+        /* Category badge */
+        .category-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            background: linear-gradient(45deg, #9932CC, #FF1493);
+            color: white;
+        }
+        
+        /* Author card */
+        .author-card {
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: white;
+        }
+        
+        /* Share buttons */
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .share-facebook {
+            background-color: #3b5998;
+        }
+        
+        .share-twitter {
+            background-color: #1da1f2;
+        }
+        
+        .share-pinterest {
+            background-color: #bd081c;
+        }
+        
+        .share-linkedin {
+            background-color: #0077b5;
+        }
+        
+        /* Related posts */
+        .related-post {
+            transition: all 0.3s ease;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .related-post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .related-post img {
+            transition: transform 0.5s ease;
+        }
+        
+        .related-post:hover img {
+            transform: scale(1.1);
+        }
+        
+        /* Table of contents */
+        .toc {
+            border-radius: 0.75rem;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #9932CC;
+        }
+        
+        .toc ul {
+            padding-left: 1.25rem;
+            list-style-type: none;
+        }
+        
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .toc a {
+            color: #4B5563;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .toc a:hover {
+            color: #9932CC;
+        }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#9932CC',
+                        accent: '#FF1493',
+                        dark: '#1E0E2F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center z-[9999]">
+        <div class="relative">
+            <div class="w-16 h-16 border-4 border-t-brand border-r-accent border-b-brand border-l-accent rounded-full animate-spin"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-3xl font-bold gradient-text">E</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-95 shadow-lg z-50 backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <a href="../../" class="flex items-center">
+                    <span class="text-3xl font-bold gradient-text">EQUIPE</span>
+                    <span class="ml-2 text-dark text-xl">HAIR</span>
+                </a>
+                
+                <nav class="hidden lg:flex space-x-10 text-gray-800">
+                    <a href="../../" class="nav-link font-medium hover:text-brand">Home</a>
+                    <a href="../../about/" class="nav-link font-medium hover:text-brand">About Us</a>
+                    <a href="../../services/" class="nav-link font-medium hover:text-brand">Services</a>
+                    <a href="../../gallery/" class="nav-link font-medium hover:text-brand">Gallery</a>
+                    <a href="../../blog/" class="nav-link font-medium hover:text-brand">Blog</a>
+                </nav>
+                
+                <div class="flex items-center">
+                    <a href="../../booking/" class="hidden md:block btn-fancy text-white px-6 py-3 rounded-full transition duration-500">
+                        Book Appointment
+                    </a>
+                    <button class="lg:hidden text-gray-700 focus:outline-none ml-4" id="mobile-menu-button">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden pt-4 pb-2" id="mobile-menu">
+                <nav class="flex flex-col space-y-3 text-gray-700">
+                    <a href="../../" class="font-medium hover:text-brand py-2 border-b border-gray-100">Home</a>
+                    <a href="../../about/" class="font-medium hover:text-brand py-2 border-b border-gray-100">About Us</a>
+                    <a href="../../services/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Services</a>
+                    <a href="../../gallery/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Gallery</a>
+                    <a href="../../blog/" class="font-medium hover:text-brand py-2 border-b border-gray-100">Blog</a>
+                    <a href="../../booking/" class="font-medium hover:text-brand py-2">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Blog Banner -->
+    <div class="blog-banner flex items-end pt-24" style="background-image: url('../../assets/images/blog/blog-2.webp');">
+        <div class="container mx-auto px-4 pb-12">
+            <div class="max-w-4xl">
+                <span class="category-badge mb-4 inline-block">Hair Care</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" data-aos="fade-up">The Ultimate Hair Care Routine for Healthy, Shiny Hair</h1>
+                <div class="flex items-center">
+                    <img src="../../assets/images/team-2.jpg" alt="Daniel Chen" class="w-12 h-12 rounded-full object-cover border-2 border-white mr-4">
+                    <div class="text-white">
+                        <p class="font-medium">Daniel Chen</p>
+                        <p class="text-sm opacity-90">Senior Stylist</p>
+                    </div>
+                    <div class="flex items-center ml-auto text-white text-sm">
+                        <span class="flex items-center mr-6">
+                            <i class="far fa-calendar-alt mr-2"></i> May 8, 2025
+                        </span>
+                        <span class="flex items-center">
+                            <i class="far fa-clock mr-2"></i> 7 min read
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Main Content -->
+                <div class="lg:w-2/3">
+                    <!-- Table of Contents -->
+                    <div class="toc mb-8" data-aos="fade-up">
+                        <h3 class="font-bold text-xl mb-4">Table of Contents</h3>
+                        <ul>
+                            <li><a href="#introduction">Introduction</a></li>
+                            <li><a href="#understanding-hair">Understanding Your Hair Type</a></li>
+                            <li><a href="#daily-routine">Essential Daily Hair Care</a></li>
+                            <li><a href="#weekly-routine">Weekly Deep Conditioning Treatments</a></li>
+                            <li><a href="#heat-protection">Heat Protection and Styling</a></li>
+                            <li><a href="#hair-nutrition">Nutrition for Healthy Hair</a></li>
+                            <li><a href="#seasonal-care">Seasonal Hair Care Tips</a></li>
+                            <li><a href="#conclusion">Conclusion</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Blog Content -->
+                    <div class="blog-content" data-aos="fade-up">
+                        <div id="introduction">
+                            <p>Beautiful, healthy hair isn't just a matter of good genetics—it's the result of consistent care and the right routine. At Equipe Hair, we often hear from clients who are frustrated with dull, lifeless hair despite using expensive products. The truth is, achieving that enviable shine and bounce is about understanding your hair's specific needs and establishing a routine that addresses them.</p>
+                            
+                            <p>In this comprehensive guide, we'll walk you through creating the ultimate hair care routine that will transform your locks from dull to radiant. Whether you have fine, straight hair or thick, curly tresses, these professional tips will help you develop a customized approach to hair care that delivers results.</p>
+                        </div>
+                        
+                        <div id="understanding-hair">
+                            <h2>Understanding Your Hair Type</h2>
+                            
+                            <img src="../../assets/images/insta_005.jpg" alt="Different Hair Types" class="w-full">
+                            
+                            <p>The first step to an effective hair care routine is understanding your unique hair type. Hair can be categorized in several ways:</p>
+                            
+                            <h3>By Texture</h3>
+                            <ul>
+                                <li><strong>Straight:</strong> Typically shiny, but can become oily quickly as sebum travels easily down the hair shaft</li>
+                                <li><strong>Wavy:</strong> Falls somewhere between straight and curly, often prone to frizz</li>
+                                <li><strong>Curly:</strong> Forms an "S" pattern, tends to be drier as natural oils don't travel down the shaft easily</li>
+                                <li><strong>Coily/Kinky:</strong> Forms tight curls or zigzags, typically very dry and fragile</li>
+                            </ul>
+                            
+                            <h3>By Density</h3>
+                            <ul>
+                                <li><strong>Fine:</strong> Each strand is thin, and hair may appear flat</li>
+                                <li><strong>Medium:</strong> Average thickness of strands</li>
+                                <li><strong>Thick/Coarse:</strong> Each strand is thicker, and hair usually appears full</li>
+                            </ul>
+                            
+                            <h3>By Porosity</h3>
+                            <ul>
+                                <li><strong>Low Porosity:</strong> Cuticles are tightly closed, making it difficult for moisture to penetrate</li>
+                                <li><strong>Medium Porosity:</strong> Balanced moisture retention and absorption</li>
+                                <li><strong>High Porosity:</strong> Cuticles are more open, allowing moisture to enter easily but also escape quickly</li>
+                            </ul>
+                            
+                            <p>Understanding these factors helps you choose appropriate products and techniques. For example, high-porosity hair benefits from protein treatments, while low-porosity hair needs lightweight products that won't sit on the surface.</p>
+                            
+                            <blockquote>
+                                "Once you truly understand your hair type, you're halfway to solving most of your hair concerns. It's like having a personalized roadmap for your hair care journey." — Daniel Chen, Senior Stylist
+                            </blockquote>
+                        </div>
+                        
+                        <div id="daily-routine">
+                            <h2>Essential Daily Hair Care</h2>
+                            
+                            <img src="../../assets/images/blog//blog-2.webp" alt="Daily Hair Care Routine" class="w-full">
+                            
+                            <p>A consistent daily routine forms the foundation of healthy hair. Here's what should be included:</p>
+                            
+                            <h3>Morning Care</h3>
+                            <ol>
+                                <li><strong>Gentle Detangling:</strong> Use a wide-tooth comb or brush designed for your hair type to remove tangles without causing breakage. Always start from the ends and work your way up.</li>
+                                <li><strong>Protective Styling:</strong> If you have long hair, consider wearing it in a loose braid or bun during the day to minimize exposure to environmental stressors.</li>
+                                <li><strong>Heat Protection:</strong> Apply a heat protectant if you'll be using hot tools for styling.</li>
+                            </ol>
+                            
+                            <h3>Evening Care</h3>
+                            <ol>
+                                <li><strong>Pre-bedtime Brush:</strong> Gently brush your hair before bed to distribute natural oils from the scalp down the hair shaft.</li>
+                                <li><strong>Silk or Satin Pillowcase:</strong> Switch to a silk or satin pillowcase to reduce friction and prevent hair breakage while you sleep.</li>
+                                <li><strong>Overnight Protection:</strong> For curly or textured hair, consider a loose pineapple (high, loose ponytail) or bonnet to preserve your style and reduce frizz.</li>
+                            </ol>
+                            
+                            <p>Remember that daily washing isn't necessary for most hair types and can strip natural oils. The frequency of shampooing should depend on your hair type, lifestyle, and personal preference. Those with oily hair might need to wash every other day, while those with dry or curly hair may benefit from washing just 1-2 times per week.</p>
+                        </div>
+                        
+                        <div id="weekly-routine">
+                            <h2>Weekly Deep Conditioning Treatments</h2>
+                            
+                            <img src="../../assets/images/blog/blog-1.webp" alt="Deep Conditioning Treatment" class="w-full">
+                            
+                            <p>Weekly treatments provide intensive care that daily routines can't deliver. Incorporate these practices once a week:</p>
+                            
+                            <h3>Clarifying Wash</h3>
+                            <p>Product buildup can weigh hair down and prevent moisture from penetrating the shaft. Use a clarifying shampoo once every 1-2 weeks to remove residue and start with a clean slate. Follow with a hydrating conditioner, as clarifying shampoos can be slightly drying.</p>
+                            
+                            <h3>Deep Conditioning Mask</h3>
+                            <p>A deep conditioning treatment should be part of your weekly routine. Choose masks based on your hair's needs:</p>
+                            <ul>
+                                <li><strong>For dry hair:</strong> Look for masks with ingredients like shea butter, argan oil, or glycerin</li>
+                                <li><strong>For damaged hair:</strong> Choose protein-infused treatments with keratin or silk proteins</li>
+                                <li><strong>For color-treated hair:</strong> Use color-safe masks with UV protection</li>
+                            </ul>
+                            
+                            <p>For maximum effectiveness, apply the mask to damp hair, focusing on mid-lengths to ends. Cover with a shower cap and leave on for 20-30 minutes. Some masks work even better with gentle heat (like a warm towel wrapped around the head).</p>
+                            
+                            <h3>Scalp Care</h3>
+                            <p>A healthy scalp is essential for healthy hair growth. Once a week, give your scalp special attention:</p>
+                            <ul>
+                                <li><strong>Scalp exfoliation:</strong> Use a gentle scrub or a silicone scalp massager to remove dead skin cells</li>
+                                <li><strong>Scalp massage:</strong> Spend 5-10 minutes massaging your scalp to stimulate blood flow and promote hair growth</li>
+                                <li><strong>Scalp treatments:</strong> Address specific concerns like dryness or excess oil with targeted treatments</li>
+                            </ul>
+                        </div>
+                        
+                        <div id="heat-protection">
+                            <h2>Heat Protection and Styling</h2>
+                            
+                            <img src="../../assets/images/blog//blog-6.avif" alt="Heat Protection for Hair" class="w-full">
+                            
+                            <p>Heat styling tools can transform your look, but they can also cause significant damage if not used properly. Here's how to minimize the negative impact:</p>
+                            
+                            <h3>Before Heat Styling</h3>
+                            <ul>
+                                <li>Always use a heat protectant spray, serum, or cream before applying any heat to your hair</li>
+                                <li>Ensure your hair is completely dry before using flat irons or curling wands (unless using wet-to-dry tools specifically designed for damp hair)</li>
+                                <li>Section your hair properly to avoid going over the same strands multiple times</li>
+                            </ul>
+                            
+                            <h3>Temperature Settings</h3>
+                            <p>Not all hair types need the same level of heat:</p>
+                            <ul>
+                                <li><strong>Fine or damaged hair:</strong> 280-320°F (140-160°C)</li>
+                                <li><strong>Medium or normal hair:</strong> 320-360°F (160-180°C)</li>
+                                <li><strong>Thick, coarse, or resistant hair:</strong> 360-410°F (180-210°C)</li>
+                            </ul>
+                            
+                            <h3>Heat-Free Styling Alternatives</h3>
+                            <p>Give your hair regular breaks from heat styling by exploring heat-free alternatives:</p>
+                            <ul>
+                                <li>Overnight braids or twists for waves</li>
+                                <li>Foam rollers or flexi-rods for curls</li>
+                                <li>Air-drying techniques specific to your hair type</li>
+                                <li>Protective styles like buns, braids, or updos</li>
+                            </ul>
+                            
+                            <blockquote>
+                                "The best styling approach is to work with your natural texture, not against it. When you embrace what your hair naturally wants to do, you'll find you need less heat and manipulation." — Daniel Chen, Senior Stylist
+                            </blockquote>
+                        </div>
+                        
+                        <div id="hair-nutrition">
+                            <h2>Nutrition for Healthy Hair</h2>
+                            
+                            <img src="../../assets/images/blog/blog-5.jpeg" alt="Nutrition for Healthy Hair" class="w-full">
+                            
+                            <p>Beautiful hair starts from within. What you eat directly impacts your hair's health and appearance. Include these nutrients in your diet for optimal hair health:</p>
+                            
+                            <h3>Essential Nutrients for Hair</h3>
+                            <ul>
+                                <li><strong>Protein:</strong> Hair is made of protein (keratin), so adequate protein intake is crucial. Include lean meats, fish, eggs, dairy, legumes, and nuts in your diet.</li>
+                                <li><strong>Omega-3 Fatty Acids:</strong> These healthy fats nourish hair follicles and promote shine. Sources include fatty fish (salmon, mackerel), flaxseeds, and walnuts.</li>
+                                <li><strong>Vitamins A & C:</strong> Vitamin A helps produce sebum, which moisturizes the scalp, while Vitamin C aids collagen production and iron absorption. Find them in colorful fruits and vegetables.</li>
+                                <li><strong>B Vitamins (especially Biotin):</strong> These vitamins support hair growth and strength. Sources include whole grains, meat, eggs, nuts, and leafy greens.</li>
+                                <li><strong>Iron:</strong> Iron deficiency is a common cause of hair loss. Include iron-rich foods like red meat, spinach, and lentils in your diet.</li>
+                                <li><strong>Zinc:</strong> This mineral supports hair growth and repair. Find it in oysters, beef, pumpkin seeds, and lentils.</li>
+                            </ul>
+                            
+                            <h3>Hydration</h3>
+                            <p>Drinking enough water is essential for all bodily functions, including maintaining healthy hair. Aim for at least 8 glasses of water daily to keep your hair hydrated from the inside out.</p>
+                            
+                            <h3>Supplements</h3>
+                            <p>While a balanced diet should provide all necessary nutrients, some people may benefit from supplements. Popular hair supplements include:</p>
+                            <ul>
+                                <li>Biotin</li>
+                                <li>Collagen</li>
+                                <li>Vitamin D</li>
+                                <li>Iron (if deficient)</li>
+                                <li>Specialized hair growth formulas</li>
+                            </ul>
+                            
+                            <p>Always consult with a healthcare provider before starting any supplement regimen, as some supplements may interact with medications or have side effects.</p>
+                        </div>
+                        
+                        <div id="seasonal-care">
+                            <h2>Seasonal Hair Care Tips</h2>
+                            
+                            <img src="../../assets/images/blog/blog-4.png" alt="Seasonal Hair Care" class="w-full">
+                            
+                            <p>Your hair faces different challenges with each season, requiring adjustments to your routine:</p>
+                            
+                            <h3>Summer Hair Care</h3>
+                            <ul>
+                                <li><strong>UV Protection:</strong> Use products with UV filters or wear a hat to protect hair from sun damage</li>
+                                <li><strong>Chlorine Protection:</strong> Wet hair with clean water before swimming and use clarifying shampoo afterward</li>
+                                <li><strong>Extra Hydration:</strong> Use leave-in conditioners to combat dryness from sun exposure</li>
+                                <li><strong>Lightweight Products:</strong> Switch to lighter formulas to avoid weighing hair down in humidity</li>
+                            </ul>
+                            
+                            <h3>Fall Hair Care</h3>
+                            <ul>
+                                <li><strong>Repairing Summer Damage:</strong> Focus on restorative treatments after summer exposure</li>
+                                <li><strong>Preventing Static:</strong> Use anti-static products as the air becomes drier</li>
+                                <li><strong>Scalp Care:</strong> Address any scalp issues that developed during summer</li>
+                            </ul>
+                            
+                            <h3>Winter Hair Care</h3>
+                            <ul>
+                                <li><strong>Intense Hydration:</strong> Use richer conditioners and oils to combat indoor heating</li>
+                                <li><strong>Hat Protection:</strong> Use satin-lined hats to prevent breakage and static</li>
+                                <li><strong>Less Frequent Washing:</strong> Consider reducing wash frequency to preserve natural oils</li>
+                            </ul>
+                            
+                            <h3>Spring Hair Care</h3>
+                            <ul>
+                                <li><strong>Detox Treatments:</strong> Use clarifying treatments to remove winter product buildup</li>
+                                <li><strong>Frizz Control:</strong> Prepare for increasing humidity with appropriate anti-frizz products</li>
+                                <li><strong>Refresh Color:</strong> Brighten up color that may have dulled during winter months</li>
+                            </ul>
+                        </div>
+                        
+                        <div id="conclusion">
+                            <h2>Conclusion</h2>
+                            
+                            <p>Creating the ultimate hair care routine doesn't happen overnight. It requires understanding your hair's unique needs, consistency in your care practices, and patience as you observe results. Remember that what works for someone else may not work for you, so be willing to adjust your routine based on how your hair responds.</p>
+                            
+                            <p>At Equipe Hair, we recommend reassessing your hair care routine every few months or whenever you notice significant changes in your hair's condition. Factors like aging, hormonal changes, seasons, and lifestyle can all impact your hair's needs over time.</p>
+                            
+                            <p>For personalized recommendations tailored to your specific hair type and concerns, book a consultation with one of our expert stylists. We can help you fine-tune your routine and recommend professional treatments that will elevate your hair care to the next level.</p>
+                            
+                            <div class="flex justify-center mt-8">
+                                <a href="../../booking/" class="btn-fancy text-white font-bold px-8 py-4 rounded-full">
+                                    Book a Hair Care Consultation
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Author Bio -->
+                    <div class="author-card mt-12 p-8" data-aos="fade-up">
+                        <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                            <img src="../../assets/images/team-2.jpg" alt="Daniel Chen" class="w-24 h-24 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-bold text-xl mb-2">Daniel Chen</h4>
+                                <p class="text-gray-600 mb-4">Senior Stylist at Equipe Hair with over 10 years of experience. Daniel specializes in hair care and restoration techniques, helping clients achieve their healthiest hair possible through personalized routines and treatments.</p>
+                                <div class="flex space-x-3">
+                                    <a href="https://www.instagram.com/equipefinchley/" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/equipehairsalon/" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="https://wa.me/+447957990217?text=Hello" class="text-brand hover:text-accent transition-colors">
+                                        <i class="fab fa-whatsapp"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar -->
+                <div class="lg:w-1/3">
+                    <!-- Related Posts -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8" data-aos="fade-left">
+                        <h3 class="font-bold text-xl mb-6">Related Articles</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="related-post">
+                                <a href="../power-of-hair-masks/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-6.avif" alt="Hair Masks Benefits" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Hair Care</span>
+                                        <h4 class="font-bold mt-1">The Power of Hair Masks: Transform Your Hair in Just 20 Minutes</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="related-post">
+                                <a href="../summer-hair-trends-2025/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-1.webp" alt="Summer Hair Trends" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Hair Trends</span>
+                                        <h4 class="font-bold mt-1">Summer Hair Trends You Need to Try in 2025</h4>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <div class="related-post">
+                                <a href="../styling-tools-guide/">
+                                    <div class="h-48 overflow-hidden">
+                                        <img src="../../assets/images/blog/blog-4.png" alt="Styling Tools Guide" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="p-4">
+                                        <span class="text-xs font-bold text-brand">Styling Tips</span>
+                                        <h4 class="font-bold mt-1">The Ultimate Guide to Hair Styling Tools</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Categories -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg mb-8" data-aos="fade-left" data-aos-delay="100">
+                        <h3 class="font-bold text-xl mb-6">Categories</h3>
+                        
+                        <div class="space-y-3">
+                            <a href="../../blog/?filter=care" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Hair Care</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">9</span>
+                            </a>
+                            <a href="../../blog/?filter=trends" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Hair Trends</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">8</span>
+                            </a>
+                            <a href="../../blog/?filter=tips" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Styling Tips</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">12</span>
+                            </a>
+                            <a href="../../blog/?filter=color" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Coloring</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">14</span>
+                            </a>
+                            <a href="../../blog/?filter=events" class="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                <span>Salon Events</span>
+                                <span class="bg-brand text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center">5</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Products Recommendation -->
+                    <div class="bg-gradient-to-br from-brand/10 to-accent/10 p-6 rounded-2xl shadow-lg mb-8" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="font-bold text-xl mb-4">Recommended Products</h3>
+                        <p class="text-gray-600 mb-6">Visit our salon to explore our range of professional hair care products that can enhance your hair care routine.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-pump-soap text-brand"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Hydrating Shampoo & Conditioner</h4>
+                                    <p class="text-sm text-gray-600">Sulfate-free formulas for all hair types</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-spray-can text-brand"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Heat Protection Spray</h4>
+                                    <p class="text-sm text-gray-600">Essential for anyone using hot tools</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3 flex-shrink-0">
+                                    <i class="fas fa-oil-can text-brand"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Hair Masks & Treatments</h4>
+                                    <p class="text-sm text-gray-600">Weekly intensive care for optimal results</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="../../services/#treatments" class="btn-fancy text-white font-bold w-full py-3 rounded-full text-center block mt-6">
+                            Explore Products
+                        </a>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="bg-white p-6 rounded-2xl shadow-lg" data-aos="fade-left" data-aos-delay="300">
+                        <h3 class="font-bold text-xl mb-4">Subscribe to Our Newsletter</h3>
+                        <p class="text-gray-600 mb-4">Get the latest hair care tips, trends, and exclusive offers delivered to your inbox.</p>
+                        <form class="space-y-3">
+                            <input type="email" placeholder="Your email address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-brand">
+                            <button type="submit" class="btn-fancy text-white font-bold w-full py-3 rounded-lg">
+                                Subscribe Now
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Success Modal -->
+    <div id="newsletter-modal" class="fixed inset-0 flex items-center justify-center z-[9999] hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-filter backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="bg-white rounded-2xl shadow-2xl p-8 max-w-md w-full mx-4 relative z-10 transform transition-all duration-300 scale-90 opacity-0" id="modal-content">
+            <div class="absolute top-4 right-4">
+                <button id="close-modal" class="text-gray-400 hover:text-gray-600 transition-colors">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-20 h-20 bg-gradient-to-br from-brand to-accent rounded-full flex items-center justify-center text-white mx-auto mb-6">
+                    <i class="fas fa-check text-3xl"></i>
+                </div>
+                
+                <h3 class="text-2xl font-bold mb-2">Subscription Successful!</h3>
+                <p class="text-gray-600 mb-6">Thank you for subscribing to our newsletter. You'll start receiving hair tips, trends, and exclusive offers straight to your inbox.</p>
+                
+                <button id="close-modal-btn" class="btn-fancy text-white font-medium px-8 py-3 rounded-full transition duration-300 transform hover:scale-105">
+                    Got it!
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- More Articles -->
+    <section class="py-16 bg-gray-50 relative overflow-hidden">
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold mb-2">More Hair <span class="gradient-text">Inspiration</span></h2>
+                <p class="text-gray-600 max-w-3xl mx-auto">Explore more articles from our expert stylists</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="blog-card" data-aos="fade-up">
+                    <div class="featured-image">
+                        <img src="../../assets/images/blog/blog-1.webp" alt="Summer Hair Trends">
+                        <div class="absolute top-4 left-4">
+                            <span class="category-badge">Trends</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="meta">
+                            <span><i class="far fa-calendar-alt"></i> May 15, 2025</span>
+                        </div>
+                        <h3>Summer Hair Trends You Need to Try in 2025</h3>
+                        <p class="mb-4">Discover the hottest summer hair trends that are making waves this season.</p>
+                        <a href="../summer-hair-trends-2025/" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-image">
+                        <img src="../../assets/images/blog/blog-3.jpg" alt="Balayage vs Highlights">
+                        <div class="absolute top-4 left-4">
+                            <span class="category-badge">Coloring</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="meta">
+                            <span><i class="far fa-calendar-alt"></i> April 29, 2025</span>
+                        </div>
+                        <h3>Balayage vs. Highlights: Which is Right for You?</h3>
+                        <p class="mb-4">Understanding the difference between these popular coloring techniques.</p>
+                        <a href="../balayage-vs-highlights/" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="blog-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-image">
+                        <img src="../../assets/images/blog/blog-6.avif" alt="Hair Masks Benefits">
+                        <div class="absolute top-4 left-4">
+                            <span class="category-badge">Hair Care</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="meta">
+                            <span><i class="far fa-calendar-alt"></i> April 8, 2025</span>
+                        </div>
+                        <h3>The Power of Hair Masks</h3>
+                        <p class="mb-4">Discover how incorporating weekly hair masks into your routine can transform your hair in just 20 minutes.</p>
+                        <a href="../power-of-hair-masks/" class="read-more">
+                            Read More <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="../../blog/" class="btn-fancy text-white font-bold px-8 py-4 rounded-full">
+                    View All Articles
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-20 pb-10 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-brand rounded-full opacity-5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-accent rounded-full opacity-5 blur-3xl"></div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- About -->
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-8">
+                        <a href="../../" class="inline-block">
+                            <span class="text-4xl font-bold gradient-text">EQUIPE</span>
+                            <span class="ml-2 text-white text-2xl">HAIR</span>
+                        </a>
+                    </div>
+                    <p class="mb-8 text-gray-400 text-lg">London's premier hair salon delivering exceptional styling, cutting and coloring services tailored to your unique style and personality.</p>
+                    <ul class="social-icon flex">
+                        <li><a href="https://www.facebook.com/equipehairsalon/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipefinchley/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/equipemaidavale/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/+447957990217?text=Hello" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                
+                <!-- Maida Vale -->
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Maida Vale <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>9 Clifton Road, Maida Vale, London W9 1SZ</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02072869988" class="block hover:text-accent transition-colors duration-300">02072869988</a>
+                                <a href="tel:02072869948" class="block hover:text-accent transition-colors duration-300">02072869948</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Monday: 9:00am - 5:00pm</p>
+                                <p>Tuesday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Finchley -->
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Finchley <span class="text-accent">Salon</span></h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-map-marker-alt text-white"></i>
+                            </div>
+                            <p>1113 Finchley Road, London NW11 0QB</p>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="fas fa-phone-alt text-white"></i>
+                            </div>
+                            <div>
+                                <a href="tel:02032095030" class="block hover:text-accent transition-colors duration-300">02032095030</a>
+                                <a href="tel:02082093200" class="block hover:text-accent transition-colors duration-300">02082093200</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="bg-gradient-to-r from-brand to-accent w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 mr-4">
+                                <i class="far fa-clock text-white"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white mb-2">Opening Hours:</p>
+                                <p class="mb-1">Sunday: 10:00am - 5:00pm</p>
+                                <p>Monday-Saturday: 9:00am - 7:00pm</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-2xl font-bold mb-8 text-white">Quick <span class="text-accent">Links</span></h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="../../" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../about/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../services/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../gallery/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Gallery
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../blog/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../booking/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Book Now
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../privacy/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../../terms/" class="group flex items-center hover:text-accent transition-all duration-300">
+                                <div class="w-2 h-2 bg-accent rounded-full mr-3 transition-all duration-300 group-hover:w-4"></div>
+                                Terms & Conditions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-16 pt-10 text-center">
+                <p class="text-gray-500">&copy; 2025 Equipe Hair. All rights reserved.</p>
+                <div class="flex justify-center mt-4 space-x-6">
+                    <a href="../../privacy/" class="text-accent hover:text-white transition-colors duration-300">Privacy Policy</a>
+                    <a href="../../terms/" class="text-accent hover:text-white transition-colors duration-300">Terms & Conditions</a>
+                    <a href="../../cookies/" class="text-accent hover:text-white transition-colors duration-300">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-gradient-to-r from-brand to-accent hover:from-accent hover:to-brand text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg transform transition-all duration-500 hover:scale-110 opacity-0 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Preloader
+        document.addEventListener('DOMContentLoaded', function() {
+            const preloader = document.getElementById('preloader');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+        
+        // Initialize AOS
+        AOS.init({
+            once: true,
+            duration: 1200,
+            easing: 'ease-out-cubic'
+        });
+        
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.remove('hidden');
+            } else {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('opacity-100');
+                backToTopButton.classList.remove('opacity-0');
+            } else {
+                backToTopButton.classList.add('opacity-0');
+                backToTopButton.classList.remove('opacity-100');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Table of Contents Smooth Scroll
+        document.querySelectorAll('.toc a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop - 100,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Newsletter Form Submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const newsletterForms = document.querySelectorAll('form');
+            const modal = document.getElementById('newsletter-modal');
+            const modalContent = document.getElementById('modal-content');
+            const modalOverlay = document.getElementById('modal-overlay');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            const closeModalX = document.getElementById('close-modal');
+            
+            newsletterForms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const emailInput = this.querySelector('input[type="email"]');
+                    
+                    // Check if email is valid
+                    if (emailInput && emailInput.value.trim() !== '' && emailInput.checkValidity()) {
+                        // Show success modal
+                        modal.classList.remove('hidden');
+                        setTimeout(() => {
+                            modalContent.classList.remove('scale-90', 'opacity-0');
+                            modalContent.classList.add('scale-100', 'opacity-100');
+                        }, 10);
+                        
+                        // Clear input field
+                        emailInput.value = '';
+                    }
+                });
+            });
+            
+            // Close modal when clicking outside
+            if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+            if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+            if (closeModalX) closeModalX.addEventListener('click', closeModal);
+            
+            function closeModal() {
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-90', 'opacity-0');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        });
+    </script>
+    </body>
+    </html>
